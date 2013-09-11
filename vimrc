@@ -14,3 +14,6 @@ source ~/.vim/bundle/bundles
 filetype plugin indent on " Required for neobundle
 
 NeoBundleCheck
+
+"Change the default mapping of ctrlp.vim
+let g:ctrlp_map = '<c-f>'
