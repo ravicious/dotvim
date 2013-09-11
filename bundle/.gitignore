@@ -1,0 +1,7 @@
+# Ignore everything…
+*
+
+# …but not these files
+!.gitignore
+!neobundle.vim
+!bundles

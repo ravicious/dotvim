@@ -9,6 +9,8 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
 
+source ~/.vim/bundle/bundles
+
 filetype plugin indent on " Required for neobundle
 
 NeoBundleCheck
