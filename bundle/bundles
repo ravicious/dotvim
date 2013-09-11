@@ -8,3 +8,4 @@ NeoBundle 'Shougo/vimproc', {
       \ }
 
 NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'scrooloose/nerdcommenter'
