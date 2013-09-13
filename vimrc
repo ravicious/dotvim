@@ -47,3 +47,6 @@ let g:ctrlp_custom_ignore = {
 
 "nerdcommenter mapping
 nmap <Leader>/ <Leader>cn
+
+set background=dark
+colorscheme base16-monokai

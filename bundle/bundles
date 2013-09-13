@@ -9,3 +9,4 @@ NeoBundle 'Shougo/vimproc', {
 
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'chriskempson/base16-vim'
