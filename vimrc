@@ -55,5 +55,22 @@ nmap <Leader>/ <Leader>cn
 nnoremap <C-L> :nohls<CR><C-L>
 inoremap <C-L> <C-O>:nohls<CR>
 
+"Relative number
+
+set relativenumber
+
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set nornu
+  else
+    set relativenumber
+  endif
+endfunc
+
+nnoremap <C-n> :call NumberToggle()<cr>
+
+"Always show context around the current line
+set scrolloff=5
+
 set background=dark
 colorscheme base16-monokai
