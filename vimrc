@@ -59,6 +59,9 @@ set scrolloff=5
 "Get rid of unnecessary gui options
 set guioptions=ac
 
+"Always show a status line
+set laststatus=2
+
 set background=dark
 colorscheme base16-monokai
 syntax on
