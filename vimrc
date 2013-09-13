@@ -72,5 +72,12 @@ nnoremap <C-n> :call NumberToggle()<cr>
 "Always show context around the current line
 set scrolloff=5
 
+"Map jk in insert mode to Esc
+imap jk <Esc>
+
+"Quick movements from vim wiki
+inoremap II <Esc>I
+inoremap AA <Esc>A
+inoremap OO <Esc>O
 set background=dark
 colorscheme base16-monokai
