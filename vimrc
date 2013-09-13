@@ -39,23 +39,9 @@ set wildignore+=*/tmp/cache/assets/*/sprockets/*,*/tmp/cache/assets/*/sass/*
 set wildignore+=*.swp,*~,._*
 
 "" Mappings
+source ~/.vim/mappings
 
-"Change the default mapping of ctrlp.vim
-let g:ctrlp_map = '<c-f>'
-
-"Make ctrlp.vim ignore specific files
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.hg$\|\.svn$',
-  \ 'file': '\.pyc$\|\.pyo$\|\.rbc$|\.rbo$\|\.class$\|\.o$\|\~$\',
-  \ }
-
-"Nerdcommenter mapping
-nmap <Leader>/ <Leader>cn
-
-"Make <c-l> clear the highlight as well as redraw
-nnoremap <C-L> :nohls<CR><C-L>
-inoremap <C-L> <C-O>:nohls<CR>
-
+"" Other
 "Relative number
 
 set relativenumber
@@ -73,13 +59,6 @@ nnoremap <C-n> :call NumberToggle()<cr>
 "Always show context around the current line
 set scrolloff=5
 
-"Map jk in insert mode to Esc
-imap jk <Esc>
-
-"Quick movements from vim wiki
-inoremap II <Esc>I
-inoremap AA <Esc>A
-inoremap OO <Esc>O
 
 set background=dark
 colorscheme base16-monokai
