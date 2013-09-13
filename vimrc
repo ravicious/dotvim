@@ -67,6 +67,10 @@ set directory=~/.swp//
 set backupdir=~/.vim-backup-dir//
 
 set background=dark
-colorscheme base16-monokai
+if has("gui_running")
+  colorscheme base16-monokai
+else
+  colorscheme mustang
+endif
 set gfn=Monaco\ 10
 syntax on
