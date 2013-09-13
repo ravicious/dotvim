@@ -2,7 +2,6 @@ set nocompatible
 
 set encoding=utf-8
 set showcmd                     " display incomplete commands
-filetype plugin indent on
 
 "" Whitespace
 set nowrap                      " don't wrap lines
@@ -36,6 +35,7 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 " All bundles are in bundle/bundles file
 source ~/.vim/bundle/bundles.vim
+filetype plugin indent on
 NeoBundleCheck
 
 "Ignore files
