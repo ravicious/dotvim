@@ -39,6 +39,8 @@ set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/*
 set wildignore+=*/tmp/cache/assets/*/sprockets/*,*/tmp/cache/assets/*/sass/*
 set wildignore+=*.swp,*~,._*
 
+"" Mappings
+
 "Change the default mapping of ctrlp.vim
 let g:ctrlp_map = '<c-f>'
 
@@ -48,7 +50,7 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\.pyc$\|\.pyo$\|\.rbc$|\.rbo$\|\.class$\|\.o$\|\~$\',
   \ }
 
-"nerdcommenter mapping
+"Nerdcommenter mapping
 nmap <Leader>/ <Leader>cn
 
 "Make <c-l> clear the highlight as well as redraw
@@ -79,5 +81,6 @@ imap jk <Esc>
 inoremap II <Esc>I
 inoremap AA <Esc>A
 inoremap OO <Esc>O
+
 set background=dark
 colorscheme base16-monokai
