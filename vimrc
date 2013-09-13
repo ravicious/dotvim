@@ -64,4 +64,5 @@ set laststatus=2
 
 set background=dark
 colorscheme base16-monokai
+set gfn=Monaco\ 10
 syntax on
