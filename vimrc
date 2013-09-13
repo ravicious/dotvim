@@ -62,6 +62,10 @@ set guioptions=ac
 "Always show a status line
 set laststatus=2
 
+"backups!
+set directory=~/.swp//
+set backupdir=~/.vim-backup-dir//
+
 set background=dark
 colorscheme base16-monokai
 set gfn=Monaco\ 10
