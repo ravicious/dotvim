@@ -4,4 +4,4 @@
 # …but not these files
 !.gitignore
 !neobundle.vim
-!bundles
+!bundles.vim

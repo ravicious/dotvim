@@ -25,7 +25,7 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
 " All bundles are in bundle/bundles file
-source ~/.vim/bundle/bundles
+source ~/.vim/bundle/bundles.vim
 NeoBundleCheck
 
 "Ignore files
@@ -36,7 +36,7 @@ set wildignore+=*/tmp/cache/assets/*/sprockets/*,*/tmp/cache/assets/*/sass/*
 set wildignore+=*.swp,*~,._*
 
 "" Mappings
-source ~/.vim/mappings
+source ~/.vim/mappings.vim
 
 "" Other
 "Relative number
