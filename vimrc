@@ -51,5 +51,9 @@ let g:ctrlp_custom_ignore = {
 "nerdcommenter mapping
 nmap <Leader>/ <Leader>cn
 
+"Make <c-l> clear the highlight as well as redraw
+nnoremap <C-L> :nohls<CR><C-L>
+inoremap <C-L> <C-O>:nohls<CR>
+
 set background=dark
 colorscheme base16-monokai
