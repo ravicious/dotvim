@@ -17,6 +17,9 @@ set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
 
+"Get rid of unnecessary gui options
+set guioptions=ac
+
 "" NeoBundle
 
 if has('vim_starting')
