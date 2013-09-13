@@ -66,6 +66,11 @@ set laststatus=2
 set directory=~/.swp//
 set backupdir=~/.vim-backup-dir//
 
+"vim-indent-guides
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 2
+IndentGuidesEnable
+
 if has("gui_running")
   colorscheme base16-monokai
 else
