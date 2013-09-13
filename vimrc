@@ -16,9 +16,6 @@ set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
 
-"Get rid of unnecessary gui options
-set guioptions=ac
-
 "" NeoBundle
 
 if has('vim_starting')
@@ -59,8 +56,9 @@ nnoremap <C-n> :call NumberToggle()<cr>
 "Always show context around the current line
 set scrolloff=5
 
+"Get rid of unnecessary gui options
+set guioptions=ac
 
 set background=dark
 colorscheme base16-monokai
-
 syntax on
