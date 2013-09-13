@@ -1,6 +1,5 @@
 set nocompatible
 
-syntax enable
 set encoding=utf-8
 set showcmd                     " display incomplete commands
 filetype plugin indent on
@@ -84,3 +83,5 @@ inoremap OO <Esc>O
 
 set background=dark
 colorscheme base16-monokai
+
+syntax on
