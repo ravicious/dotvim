@@ -66,11 +66,11 @@ set laststatus=2
 set directory=~/.swp//
 set backupdir=~/.vim-backup-dir//
 
-set background=dark
 if has("gui_running")
   colorscheme base16-monokai
 else
   colorscheme mustang
 endif
+set background=dark
 set gfn=Monaco\ 10
 syntax on
