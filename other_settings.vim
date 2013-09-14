@@ -44,4 +44,5 @@ endif
 set background=dark
 set gfn=Monaco\ 10
 
+set synmaxcol=128
 syntax on
