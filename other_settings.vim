@@ -1,4 +1,5 @@
 " Relative number
+set number
 set relativenumber
 function! NumberToggle()
   if(&relativenumber == 1)
