@@ -43,7 +43,7 @@ else
   colorscheme mustang
 endif
 set background=dark
-set gfn=Monaco\ 10
+set gfn=Consolas\ 12
 
 set synmaxcol=128
 syntax on
