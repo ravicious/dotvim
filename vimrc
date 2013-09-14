@@ -47,7 +47,7 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
 " All bundles are in bundle/bundles file
-source ~/.vim/bundle/bundles.vim
+source ~/.vim/bundles.vim
 filetype plugin indent on
 NeoBundleCheck
 
