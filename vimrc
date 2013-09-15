@@ -49,6 +49,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " All bundles are in bundle/bundles file
 source ~/.vim/bundles.vim
 filetype plugin indent on
+filetype detect " Required by matchit
 NeoBundleCheck
 
 " Mappings

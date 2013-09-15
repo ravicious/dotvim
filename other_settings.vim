@@ -36,6 +36,9 @@ let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 2
 let g:indent_guides_enable_on_vim_startup = 1
 
+" matchit.vim
+runtime macros/matchit.vim
+
 " Colorscheme and GUI
 if has("gui_running")
   colorscheme base16-monokai
