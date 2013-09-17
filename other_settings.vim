@@ -39,6 +39,9 @@ let g:indent_guides_enable_on_vim_startup = 1
 " matchit.vim
 runtime macros/matchit.vim
 
+"vim-airline
+let g:airline_powerline_fonts = 1
+
 " Colorscheme and GUI
 if has("gui_running")
   colorscheme base16-monokai
