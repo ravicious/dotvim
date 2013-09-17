@@ -41,6 +41,7 @@ runtime macros/matchit.vim
 
 "vim-airline
 let g:airline_powerline_fonts = 1
+let g:airline_theme="jellybeans"
 
 " Colorscheme and GUI
 if has("gui_running")
