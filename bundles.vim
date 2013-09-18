@@ -8,7 +8,6 @@ NeoBundle 'Shougo/vimproc', {
       \ }
 
 NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'chriskempson/base16-vim'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-rails'
@@ -20,3 +19,4 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'sheerun/vim-polyglot'
 NeoBundle 'bling/vim-airline'
+NeoBundle 'tpope/vim-commentary'
