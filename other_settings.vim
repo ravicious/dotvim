@@ -50,7 +50,7 @@ else
   colorscheme mustang
 endif
 set background=dark
-set gfn=Monaco\ for\ Powerline\ 9
+set gfn=Monaco\ 9
 
 set synmaxcol=128
 syntax on
