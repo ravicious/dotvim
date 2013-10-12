@@ -1,5 +1,5 @@
 "Map leader
-let mapleader = ","
+let mapleader = " "
 "Change the default mapping of ctrlp.vim
 let g:ctrlp_map = '<c-f>'
 
