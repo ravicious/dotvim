@@ -45,7 +45,7 @@ let g:airline_theme="jellybeans"
 
 " Colorscheme and GUI
 if has("gui_running")
-  colorscheme base16-monokai
+  colorscheme jellybeans
 else
   colorscheme mustang
 endif
