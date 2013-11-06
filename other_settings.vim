@@ -44,11 +44,7 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme="jellybeans"
 
 " Colorscheme and GUI
-if has("gui_running")
-  colorscheme jellybeans
-else
-  colorscheme mustang
-endif
+colorscheme jellybeans
 set background=dark
 set gfn=Consolas\ 9
 
