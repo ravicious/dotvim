@@ -48,5 +48,5 @@ colorscheme jellybeans
 set background=dark
 set gfn=Consolas\ 9
 
-set synmaxcol=128
+set synmaxcol=256
 syntax on
