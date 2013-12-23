@@ -7,6 +7,7 @@ NeoBundle 'Shougo/vimproc', {
       \    },
       \ }
 
+NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'chriskempson/base16-vim'
 NeoBundle 'tpope/vim-endwise'
