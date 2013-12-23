@@ -43,6 +43,9 @@ runtime macros/matchit.vim
 let g:airline_powerline_fonts = 1
 let g:airline_theme="jellybeans"
 
+"YouCompleteMe
+let g:ycm_min_num_of_chars_for_completion = 3
+
 " Colorscheme and GUI
 colorscheme jellybeans
 set background=dark
