@@ -60,9 +60,6 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
-" vim-sneak
-let g:sneak#streak = 1
-
 " Colorscheme and GUI
 colorscheme jellybeans
 set background=dark
