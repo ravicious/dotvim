@@ -45,6 +45,8 @@ let g:airline_theme="jellybeans"
 
 "YouCompleteMe
 let g:ycm_min_num_of_chars_for_completion = 3
+set completeopt-=preview
+let g:ycm_add_preview_to_completeopt = 0
 
 " The Silver Searcher
 if executable('ag')
