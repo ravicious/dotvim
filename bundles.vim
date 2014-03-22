@@ -7,6 +7,7 @@ NeoBundle 'Shougo/vimproc', {
       \    },
       \ }
 
+NeoBundle 'scrooloose/syntastic'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'chriskempson/base16-vim'
@@ -22,4 +23,3 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'justinmk/vim-sneak'
 NeoBundle 'nanotech/jellybeans.vim'
-NeoBundle 'scrooloose/syntastic'
