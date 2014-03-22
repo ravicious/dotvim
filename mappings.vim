@@ -1,5 +1,6 @@
-"Map leader
-let mapleader = " "
+"Map space to leader
+let mapleader = "\<Space>"
+
 "Change the default mapping of ctrlp.vim
 let g:ctrlp_map = '<c-f>'
 
