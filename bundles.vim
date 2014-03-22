@@ -10,7 +10,6 @@ NeoBundle 'Shougo/vimproc', {
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'chriskempson/base16-vim'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'Valloric/YouCompleteMe'
