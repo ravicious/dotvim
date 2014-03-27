@@ -52,3 +52,7 @@ nmap <leader>L mQgewvu`Q
 "splitjoin.vim
 nmap <leader>sj :SplitjoinSplit<cr>
 nmap <leader>sk :SplitjoinJoin<cr>
+
+"vim-expand-region
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
