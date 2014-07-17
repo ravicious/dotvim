@@ -33,4 +33,5 @@ NeoBundle 'JazzCore/ctrlp-cmatcher', {
       \     'unix': './install_linux.sh'
       \   }
       \ }
+NeoBundle 'roman/golden-ratio'
 NeoBundle 'lukerandall/haskellmode-vim'
