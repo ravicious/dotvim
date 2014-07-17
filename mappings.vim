@@ -56,3 +56,6 @@ nmap <leader>sk :SplitjoinJoin<cr>
 "vim-expand-region
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
+
+"switch.vim
+nmap <Leader><Tab> :Switch<CR>
