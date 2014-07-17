@@ -66,6 +66,9 @@ endif
 "use ctrl-cmatcher
 let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
 
+"treat .md files as markdown files
+autocmd BufRead,BufNewFile *.md set filetype=markdown
+
 " Colorscheme and GUI
 colorscheme jellybeans
 set background=dark
