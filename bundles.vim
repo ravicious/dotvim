@@ -36,4 +36,5 @@ NeoBundle 'JazzCore/ctrlp-cmatcher', {
 NeoBundle 'roman/golden-ratio'
 NeoBundle 'AndrewRadev/switch.vim'
 NeoBundle 'tommcdo/vim-lion'
+NeoBundle 'skalnik/vim-vroom'
 NeoBundle 'lukerandall/haskellmode-vim'
