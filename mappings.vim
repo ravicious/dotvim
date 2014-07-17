@@ -1,3 +1,12 @@
+"http://stackoverflow.com/a/15330610/742872
+noremap l h
+noremap ; l
+noremap h ;
+map h <Plug>SneakNext
+
+nmap <silent> <c-w>l :wincmd h<CR>
+nmap <silent> <c-w>; :wincmd l<CR>
+
 "Map space to leader
 let mapleader = "\<Space>"
 
