@@ -8,7 +8,6 @@ NeoBundle 'Shougo/vimproc', {
       \ }
 
 NeoBundle 'scrooloose/syntastic'
-NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-rails'
@@ -39,3 +38,4 @@ NeoBundle 'tommcdo/vim-lion'
 NeoBundle 'skalnik/vim-vroom'
 NeoBundle 'lukerandall/haskellmode-vim'
 NeoBundle 'tpope/vim-unimpaired'
+NeoBundle 'vim-ruby/vim-ruby'
