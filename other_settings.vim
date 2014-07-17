@@ -63,6 +63,9 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
+"use ctrl-cmatcher
+let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
+
 " Colorscheme and GUI
 colorscheme jellybeans
 set background=dark
