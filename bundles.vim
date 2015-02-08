@@ -27,11 +27,7 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'AndrewRadev/splitjoin.vim'
 NeoBundle 'terryma/vim-expand-region'
 NeoBundle 'matchit.zip'
-NeoBundle 'JazzCore/ctrlp-cmatcher', {
-      \ 'build': {
-      \     'unix': './install_linux.sh'
-      \   }
-      \ }
+NeoBundle 'JazzCore/ctrlp-cmatcher'
 NeoBundle 'roman/golden-ratio'
 NeoBundle 'AndrewRadev/switch.vim'
 NeoBundle 'tommcdo/vim-lion'
