@@ -35,9 +35,12 @@ NeoBundle 'skalnik/vim-vroom'
 NeoBundle 'lukerandall/haskellmode-vim'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'tpope/vim-repeat' " vim-sexp needs it for the . command
 " Clojure
 NeoBundle 'tpope/vim-leiningen.git'
 NeoBundle 'tpope/vim-projectionist'
 NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'tpope/vim-fireplace'
 NeoBundle 'guns/vim-clojure-static'
+NeoBundle 'guns/vim-sexp'
+NeoBundle 'tpope/vim-sexp-mappings-for-regular-people'
