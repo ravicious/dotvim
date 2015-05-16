@@ -76,5 +76,9 @@ autocmd BufRead,BufNewFile *.es6 set filetype=javascript
 colorscheme jellybeans
 set gfn=Consolas\ 9
 
+" Row/column settings
+set cc=100
+set textwidth=100
+
 set synmaxcol=256
 syntax on
