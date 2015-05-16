@@ -69,6 +69,9 @@ let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
 "treat .md files as markdown files
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 
+"treat .es6 files as JavaScript files
+autocmd BufRead,BufNewFile *.es6 set filetype=javascript
+
 " Colorscheme and GUI
 colorscheme jellybeans
 set gfn=Consolas\ 9
