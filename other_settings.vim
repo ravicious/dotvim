@@ -84,5 +84,8 @@ set textwidth=100
 " Enable vim-jsx in .js files (by default it works with .jsx files only)
 let g:jsx_ext_required = 0
 
+" Change Ruby version used by syntastic
+let g:syntastic_ruby_mri_exec='~/.rubies/ruby-2.2.2/bin/ruby'
+
 set synmaxcol=256
 syntax on
