@@ -8,7 +8,7 @@ NeoBundle 'Shougo/vimproc', {
       \ }
 
 NeoBundle 'scrooloose/syntastic'
-NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'Valloric/YouCompleteMe'
