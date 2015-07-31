@@ -81,5 +81,8 @@ set guifont=Menlo:h11
 set cc=100
 set textwidth=100
 
+" Enable vim-jsx in .js files (by default it works with .jsx files only)
+let g:jsx_ext_required = 0
+
 set synmaxcol=256
 syntax on
