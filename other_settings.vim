@@ -35,13 +35,14 @@ set backupdir=~/.vim-backup-dir//
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 2
 let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_color_change_percent = 6
 
 " matchit.vim
 runtime macros/matchit.vim
 
 "vim-airline
 let g:airline_powerline_fonts = 1
-let g:airline_theme="jellybeans"
+let g:airline_theme='light'
 
 "YouCompleteMe
 let g:ycm_min_num_of_chars_for_completion = 3
@@ -73,8 +74,8 @@ autocmd BufRead,BufNewFile *.md set filetype=markdown
 autocmd BufRead,BufNewFile *.es6 set filetype=javascript
 
 " Colorscheme and GUI
-colorscheme jellybeans
 set gfn=Consolas\ 9
+colorscheme pyte
 
 " Row/column settings
 set cc=100
