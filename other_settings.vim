@@ -74,8 +74,8 @@ autocmd BufRead,BufNewFile *.md set filetype=markdown
 autocmd BufRead,BufNewFile *.es6 set filetype=javascript
 
 " Colorscheme and GUI
-set gfn=Consolas\ 9
 colorscheme pyte
+set guifont=Menlo:h11
 
 " Row/column settings
 set cc=100
