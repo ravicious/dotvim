@@ -1,3 +1,6 @@
+" Open diff in a vertical split
+set diffopt+=vertical
+
 " Relative number
 set number
 set relativenumber
