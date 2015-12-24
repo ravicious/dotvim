@@ -78,7 +78,8 @@ autocmd BufRead,BufNewFile *.es6 set filetype=javascript
 
 " Colorscheme and GUI
 colorscheme pyte
-set guifont=Menlo:h11
+set macligatures
+set guifont=Fira\ Code:h11
 
 " Row/column settings
 set cc=100
