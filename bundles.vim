@@ -40,10 +40,10 @@ NeoBundle 'buztard/vim-rel-jump'
 NeoBundle 'vim-scripts/pyte'
 
 " Clojure
-NeoBundle 'tpope/vim-leiningen.git'
+" NeoBundle 'tpope/vim-leiningen.git'
 NeoBundle 'tpope/vim-projectionist'
 NeoBundle 'tpope/vim-dispatch'
-NeoBundle 'tpope/vim-fireplace'
+" NeoBundle 'tpope/vim-fireplace'
 NeoBundle 'guns/vim-clojure-static'
 NeoBundle 'guns/vim-sexp'
 NeoBundle 'tpope/vim-sexp-mappings-for-regular-people'
