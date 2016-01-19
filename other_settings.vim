@@ -76,6 +76,12 @@ autocmd BufRead,BufNewFile *.md set filetype=markdown
 "treat .es6 files as JavaScript files
 autocmd BufRead,BufNewFile *.es6 set filetype=javascript
 
+"automatically enable rainbow parentheses
+augroup rainbow_lisp
+  autocmd!
+  autocmd FileType lisp,clojure,scheme RainbowParentheses
+augroup END
+
 " Colorscheme and GUI
 colorscheme pyte
 set macligatures
