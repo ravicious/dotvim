@@ -51,3 +51,6 @@ NeoBundle 'guns/vim-clojure-static'
 NeoBundle 'guns/vim-sexp'
 NeoBundle 'tpope/vim-sexp-mappings-for-regular-people'
 NeoBundle 'junegunn/rainbow_parentheses.vim'
+
+"Rust
+NeoBundle 'rust-lang/rust.vim'

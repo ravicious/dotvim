@@ -97,5 +97,8 @@ let g:jsx_ext_required = 0
 " Change Ruby version used by syntastic
 let g:syntastic_ruby_mri_exec='ruby'
 
+" Enable Rust autoformating
+let g:rustfmt_autosave = 1
+
 set synmaxcol=256
 syntax on
