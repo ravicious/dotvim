@@ -54,6 +54,10 @@ filetype plugin indent on
 filetype detect " Required by matchit
 NeoBundleCheck
 
+" Commands
+"=========================
+source ~/.vim/commands.vim
+
 " Mappings
 "=========================
 source ~/.vim/mappings.vim

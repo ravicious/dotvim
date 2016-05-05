@@ -97,6 +97,9 @@ let g:jsx_ext_required = 0
 " Change Ruby version used by syntastic
 let g:syntastic_ruby_mri_exec='ruby'
 
+let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+let g:syntastic_sort_aggregated_errors = 1
+
 " Enable Rust autoformating
 let g:rustfmt_autosave = 1
 
