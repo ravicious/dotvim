@@ -83,7 +83,7 @@ augroup rainbow_lisp
 augroup END
 
 " Colorscheme and GUI
-colorscheme pyte
+colorscheme white-sand
 set macligatures
 set guifont=Fira\ Code:h12
 

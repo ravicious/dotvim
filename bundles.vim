@@ -40,6 +40,7 @@ NeoBundle 'tpope/vim-repeat' " vim-sexp needs it for the . command
 NeoBundle 'buztard/vim-rel-jump'
 NeoBundle 'vim-scripts/pyte'
 NeoBundle 'ElmCast/elm-vim'
+NeoBundle 'ravicious/vim-themes'
 
 " Clojure
 " NeoBundle 'tpope/vim-leiningen.git'
