@@ -41,6 +41,8 @@ NeoBundle 'buztard/vim-rel-jump'
 NeoBundle 'vim-scripts/pyte'
 NeoBundle 'ElmCast/elm-vim'
 NeoBundle 'ravicious/vim-themes'
+NeoBundle 'kana/vim-textobj-user'
+NeoBundle 'nelstrom/vim-textobj-rubyblock'
 
 " Clojure
 " NeoBundle 'tpope/vim-leiningen.git'
