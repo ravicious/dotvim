@@ -103,5 +103,8 @@ let g:syntastic_sort_aggregated_errors = 1
 " Enable Rust autoformating
 let g:rustfmt_autosave = 1
 
+" Enables HTML/CSS syntax highlighting in JavaScript files.
+let g:javascript_enable_domhtmlcss = 1
+
 set synmaxcol=256
 syntax on
