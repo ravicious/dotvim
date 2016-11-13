@@ -55,15 +55,15 @@ let g:ycm_add_preview_to_completeopt = 0
 "haskellmode-vim
 let g:haddock_browser="xdg-open"
 
-" The Silver Searcher
-if executable('ag')
-  " Use ag over grep
-  set grepprg=ag\ --nogroup\ --nocolor
+" ripgrep
+if executable('rg')
+  " Use ripgrep over grep
+  set grepprg=rg\ --vimgrep
 
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  " Use ripgrep in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'rg --files --hidden --follow --glob "!.git/*" %s'
 
-  " ag is fast enough that CtrlP doesn't need to cache
+  " ripgrep is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
 
