@@ -108,6 +108,9 @@ let g:rustfmt_autosave = 1
 " Enables HTML/CSS syntax highlighting in JavaScript files.
 let g:javascript_enable_domhtmlcss = 1
 
+" Enable vim-closetag for the following filetypes
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.js,*.jsx,*.erb"
+
 " elm-vim
 let g:elm_format_autosave = 1
 

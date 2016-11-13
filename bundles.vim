@@ -43,6 +43,7 @@ NeoBundle 'ElmCast/elm-vim'
 NeoBundle 'ravicious/vim-themes'
 NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'nelstrom/vim-textobj-rubyblock'
+NeoBundle 'alvan/vim-closetag'
 
 " Clojure
 " NeoBundle 'tpope/vim-leiningen.git'
