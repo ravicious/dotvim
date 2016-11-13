@@ -106,5 +106,8 @@ let g:rustfmt_autosave = 1
 " Enables HTML/CSS syntax highlighting in JavaScript files.
 let g:javascript_enable_domhtmlcss = 1
 
+" elm-vim
+let g:elm_format_autosave = 1
+
 set synmaxcol=256
 syntax on
