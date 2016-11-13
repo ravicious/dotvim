@@ -68,3 +68,6 @@ vmap <C-v> <Plug>(expand_region_shrink)
 
 "switch.vim
 nmap <Leader><Tab> :Switch<CR>
+
+"Same as `gi`, but doesn't go into insert mode.
+nmap <leader>gi `^
