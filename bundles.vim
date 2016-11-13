@@ -44,6 +44,7 @@ NeoBundle 'ravicious/vim-themes'
 NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'nelstrom/vim-textobj-rubyblock'
 NeoBundle 'alvan/vim-closetag'
+NeoBundle 'mtscout6/syntastic-local-eslint.vim'
 
 " Clojure
 " NeoBundle 'tpope/vim-leiningen.git'
