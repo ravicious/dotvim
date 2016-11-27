@@ -3,6 +3,8 @@ set nocompatible
 set encoding=utf-8
 set showcmd                     " display incomplete commands
 
+set spell spelllang=en_us       " spellchecking
+
 " Whitespace
 "===========
 set nowrap                      " don't wrap lines
