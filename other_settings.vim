@@ -91,8 +91,8 @@ set guifont=Fira\ Code:h12
 set cc=100
 set textwidth=100
 
-" Enable vim-jsx in .js files (by default it works with .jsx files only)
-let g:jsx_ext_required = 0
+" Colorful style for vim-jsx-pretty
+let g:vim_jsx_pretty_colorful_config = 1
 
 " Neomake
 autocmd! BufWritePost * Neomake
