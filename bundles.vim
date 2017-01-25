@@ -47,6 +47,7 @@ NeoBundle 'AndrewRadev/dsf.vim'
 NeoBundle 'neomake/neomake'
 NeoBundle 'jaawerth/nrun.vim'
 NeoBundle 'thinca/vim-localrc'
+NeoBundle 'flowtype/vim-flow'
 
 " Clojure
 " NeoBundle 'tpope/vim-leiningen.git'

@@ -97,6 +97,8 @@ let g:vim_jsx_pretty_colorful_config = 1
 " Neomake
 autocmd! BufWritePost * Neomake
 let g:neomake_highlight_lines = 1
+" Turn off vim-flow checks, since Neomake handles that.
+let g:flow#enable = 0
 " Example Neomake maker configs. Create a `.local.vimrc` file in the project's directory
 " and paste the `let` statements there.
 "   Sets the eslint to the version local to the opened file in the buffer.
