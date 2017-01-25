@@ -94,14 +94,15 @@ set textwidth=100
 " Enable vim-jsx in .js files (by default it works with .jsx files only)
 let g:jsx_ext_required = 0
 
-" Change Ruby version used by syntastic
-let g:syntastic_ruby_mri_exec='ruby'
-
-let g:syntastic_ruby_checkers = ['mri', 'rubocop']
-let g:syntastic_javascript_checkers = ['eslint', 'flow']
-let g:syntastic_sort_aggregated_errors = 1
-
-let g:elm_syntastic_show_warnings = 1
+" Neomake
+autocmd! BufWritePost * Neomake
+let g:neomake_highlight_lines = 1
+" Example Neomake maker configs. Create a `.local.vimrc` file in the project's directory
+" and paste the `let` statements there.
+"   Sets the eslint to the version local to the opened file in the buffer.
+"   let g:neomake_javascript_eslint_exe = nrun#Which('eslint')
+"   let g:neomake_ruby_enabled_makers = ['mri', 'rubocop']
+"   let g:neomake_javascript_enabled_makers = ['eslint', 'flow']
 
 " Enable Rust autoformating
 let g:rustfmt_autosave = 1

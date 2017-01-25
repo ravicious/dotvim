@@ -7,7 +7,6 @@ NeoBundle 'Shougo/vimproc', {
       \    },
       \ }
 
-NeoBundle 'scrooloose/syntastic', { 'rev': '1379530f03' }
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-rails'
@@ -44,8 +43,10 @@ NeoBundle 'ravicious/vim-themes'
 NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'nelstrom/vim-textobj-rubyblock'
 NeoBundle 'alvan/vim-closetag'
-NeoBundle 'mtscout6/syntastic-local-eslint.vim'
 NeoBundle 'AndrewRadev/dsf.vim'
+NeoBundle 'neomake/neomake'
+NeoBundle 'jaawerth/nrun.vim'
+NeoBundle 'thinca/vim-localrc'
 
 " Clojure
 " NeoBundle 'tpope/vim-leiningen.git'
