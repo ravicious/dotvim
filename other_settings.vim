@@ -98,7 +98,7 @@ let g:jsx_ext_required = 0
 let g:syntastic_ruby_mri_exec='ruby'
 
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
-let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_checkers = ['eslint', 'flow']
 let g:syntastic_sort_aggregated_errors = 1
 
 let g:elm_syntastic_show_warnings = 1
