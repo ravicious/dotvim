@@ -106,6 +106,19 @@ let g:flow#enable = 0
 "   let g:neomake_ruby_enabled_makers = ['mri', 'rubocop']
 "   let g:neomake_javascript_enabled_makers = ['eslint', 'flow']
 
+" Neoformat
+augroup fmt
+  autocmd!
+  autocmd BufWritePre * Neoformat
+augroup END
+" Example Neoformat formatter options for JavaScript:
+"   let g:neoformat_enabled_javascript = ['prettier']
+"   let g:neoformat_javascript_prettier = {
+"         \ 'exe': nrun#Which('prettier'),
+"         \ 'args': ['--stdin', '--trailing-comma', '--single-quote', '--print-width ' . &textwidth],
+"         \ 'stdin': 1,
+"         \ }
+
 " Enable Rust autoformating
 let g:rustfmt_autosave = 1
 

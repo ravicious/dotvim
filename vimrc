@@ -2,6 +2,11 @@ set nocompatible
 
 set encoding=utf-8
 set showcmd                     " display incomplete commands
+" Set the command line height to two lines.
+" Otherwise long messages (like after running prettier) won't fit
+" in the command line which in turn will cause vim to display
+" a prompt. http://vim.wikia.com/wiki/Avoiding_the_%22Hit_ENTER_to_continue%22_prompts
+set cmdheight=2
 
 set spell spelllang=en_us       " spellchecking
 
