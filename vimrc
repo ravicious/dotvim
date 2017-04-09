@@ -7,6 +7,8 @@ set showcmd                     " display incomplete commands
 " in the command line which in turn will cause vim to display
 " a prompt. http://vim.wikia.com/wiki/Avoiding_the_%22Hit_ENTER_to_continue%22_prompts
 set cmdheight=2
+set undofile " Maintain undo history between sessions
+set undodir=~/.vim-undodir
 
 set spell spelllang=en_us       " spellchecking
 
