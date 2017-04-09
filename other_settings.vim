@@ -94,17 +94,13 @@ set textwidth=100
 " Colorful style for vim-jsx-pretty
 let g:vim_jsx_pretty_colorful_config = 1
 
-" Neomake
-autocmd! BufWritePost * Neomake
-let g:neomake_highlight_lines = 1
-" Turn off vim-flow checks, since Neomake handles that.
+" Ale
+let g:ale_echo_msg_format = '%linter%: %s'
+let g:ale_lint_on_text_changed = 'normal'
+let g:ale_lint_on_insert_leave = 1
+
+" Turn off vim-flow checks, since Ale handles that.
 let g:flow#enable = 0
-" Example Neomake maker configs. Create a `.local.vimrc` file in the project's directory
-" and paste the `let` statements there.
-"   Sets the eslint to the version local to the opened file in the buffer.
-"   let g:neomake_javascript_eslint_exe = nrun#Which('eslint')
-"   let g:neomake_ruby_enabled_makers = ['mri', 'rubocop']
-"   let g:neomake_javascript_enabled_makers = ['eslint', 'flow']
 
 " Neoformat
 augroup fmt

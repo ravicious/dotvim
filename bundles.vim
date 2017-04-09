@@ -44,11 +44,11 @@ NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'nelstrom/vim-textobj-rubyblock'
 NeoBundle 'alvan/vim-closetag'
 NeoBundle 'AndrewRadev/dsf.vim'
-NeoBundle 'neomake/neomake'
 NeoBundle 'jaawerth/nrun.vim'
 NeoBundle 'thinca/vim-localrc'
 NeoBundle 'flowtype/vim-flow'
 NeoBundle 'sbdchd/neoformat'
+NeoBundle 'w0rp/ale'
 
 " Clojure
 " NeoBundle 'tpope/vim-leiningen.git'
