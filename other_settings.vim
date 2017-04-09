@@ -85,7 +85,7 @@ augroup END
 " Colorscheme and GUI
 colorscheme white-sand
 set macligatures
-set guifont=Fira\ Code\ Retina:h12
+set guifont=Fira\ Code:h12
 
 " Row/column settings
 set cc=100
