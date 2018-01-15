@@ -98,6 +98,10 @@ let g:vim_jsx_pretty_colorful_config = 1
 let g:ale_echo_msg_format = '%linter%: %s'
 let g:ale_lint_on_text_changed = 'normal'
 let g:ale_lint_on_insert_leave = 1
+" Turn off HTML linters.
+let g:ale_linters = {
+      \ 'html': [],
+      \}
 
 " Turn off vim-flow checks, since Ale handles that.
 let g:flow#enable = 0
@@ -107,6 +111,7 @@ augroup fmt
   autocmd!
   autocmd BufWritePre * Neoformat
 augroup END
+let g:neoformat_enabled_json = []
 " Example Neoformat formatter options for JavaScript:
 "   let g:neoformat_enabled_javascript = ['prettier']
 "   let g:neoformat_javascript_prettier = {
