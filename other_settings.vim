@@ -119,6 +119,13 @@ let g:neoformat_enabled_json = []
 "         \ 'args': ['--stdin', '--trailing-comma', '--single-quote', '--print-width ' . &textwidth],
 "         \ 'stdin': 1,
 "         \ }
+" Example Neoformat formatter options for SCSS:
+"   let g:neoformat_enabled_scss = ['prettier']
+"   let g:neoformat_scss_prettier = {
+"         \ 'exe': nrun#Which('prettier'),
+"         \ 'args': ['--stdin', '--trailing-comma es5', '--single-quote', '--print-width 100', '--bracket-spacing', '--parser postcss', '--tab-width 2', '--no-semi'],
+"         \ 'stdin': 1,
+"         \ }
 
 " Enable Rust autoformating
 let g:rustfmt_autosave = 1
