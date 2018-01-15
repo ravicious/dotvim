@@ -32,7 +32,7 @@ NeoBundle 'roman/golden-ratio'
 NeoBundle 'AndrewRadev/switch.vim'
 NeoBundle 'tommcdo/vim-lion'
 NeoBundle 'skalnik/vim-vroom'
-NeoBundle 'lukerandall/haskellmode-vim'
+" NeoBundle 'lukerandall/haskellmode-vim'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'tpope/vim-repeat' " vim-sexp needs it for the . command
@@ -61,4 +61,4 @@ NeoBundle 'tpope/vim-sexp-mappings-for-regular-people'
 NeoBundle 'junegunn/rainbow_parentheses.vim'
 
 "Rust
-NeoBundle 'rust-lang/rust.vim'
+" NeoBundle 'rust-lang/rust.vim'
