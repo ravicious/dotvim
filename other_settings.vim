@@ -46,6 +46,7 @@ runtime macros/matchit.vim
 "vim-airline
 let g:airline_powerline_fonts = 1
 let g:airline_theme='light'
+let g:airline#extensions#neomake#enabled = 1
 
 "YouCompleteMe
 let g:ycm_min_num_of_chars_for_completion = 3
