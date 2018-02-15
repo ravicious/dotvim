@@ -113,6 +113,7 @@ augroup fmt
   autocmd BufWritePre * Neoformat
 augroup END
 let g:neoformat_enabled_json = []
+let g:neoformat_enabled_scss = []
 " Example Neoformat formatter options for JavaScript:
 "   let g:neoformat_enabled_javascript = ['prettier']
 "   let g:neoformat_javascript_prettier = {
