@@ -49,6 +49,7 @@ NeoBundle 'thinca/vim-localrc'
 NeoBundle 'flowtype/vim-flow'
 NeoBundle 'sbdchd/neoformat'
 NeoBundle 'w0rp/ale'
+NeoBundle 'Glench/Vim-Jinja2-Syntax'
 
 " Clojure
 " NeoBundle 'tpope/vim-leiningen.git'
