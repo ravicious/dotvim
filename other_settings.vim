@@ -74,8 +74,9 @@ if executable('ag')
   let g:abbrev_matcher_grep_args = '--numbers'
 endif
 
-"use vim-abbrev-matcher
+"ctrlp
 let g:ctrlp_match_func = { 'match': 'ctrlp#abbrev_matcher#match' }
+let g:ctrlp_lazy_update = 100
 
 "treat .md files as markdown files
 autocmd BufRead,BufNewFile *.md set filetype=markdown
