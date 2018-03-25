@@ -48,10 +48,11 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='light'
 let g:airline#extensions#neomake#enabled = 1
 
-"YouCompleteMe
-let g:ycm_min_num_of_chars_for_completion = 3
-set completeopt-=preview
-let g:ycm_add_preview_to_completeopt = 0
+"nvim-completion-manager
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+let g:cm_refresh_length=[[1,3],[7,3]]
+let g:cm_matcher = {'module': 'cm_matchers.abbrev_matcher'}
 
 "haskellmode-vim
 let g:haddock_browser="xdg-open"
