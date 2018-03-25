@@ -69,8 +69,13 @@ if executable('rg')
   let g:ctrlp_use_caching = 0
 endif
 
-"use ctrl-cmatcher
-let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
+if executable('ag')
+  let g:abbrev_matcher_grep_exe = 'ag'
+  let g:abbrev_matcher_grep_args = '--numbers'
+endif
+
+"use vim-abbrev-matcher
+let g:ctrlp_match_func = { 'match': 'ctrlp#abbrev_matcher#match' }
 
 "treat .md files as markdown files
 autocmd BufRead,BufNewFile *.md set filetype=markdown

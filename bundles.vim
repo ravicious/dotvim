@@ -8,6 +8,7 @@ NeoBundle 'Shougo/vimproc', {
       \ }
 
 NeoBundle 'ctrlpvim/ctrlp.vim'
+NeoBundle 'sergei-dyshel/vim-abbrev-matcher'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'roxma/nvim-completion-manager'
@@ -29,7 +30,6 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'AndrewRadev/splitjoin.vim'
 NeoBundle 'terryma/vim-expand-region'
 NeoBundle 'matchit.zip'
-NeoBundle 'JazzCore/ctrlp-cmatcher'
 NeoBundle 'roman/golden-ratio'
 NeoBundle 'AndrewRadev/switch.vim'
 NeoBundle 'tommcdo/vim-lion'

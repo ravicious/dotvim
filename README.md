@@ -10,6 +10,5 @@
   * `gem install neovim fastri rcodetools`
 5. Install Python packages.
   * `pip3 install --upgrade --user neovim`
-4. Compile [ctrlp-cmatcher](https://github.com/JazzCore/ctrlp-cmatcher) C extension.
 6. Install [Fira Code](https://github.com/tonsky/FiraCode) font.
 7. Turn back on fsck-related git options.
