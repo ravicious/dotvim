@@ -85,8 +85,14 @@ augroup END
 
 " Colorscheme and GUI
 colorscheme white-sand
-set macligatures
-set guifont=Fira\ Code:h12
+if !has('gui_vimr')
+  "vimr sets the font in its own settings.
+  set guifont=Fira\ Code:h12
+endif
+
+if has("gui_macvim")
+  set macligatures
+endif
 
 " Row/column settings
 set cc=100
