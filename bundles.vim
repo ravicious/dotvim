@@ -31,7 +31,8 @@ NeoBundle 'roman/golden-ratio'
 NeoBundle 'AndrewRadev/switch.vim'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'tpope/vim-repeat' " vim-sexp needs it for the . command
+"vim-repeat integrates with a bunch of tpope's plugins.
+NeoBundle 'tpope/vim-repeat'
 NeoBundle 'buztard/vim-rel-jump'
 NeoBundle 'ElmCast/elm-vim'
 NeoBundle 'ravicious/vim-themes'
