@@ -46,6 +46,9 @@ set wildignore+=*/tmp/cache/assets/*/sprockets/*,*/tmp/cache/assets/*/sass/*
 set wildignore+=*/tmp/*,*.so,*.zip
 set wildignore+=*.swp,*~,._*
 
+"nvim
+let g:python_host_prog  = '/usr/bin/python'
+
 
 " NeoBundle
 "=========================
