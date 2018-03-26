@@ -3,7 +3,10 @@
 ## Things to do after a fresh install
 
 1. Turn of fsck-related git options since a lot of the vim plugin repos have fsck errors in them.
-1. Go to the root dir of this repo and run `git submodule init && git submodule update`.
+1. Go to the root dir of this repo and run:
+  * `git submodule init && git submodule update`
+2. Compile YouCompleteMe.
+  * `cd bundle/YouCompleteMe && git submodule update --init --recursive && ./install.py`
 3. Install brew packages.
   * `brew install ripgrep the_silver_searcher`
 4. Install gems.
