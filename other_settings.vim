@@ -53,6 +53,11 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 let g:cm_refresh_length=[[1,3],[7,3]]
 let g:cm_matcher = {'module': 'cm_matchers.abbrev_matcher'}
+let g:cm_sources_override = {
+    \ 'cm-filepath': {'priority':1},
+    \ 'cm-otherbuf': {'priority':7},
+    \ 'cm-bufkeyword': {'priority':8}
+    \ }
 
 "haskellmode-vim
 let g:haddock_browser="xdg-open"
