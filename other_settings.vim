@@ -58,6 +58,8 @@ let g:ycm_add_preview_to_completeopt = 0
 let g:ycm_filetype_specific_completion_to_disable = {
     \ 'ruby': 1
     \ }
+let g:ycm_python_binary_path = '/usr/local/bin/python3'
+let g:ycm_seed_identifiers_with_syntax = 1
 
 "haskellmode-vim
 let g:haddock_browser="xdg-open"
