@@ -46,8 +46,13 @@ set wildignore+=*/tmp/cache/assets/*/sprockets/*,*/tmp/cache/assets/*/sass/*
 set wildignore+=*/tmp/*,*.so,*.zip
 set wildignore+=*.swp,*~,._*
 
-"nvim
+" nvim
+"=========================
 let g:python_host_prog  = '/usr/bin/python'
+" neovim doesn't check if the file was changed by default
+" https://github.com/qvacua/vimr/issues/242#issuecomment-318549413
+au FocusGained * checktime
+set noautoread
 
 
 " NeoBundle
