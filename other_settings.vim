@@ -74,11 +74,9 @@ if executable('rg')
 
   " ripgrep is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
-endif
 
-if executable('ag')
-  let g:abbrev_matcher_grep_exe = 'ag'
-  let g:abbrev_matcher_grep_args = '--numbers'
+  let g:abbrev_matcher_grep_exe = 'rg'
+  let g:abbrev_matcher_grep_args = '--line-number'
 endif
 
 "ctrlp

@@ -8,7 +8,7 @@
 2. Compile YouCompleteMe.
   * `cd bundle/YouCompleteMe && git submodule update --init --recursive && ./install.py`
 3. Install brew packages.
-  * `brew install ripgrep the_silver_searcher`
+  * `brew install ripgrep`
 4. Install gems.
   * `gem install neovim fastri rcodetools`
 5. Install Python packages.
