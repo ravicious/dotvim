@@ -81,7 +81,7 @@ endif
 
 "ctrlp
 let g:ctrlp_match_func = { 'match': 'ctrlp#abbrev_matcher#match' }
-let g:ctrlp_lazy_update = 100
+let g:ctrlp_lazy_update = 1
 
 "treat .md files as markdown files
 autocmd BufRead,BufNewFile *.md set filetype=markdown
