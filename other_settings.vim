@@ -6,7 +6,7 @@ set number
 set relativenumber
 function! NumberToggle()
   if(&relativenumber == 1)
-    set nornu
+    set norelativenumber
   else
     set relativenumber
   endif
@@ -19,7 +19,7 @@ set scrolloff=5
 " Get rid of unnecessary gui options
 set guioptions=ac
 
-if has("statusline") && !&cp
+if has('statusline') && !&compatible
   set laststatus=2  " Always show the status bar
 
   " Start the status line
@@ -61,9 +61,6 @@ let g:ycm_filetype_specific_completion_to_disable = {
 let g:ycm_python_binary_path = '/usr/local/bin/python3'
 let g:ycm_seed_identifiers_with_syntax = 1
 
-"haskellmode-vim
-let g:haddock_browser="xdg-open"
-
 " ripgrep
 if executable('rg')
   " Use ripgrep over grep
@@ -102,12 +99,12 @@ if !has('gui_vimr')
   set guifont=Fira\ Code:h12
 endif
 
-if has("gui_macvim")
+if has('gui_macvim')
   set macligatures
 endif
 
 " Row/column settings
-set cc=100
+set colorcolumn=100
 set textwidth=100
 
 " Colorful style for vim-jsx-pretty
@@ -155,7 +152,7 @@ let g:rustfmt_autosave = 1
 let g:javascript_enable_domhtmlcss = 1
 
 " Enable vim-closetag for the following filetypes
-let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.js,*.jsx,*.erb"
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js,*.jsx,*.erb'
 
 " elm-vim
 let g:elm_format_autosave = 1
