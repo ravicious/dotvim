@@ -71,3 +71,12 @@ nmap <Leader><Tab> :Switch<CR>
 
 "Same as `gi`, but doesn't go into insert mode.
 nmap <leader>gi `^
+
+" Shows highlight groups under cursor.
+nmap <leader>sp :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
