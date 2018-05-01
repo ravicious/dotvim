@@ -93,7 +93,7 @@ augroup rainbow_lisp
 augroup END
 
 " Colorscheme and GUI
-colorscheme white-sand
+colorscheme alabaster
 if !has('gui_vimr')
   "vimr sets the font in its own settings.
   set guifont=Fira\ Code:h12
