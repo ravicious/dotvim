@@ -54,6 +54,12 @@ let g:python_host_prog  = '/usr/bin/python'
 au FocusGained * checktime
 set noautoread
 
+" fzf
+"=========================
+if executable('fzf')
+  set rtp+=/usr/local/opt/fzf
+endif
+
 
 " NeoBundle
 "=========================

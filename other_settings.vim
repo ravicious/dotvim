@@ -61,24 +61,14 @@ let g:ycm_filetype_specific_completion_to_disable = {
 let g:ycm_python_binary_path = '/usr/local/bin/python3'
 let g:ycm_seed_identifiers_with_syntax = 1
 
+" fzf.vim
+let g:fzf_layout = { 'down': '~33%' }
+
 " ripgrep
 if executable('rg')
   " Use ripgrep over grep
   set grepprg=rg\ --vimgrep
-
-  " Use ripgrep in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'rg --files --hidden --follow --glob "!.git/*" %s'
-
-  " ripgrep is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-
-  let g:abbrev_matcher_grep_exe = 'rg'
-  let g:abbrev_matcher_grep_args = '--line-number'
 endif
-
-"ctrlp
-let g:ctrlp_match_func = { 'match': 'ctrlp#abbrev_matcher#match' }
-let g:ctrlp_lazy_update = 1
 
 "treat .md files as markdown files
 autocmd BufRead,BufNewFile *.md set filetype=markdown

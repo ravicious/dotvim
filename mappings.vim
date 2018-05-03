@@ -10,14 +10,8 @@ nmap <silent> <c-w>; :wincmd l<CR>
 "Map space to leader
 let mapleader = "\<Space>"
 
-"Change the default mapping of ctrlp.vim
-let g:ctrlp_map = '<c-f>'
-
-"Make ctrlp.vim ignore specific files
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.hg$\|\.svn$',
-  \ 'file': '\.pyc$\|\.pyo$\|\.rbc$|\.rbo$\|\.class$\|\.o$\|\~$\',
-  \ }
+"Change the default mappings of fzf.vim
+nmap <c-f> :FZF<CR>
 
 "Make <c-l> clear the highlight as well as redraw
 nnoremap <C-L> :nohls<CR><C-L>

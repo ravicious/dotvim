@@ -7,8 +7,7 @@ NeoBundle 'Shougo/vimproc', {
       \    },
       \ }
 
-NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'sergei-dyshel/vim-abbrev-matcher'
+NeoBundle 'junegunn/fzf.vim'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'Valloric/YouCompleteMe'
