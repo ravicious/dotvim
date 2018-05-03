@@ -92,8 +92,10 @@ exe 'hi Underlined guifg='s:keyword' gui=underline'
 
 " Ruby Highlighting
 exe 'hi rubyClassName guifg='s:type
+exe 'hi rubyModuleName guifg='s:type
 exe 'hi rubyConstant guifg='s:keyword
 exe 'hi rubyClassDeclaration guifg='s:keyword
+exe 'hi rubyModuleDeclaration guifg='s:keyword
 exe 'hi rubyClassVariable guifg='s:keyword
 exe 'hi rubyPseudoVariable guifg='s:const
 exe 'hi rubySymbol guifg='s:str
