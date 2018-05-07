@@ -97,6 +97,7 @@ exe 'hi rubyConstant guifg='s:keyword
 exe 'hi rubyClassDeclaration guifg='s:keyword
 exe 'hi rubyModuleDeclaration guifg='s:keyword
 exe 'hi rubyClassVariable guifg='s:keyword
+exe 'hi rubyInstanceVariable guifg='s:keyword
 exe 'hi rubyPseudoVariable guifg='s:const
 exe 'hi rubySymbol guifg='s:str
 exe 'hi rubyRegexp guifg='s:const
