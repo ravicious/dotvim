@@ -127,6 +127,12 @@ exe 'hi jsFuncCall guifg='s:func
 exe 'hi htmlLink guifg='s:var' gui=underline'
 exe 'hi htmlStatement guifg='s:keyword
 exe 'hi htmlSpecialTagName guifg='s:keyword
+hi htmlH1 gui=NONE
+hi htmlH2 gui=NONE
+hi htmlH3 gui=NONE
+hi htmlH4 gui=NONE
+hi htmlH5 gui=NONE
+hi htmlH6 gui=NONE
 
 " Markdown Highlighting
 exe 'hi mkdCode guifg='s:builtin
