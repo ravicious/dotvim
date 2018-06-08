@@ -144,8 +144,5 @@ let g:javascript_enable_domhtmlcss = 1
 " Enable vim-closetag for the following filetypes
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js,*.jsx,*.erb'
 
-" elm-vim
-let g:elm_format_autosave = 1
-
 set synmaxcol=256
 syntax on
