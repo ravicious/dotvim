@@ -65,3 +65,6 @@ function! <SID>SynStack()
   endif
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
+
+" Turn off ex mode mapping
+nnoremap Q <nop>
