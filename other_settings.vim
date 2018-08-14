@@ -119,6 +119,7 @@ augroup fmt
 augroup END
 let g:neoformat_enabled_json = []
 let g:neoformat_enabled_scss = []
+let g:neoformat_enabled_javascript = []
 let g:neoformat_only_msg_on_error = 1
 " Example Neoformat formatter options for JavaScript:
 "   let g:neoformat_enabled_javascript = ['prettier']
