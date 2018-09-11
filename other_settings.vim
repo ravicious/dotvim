@@ -47,6 +47,7 @@ runtime macros/matchit.vim
 let g:airline_powerline_fonts = 1
 let g:airline_theme='light'
 let g:airline#extensions#neomake#enabled = 1
+let g:airline_section_a = airline#section#create_left(['mode', 'crypt', 'paste', 'iminsert'])
 
 "YouCompleteMe
 " Enable identifier completion after 3 chars.
