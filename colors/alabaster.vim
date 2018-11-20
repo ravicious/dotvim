@@ -1,6 +1,7 @@
 " Vim color file
 " alabaster
 " Created by Rafał Cieślak with ThemeCreator (https://github.com/mswift42/themecreator)
+" Based on Alabaster theme by Nikita Prokopov https://github.com/tonsky/vscode-theme-alabaster
 
 hi clear
 
