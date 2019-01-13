@@ -48,7 +48,7 @@ set wildignore+=*.swp,*~,._*
 
 " nvim
 "=========================
-let g:python_host_prog  = '/usr/bin/python'
+let g:loaded_python_provider = 1
 " neovim doesn't check if the file was changed by default
 " https://github.com/qvacua/vimr/issues/242#issuecomment-318549413
 au FocusGained * checktime
