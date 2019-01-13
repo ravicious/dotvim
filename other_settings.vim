@@ -84,6 +84,7 @@ augroup rainbow_lisp
 augroup END
 
 " Colorscheme and GUI
+set bg=light
 colorscheme alabaster
 if !has('gui_vimr')
   "vimr sets the font in its own settings.
