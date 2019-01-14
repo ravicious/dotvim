@@ -60,6 +60,10 @@ if executable('fzf')
   set rtp+=/usr/local/opt/fzf
 endif
 
+" chruby
+"=========================
+set shell=$SHELL
+
 
 " NeoBundle
 "=========================
