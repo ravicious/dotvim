@@ -16,6 +16,9 @@ nnoremap <C-n> :call NumberToggle()<cr>
 " Always show context around the current line
 set scrolloff=5
 
+" Enable mouse selection
+set mouse=a
+
 " Get rid of unnecessary gui options
 set guioptions=ac
 
