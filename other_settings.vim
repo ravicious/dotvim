@@ -154,3 +154,5 @@ syntax on
 
 " Show quick preview of off-screen substitution matches.
 set inccommand=split
+
+let g:highlightedyank_highlight_duration = 500
