@@ -151,3 +151,6 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js,*.jsx,*.erb'
 
 set synmaxcol=256
 syntax on
+
+" Show quick preview of off-screen substitution matches.
+set inccommand=split
