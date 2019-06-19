@@ -68,3 +68,7 @@ endfunc
 
 " Turn off ex mode mapping
 nnoremap Q <nop>
+
+" sideways.vim
+nnoremap <c-Left> :SidewaysLeft<cr>
+nnoremap <c-Right> :SidewaysRight<cr>
