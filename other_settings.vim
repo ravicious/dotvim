@@ -156,3 +156,6 @@ syntax on
 set inccommand=split
 
 let g:highlightedyank_highlight_duration = 500
+
+" Edit crontab in place
+autocmd filetype crontab setlocal nobackup nowritebackup
