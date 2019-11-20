@@ -88,13 +88,7 @@ augroup END
 set bg=light
 colorscheme alabaster
 if !has('gui_vimr')
-  "vimr sets the font in its own settings.
-  set guifont=Fira\ Code:h14
   colorscheme alabaster-256
-endif
-
-if has('gui_macvim')
-  set macligatures
 endif
 
 " Row/column settings
