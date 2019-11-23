@@ -154,3 +154,12 @@ let g:highlightedyank_highlight_duration = 500
 
 " Edit crontab in place
 autocmd filetype crontab setlocal nobackup nowritebackup
+
+" Use the old regex engine for Ruby files. Apparently vim's Ruby syntax is using something that's
+" slower on the newer engine, so this should improve performance.
+" https://stackoverflow.com/a/38616348/742872
+augroup ft_rb
+    au!
+    au FileType ruby setlocal re=1
+    au FileType eruby setlocal re=1
+augroup END
