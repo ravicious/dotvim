@@ -72,3 +72,16 @@ nnoremap Q <nop>
 " sideways.vim
 nnoremap <c-Left> :SidewaysLeft<cr>
 nnoremap <c-Right> :SidewaysRight<cr>
+
+" Search for selected text, forwards or backwards.
+" https://vim.fandom.com/wiki/Search_for_visually_selected_text
+vnoremap <silent> * :<C-U>
+  \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
+  \gvy/<C-R><C-R>=substitute(
+  \escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
+  \gV:call setreg('"', old_reg, old_regtype)<CR>
+vnoremap <silent> # :<C-U>
+  \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
+  \gvy?<C-R><C-R>=substitute(
+  \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
+  \gV:call setreg('"', old_reg, old_regtype)<CR>
