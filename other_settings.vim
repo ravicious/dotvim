@@ -108,9 +108,6 @@ let g:ale_linters = {
       \ 'html': [],
       \}
 
-" Turn off vim-flow checks, since Ale handles that.
-let g:flow#enable = 0
-
 " Neoformat
 augroup fmt
   autocmd!
