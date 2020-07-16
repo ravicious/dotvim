@@ -103,9 +103,11 @@ let g:vim_jsx_pretty_colorful_config = 1
 let g:ale_echo_msg_format = '%linter%: %s'
 let g:ale_lint_on_text_changed = 'normal'
 let g:ale_lint_on_insert_leave = 1
-" Turn off HTML linters.
+" Turn off default linters.
 let g:ale_linters = {
       \ 'html': [],
+      \ 'javascript': [],
+      \ 'ruby': ['ruby'],
       \}
 
 " Neoformat
