@@ -163,3 +163,6 @@ augroup ft_rb
     au FileType ruby setlocal re=1
     au FileType eruby setlocal re=1
 augroup END
+
+" Show filename in title in GUIs.
+set title
