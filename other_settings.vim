@@ -166,3 +166,5 @@ augroup END
 
 " Show filename in title in GUIs.
 set title
+
+set guifont=Comic\ Code\ Ligatures:h13
