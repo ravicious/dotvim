@@ -168,3 +168,5 @@ augroup END
 set title
 
 set guifont=Comic\ Code\ Ligatures:h13
+" Change linespace for neovim-qt.
+set linespace=-1
