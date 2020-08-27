@@ -16,8 +16,10 @@ inoremap II <Esc>I
 inoremap AA <Esc>A
 inoremap OO <Esc>O
 
-" format the entire file
+" Format the entire file
 nnoremap <leader>fef :normal! gg=G``<CR>
+" Fix entire file with ale.
+nnoremap <leader>fix :ALEFix<CR>
 
 " Some helpers to edit mode
 " http://vimcasts.org/e/14
