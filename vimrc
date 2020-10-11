@@ -75,7 +75,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
 " All bundles are in bundle/bundles file
-source ~/.vim/bundles.vim
+source ~/.vim/plugins.vim
 call neobundle#end()
 filetype plugin indent on
 filetype detect " Required by matchit
