@@ -168,3 +168,4 @@ augroup END
 " Show filename in title in GUIs.
 set title
 
+set startofline
