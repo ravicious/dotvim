@@ -104,6 +104,8 @@ let g:vim_jsx_pretty_colorful_config = 1
 let g:ale_echo_msg_format = '%linter%: %s'
 let g:ale_lint_on_text_changed = 'normal'
 let g:ale_lint_on_insert_leave = 1
+let g:ale_open_list = 0
+let g:ale_rust_cargo_use_clippy = 1
 " Turn off default linters.
 let g:ale_linters = {
       \ 'html': [],
@@ -135,9 +137,6 @@ let g:neoformat_only_msg_on_error = 1
 "         \ 'args': ['--stdin', '--trailing-comma es5', '--single-quote', '--print-width 100', '--bracket-spacing', '--parser postcss', '--tab-width 2', '--no-semi'],
 "         \ 'stdin': 1,
 "         \ }
-
-" Enable Rust autoformating
-let g:rustfmt_autosave = 1
 
 " Enables HTML/CSS syntax highlighting in JavaScript files.
 let g:javascript_enable_domhtmlcss = 1
