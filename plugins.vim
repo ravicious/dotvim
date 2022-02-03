@@ -37,3 +37,5 @@ NeoBundle 'tpope/vim-speeddating'
 NeoBundle 'machakann/vim-highlightedyank'
 NeoBundle 'AndrewRadev/sideways.vim'
 NeoBundle 'AndrewRadev/tagalong.vim'
+NeoBundle 'cespare/vim-toml', { 'rev' : 'main' }
+NeoBundle 'mustache/vim-mustache-handlebars'
