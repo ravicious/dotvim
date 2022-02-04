@@ -58,6 +58,7 @@ set noautoread
 "=========================
 if executable('fzf')
   set rtp+=/usr/local/opt/fzf
+  set rtp+=/opt/homebrew/opt/fzf
 endif
 
 " chruby
