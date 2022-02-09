@@ -15,4 +15,5 @@
   * `pip3 install --upgrade --user neovim`
 6. Install [Fira Code](https://github.com/tonsky/FiraCode) font.
 8. `ln -s ~/.vim/init.vim ~/.config/nvim/init.vim`
+9. `ln -s ~/.vim/coc-settings.json ~/.config/nvim/coc-settings.json`
 7. Turn back on fsck-related git options.

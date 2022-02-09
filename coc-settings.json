@@ -1,0 +1,12 @@
+{
+  "hover.floatConfig": {
+    "border": true
+  },
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "html",
+    "json",
+    "javascript",
+    "typescript"
+  ]
+}

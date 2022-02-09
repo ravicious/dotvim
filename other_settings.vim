@@ -114,10 +114,10 @@ let g:ale_linters = {
       \}
 
 " Neoformat
-augroup fmt
-  autocmd!
-  autocmd BufWritePre * Neoformat
-augroup END
+" augroup fmt
+"   autocmd!
+"   autocmd BufWritePre * Neoformat
+" augroup END
 let g:neoformat_enabled_json = []
 let g:neoformat_enabled_scss = []
 let g:neoformat_enabled_javascript = []
@@ -168,3 +168,16 @@ augroup END
 set title
 
 set startofline
+
+" coc-related settings
+" https://github.com/neoclide/coc.nvim/tree/v0.0.80
+set updatetime=300
+set shortmess+=c
+set signcolumn=yes
+
+let g:coc_global_extensions = [
+      \'coc-json', 'coc-tsserver', 'coc-prettier', 'coc-go'
+      \]
+
+" coc-prettier
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
