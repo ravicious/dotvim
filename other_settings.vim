@@ -176,7 +176,7 @@ set shortmess+=c
 set signcolumn=yes
 
 let g:coc_global_extensions = [
-      \'coc-json', 'coc-tsserver', 'coc-prettier', 'coc-go'
+      \'coc-json', 'coc-tsserver', 'coc-prettier', 'coc-go', 'coc-eslint'
       \]
 
 " coc-prettier
