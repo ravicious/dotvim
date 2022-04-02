@@ -183,3 +183,15 @@ let g:airline#extensions#coc#enabled = 0
 
 " coc-prettier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+" vim-go
+let g:go_code_completion_enabled = 0
+let g:go_fmt_autosave = 0
+let g:go_imports_autosave = 0
+let g:go_mod_fmt_autosave = 0
+let g:go_doc_keywordprg_enabled = 0
+let g:go_def_mapping_enabled = 0
+let g:go_get_update = 0
+let g:go_gopls_enabled = 0
+let g:go_list_autoclose = 0
+let g:go_template_autocreate = 0

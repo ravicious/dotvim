@@ -40,3 +40,4 @@ NeoBundle 'AndrewRadev/tagalong.vim'
 NeoBundle 'cespare/vim-toml', { 'rev' : 'main' }
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'neoclide/coc.nvim', { 'rev' : 'master', 'build': { 'others': 'yarn install --frozen-lockfile'} }
+NeoBundle 'fatih/vim-go'
