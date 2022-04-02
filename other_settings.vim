@@ -179,5 +179,7 @@ let g:coc_global_extensions = [
       \'coc-json', 'coc-tsserver', 'coc-prettier', 'coc-go', 'coc-eslint'
       \]
 
+let g:airline#extensions#coc#enabled = 0
+
 " coc-prettier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
