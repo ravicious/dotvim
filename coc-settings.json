@@ -8,5 +8,7 @@
     "json",
     "javascript",
     "typescript"
-  ]
+  ],
+  "coc.source.around.firstMatch": false,
+  "coc.source.buffer.firstMatch": false
 }
