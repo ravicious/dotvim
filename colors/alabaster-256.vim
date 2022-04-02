@@ -27,7 +27,7 @@ endfunction
 
 if 0
 elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^screen") && exists("g:CSApprox_konsole") && g:CSApprox_konsole) || (&term =~? "^konsole" && s:old_kde())
-    CSAHi Normal term=NONE cterm=NONE ctermbg=231 ctermfg=235 gui=NONE guibg=#F7F7F7 guifg=#222222
+    CSAHi Normal term=NONE cterm=NONE ctermbg=231 ctermfg=16 gui=NONE guibg=#F7F7F7 guifg=#000000
     CSAHi CocListWhiteCyan term=NONE cterm=NONE ctermbg=71 ctermfg=138 gui=NONE guibg=#689d6a guifg=#a89984
     CSAHi CocListWhiteYellow term=NONE cterm=NONE ctermbg=172 ctermfg=138 gui=NONE guibg=#d79921 guifg=#a89984
     CSAHi CocListWhiteMagenta term=NONE cterm=NONE ctermbg=132 ctermfg=138 gui=NONE guibg=#b16286 guifg=#a89984
@@ -36,16 +36,11 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi CocListBgWhite term=NONE cterm=NONE ctermbg=138 ctermfg=fg gui=NONE guibg=#a89984 guifg=fg
     CSAHi CocListCyanBlack term=NONE cterm=NONE ctermbg=235 ctermfg=71 gui=NONE guibg=#282828 guifg=#689d6a
     CSAHi CocListCyanBlue term=NONE cterm=NONE ctermbg=66 ctermfg=71 gui=NONE guibg=#458588 guifg=#689d6a
-    CSAHi jsFuncArgs term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi vimMenuPriority term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
+    CSAHi jsFuncArgs term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi MatchParen term=underline cterm=underline ctermbg=51 ctermfg=208 gui=underline guibg=Cyan guifg=#ff8800
     CSAHi Comment term=NONE cterm=NONE ctermbg=bg ctermfg=131 gui=NONE guibg=bg guifg=#AA3731
-    CSAHi Underlined term=underline cterm=underline ctermbg=bg ctermfg=235 gui=underline guibg=bg guifg=#222222
+    CSAHi Underlined term=underline cterm=underline ctermbg=bg ctermfg=16 gui=underline guibg=bg guifg=#000000
     CSAHi Ignore term=NONE cterm=NONE ctermbg=bg ctermfg=231 gui=NONE guibg=bg guifg=bg
-    CSAHi vimOnlyCommand term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimStdPlugin term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimOnlyOption term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimTermOption term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi SpecialKey term=NONE cterm=NONE ctermbg=254 ctermfg=233 gui=NONE guibg=#e3e3e3 guifg=#141414
     CSAHi TermCursor term=reverse cterm=reverse ctermbg=bg ctermfg=fg gui=reverse guibg=bg guifg=fg
     CSAHi TermCursorNC term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
@@ -65,18 +60,16 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi airline_term_red term=NONE cterm=NONE ctermbg=234 ctermfg=196 gui=NONE guibg=#202020 guifg=#ff0000
     CSAHi airline_error term=NONE cterm=NONE ctermbg=88 ctermfg=16 gui=NONE guibg=#990000 guifg=#000000
     CSAHi airline_error_bold term=bold cterm=bold ctermbg=88 ctermfg=16 gui=bold guibg=#990000 guifg=#000000
-    CSAHi vimSyncLinebreak term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi DiffText term=bold cterm=bold ctermbg=235 ctermfg=235 gui=bold guibg=#222222 guifg=#222222
+    CSAHi DiffText term=bold cterm=bold ctermbg=16 ctermfg=16 gui=bold guibg=#000000 guifg=#000000
     CSAHi SignColumn term=NONE cterm=NONE ctermbg=231 ctermfg=18 gui=NONE guibg=#F7F7F7 guifg=DarkBlue
     CSAHi Conceal term=NONE cterm=NONE ctermbg=248 ctermfg=252 gui=NONE guibg=DarkGrey guifg=LightGrey
     CSAHi SpellBad term=undercurl cterm=undercurl ctermbg=bg ctermfg=196 gui=undercurl guibg=bg guifg=fg guisp=Red
     CSAHi SpellCap term=undercurl cterm=undercurl ctermbg=bg ctermfg=21 gui=undercurl guibg=bg guifg=fg guisp=Blue
     CSAHi SpellRare term=undercurl cterm=undercurl ctermbg=bg ctermfg=201 gui=undercurl guibg=bg guifg=fg guisp=Magenta
     CSAHi SpellLocal term=undercurl cterm=undercurl ctermbg=bg ctermfg=30 gui=undercurl guibg=bg guifg=fg guisp=DarkCyan
-    CSAHi Pmenu term=NONE cterm=NONE ctermbg=254 ctermfg=235 gui=NONE guibg=#e3e3e3 guifg=#222222
+    CSAHi Pmenu term=NONE cterm=NONE ctermbg=254 ctermfg=16 gui=NONE guibg=#e3e3e3 guifg=#000000
     CSAHi PmenuSel term=NONE cterm=NONE ctermbg=252 ctermfg=fg gui=NONE guibg=#cfcfcf guifg=fg
     CSAHi PmenuSbar term=NONE cterm=NONE ctermbg=250 ctermfg=fg gui=NONE guibg=Grey guifg=fg
-    CSAHi vimSyncRegion term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi CocListCyanGreen term=NONE cterm=NONE ctermbg=100 ctermfg=71 gui=NONE guibg=#98971a guifg=#689d6a
     CSAHi CocListCyanGrey term=NONE cterm=NONE ctermbg=102 ctermfg=71 gui=NONE guibg=#928374 guifg=#689d6a
     CSAHi CocListCyanWhite term=NONE cterm=NONE ctermbg=138 ctermfg=71 gui=NONE guibg=#a89984 guifg=#689d6a
@@ -88,17 +81,6 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi CocListBgCyan term=NONE cterm=NONE ctermbg=71 ctermfg=fg gui=NONE guibg=#689d6a guifg=fg
     CSAHi CocListYellowBlack term=NONE cterm=NONE ctermbg=235 ctermfg=172 gui=NONE guibg=#282828 guifg=#d79921
     CSAHi NvimInternalError term=NONE cterm=NONE ctermbg=9 ctermfg=9 gui=NONE guibg=Red guifg=Red
-    CSAHi vimOnlyHLGroup term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimGlobal term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi airline_b_to_airline_c_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=252 gui=NONE guibg=#ffffff guifg=#d0d0d0
-    CSAHi vimHiKeyList term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi airline_b_to_airline_c2 term=NONE cterm=NONE ctermbg=231 ctermfg=45 gui=NONE guibg=#F7F7F7 guifg=#00dfff
-    CSAHi airline_c3_to_airline_x term=NONE cterm=NONE ctermbg=231 ctermfg=159 gui=NONE guibg=#F7F7F7 guifg=#afffff
-    CSAHi airline_c2_to_airline_x term=NONE cterm=NONE ctermbg=231 ctermfg=159 gui=NONE guibg=#F7F7F7 guifg=#afffff
-    CSAHi vimHiTermcap term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimCommentTitleLeader term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimLuaRegion term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi luaInnerComment term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi airline_error_red term=NONE cterm=NONE ctermbg=88 ctermfg=196 gui=NONE guibg=#990000 guifg=#ff0000
     CSAHi airline_a term=NONE cterm=NONE ctermbg=27 ctermfg=231 gui=NONE guibg=#005fff guifg=#ffffff
     CSAHi airline_a_bold term=bold cterm=bold ctermbg=27 ctermfg=231 gui=bold guibg=#005fff guifg=#ffffff
@@ -117,7 +99,6 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi CursorLine term=NONE cterm=NONE ctermbg=254 ctermfg=fg gui=NONE guibg=#e3e3e3 guifg=fg
     CSAHi ColorColumn term=NONE cterm=NONE ctermbg=254 ctermfg=fg gui=NONE guibg=#e3e3e3 guifg=fg
     CSAHi NormalNC term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimMapLhs term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi CocListYellowBlue term=NONE cterm=NONE ctermbg=66 ctermfg=172 gui=NONE guibg=#458588 guifg=#d79921
     CSAHi CocListYellowGreen term=NONE cterm=NONE ctermbg=100 ctermfg=172 gui=NONE guibg=#98971a guifg=#d79921
     CSAHi CocListYellowGrey term=NONE cterm=NONE ctermbg=102 ctermfg=172 gui=NONE guibg=#928374 guifg=#d79921
@@ -128,16 +109,6 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi CocListYellowRed term=NONE cterm=NONE ctermbg=160 ctermfg=172 gui=NONE guibg=#cc241d guifg=#d79921
     CSAHi CocListFgYellow term=NONE cterm=NONE ctermbg=bg ctermfg=172 gui=NONE guibg=bg guifg=#d79921
     CSAHi CocListBgYellow term=NONE cterm=NONE ctermbg=172 ctermfg=fg gui=NONE guibg=#d79921 guifg=fg
-    CSAHi vimEcho term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimIsCommand term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimExtCmd term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimFilter term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSet term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi luaIfThen term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi luaElseifThen term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi luaThenEnd term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi luaBlock term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi luaLoopBlock term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi airline_warning term=NONE cterm=NONE ctermbg=166 ctermfg=16 gui=NONE guibg=#df5f00 guifg=#000000
     CSAHi airline_warning_bold term=bold cterm=bold ctermbg=166 ctermfg=16 gui=bold guibg=#df5f00 guifg=#000000
     CSAHi airline_warning_red term=NONE cterm=NONE ctermbg=166 ctermfg=196 gui=NONE guibg=#df5f00 guifg=#ff0000
@@ -148,16 +119,13 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi airline_y_to_airline_z term=NONE cterm=NONE ctermbg=45 ctermfg=27 gui=NONE guibg=#00dfff guifg=#005fff
     CSAHi airline_z_to_airline_warning term=NONE cterm=NONE ctermbg=27 ctermfg=166 gui=NONE guibg=#005fff guifg=#df5f00
     CSAHi airline_warning_to_airline_error term=NONE cterm=NONE ctermbg=166 ctermfg=88 gui=NONE guibg=#df5f00 guifg=#990000
-    CSAHi vimMapRhsExtend term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimMenuBang term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi MsgArea term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi RedrawDebugNormal term=reverse cterm=reverse ctermbg=bg ctermfg=fg gui=reverse guibg=bg guifg=fg
     CSAHi RedrawDebugClear term=NONE cterm=NONE ctermbg=226 ctermfg=fg gui=NONE guibg=Yellow guifg=fg
     CSAHi RedrawDebugComposed term=NONE cterm=NONE ctermbg=46 ctermfg=fg gui=NONE guibg=Green guifg=fg
     CSAHi RedrawDebugRecompose term=NONE cterm=NONE ctermbg=196 ctermfg=fg gui=NONE guibg=Red guifg=fg
-    CSAHi Cursor term=NONE cterm=NONE ctermbg=235 ctermfg=231 gui=NONE guibg=#222222 guifg=#F7F7F7
-    CSAHi lCursor term=NONE cterm=NONE ctermbg=235 ctermfg=231 gui=NONE guibg=fg guifg=bg
-    CSAHi vimMapRhs term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
+    CSAHi Cursor term=NONE cterm=NONE ctermbg=16 ctermfg=231 gui=NONE guibg=#000000 guifg=#F7F7F7
+    CSAHi lCursor term=NONE cterm=NONE ctermbg=16 ctermfg=231 gui=NONE guibg=fg guifg=bg
     CSAHi CocListMagentaBlack term=NONE cterm=NONE ctermbg=235 ctermfg=132 gui=NONE guibg=#282828 guifg=#b16286
     CSAHi CocListMagentaBlue term=NONE cterm=NONE ctermbg=66 ctermfg=132 gui=NONE guibg=#458588 guifg=#b16286
     CSAHi CocListMagentaGreen term=NONE cterm=NONE ctermbg=100 ctermfg=132 gui=NONE guibg=#98971a guifg=#b16286
@@ -168,21 +136,12 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi CocListMagentaMagenta term=NONE cterm=NONE ctermbg=132 ctermfg=132 gui=NONE guibg=#b16286 guifg=#b16286
     CSAHi CocListMagentaRed term=NONE cterm=NONE ctermbg=160 ctermfg=132 gui=NONE guibg=#cc241d guifg=#b16286
     CSAHi CocListFgMagenta term=NONE cterm=NONE ctermbg=bg ctermfg=132 gui=NONE guibg=bg guifg=#b16286
-    CSAHi vimComFilter term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimUserCmd term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimCmdSep term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimClusterName term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi luaParen term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi luaTableBlock term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi luaFunctionBlock term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi airline_c1_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=248 gui=NONE guibg=#ffffff guifg=#a8a8a8
     CSAHi CocErrorLine term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi CocWarningLine term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi CocInfoLine term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi CocHintLine term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi CocSelectedLine term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi airline_c1_to_airline_x term=NONE cterm=NONE ctermbg=231 ctermfg=159 gui=NONE guibg=#F7F7F7 guifg=#afffff
-    CSAHi vimSetEqual term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi FloatShadow term=NONE cterm=NONE ctermbg=16 ctermfg=fg gui=NONE guibg=Black guifg=fg
     CSAHi FloatShadowThrough term=NONE cterm=NONE ctermbg=16 ctermfg=fg gui=NONE guibg=Black guifg=fg
     CSAHi Error term=NONE cterm=NONE ctermbg=196 ctermfg=231 gui=NONE guibg=Red guifg=White
@@ -191,8 +150,6 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi Constant term=NONE cterm=NONE ctermbg=bg ctermfg=97 gui=NONE guibg=bg guifg=#7A3E9D
     CSAHi Character term=NONE cterm=NONE ctermbg=bg ctermfg=64 gui=NONE guibg=bg guifg=#448C27
     CSAHi Number term=NONE cterm=NONE ctermbg=bg ctermfg=97 gui=NONE guibg=bg guifg=#7A3E9D
-    CSAHi vimMenuMap term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimMenuRhs term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi CocListBgMagenta term=NONE cterm=NONE ctermbg=132 ctermfg=fg gui=NONE guibg=#b16286 guifg=fg
     CSAHi CocListRedBlack term=NONE cterm=NONE ctermbg=235 ctermfg=160 gui=NONE guibg=#282828 guifg=#cc241d
     CSAHi CocListRedBlue term=NONE cterm=NONE ctermbg=66 ctermfg=160 gui=NONE guibg=#458588 guifg=#cc241d
@@ -203,38 +160,25 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi CocListRedYellow term=NONE cterm=NONE ctermbg=172 ctermfg=160 gui=NONE guibg=#d79921 guifg=#cc241d
     CSAHi CocListRedMagenta term=NONE cterm=NONE ctermbg=132 ctermfg=160 gui=NONE guibg=#b16286 guifg=#cc241d
     CSAHi CocListRedRed term=NONE cterm=NONE ctermbg=160 ctermfg=160 gui=NONE guibg=#cc241d guifg=#cc241d
-    CSAHi vimFiletype term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimAugroup term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimExecute term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimFunction term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi PreProc term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
+    CSAHi PreProc term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi CocCursorTransparent term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi Define term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi vimAugroupSyncA term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi StorageClass term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi helpNormal term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
+    CSAHi Define term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi StorageClass term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi rubyClassName term=NONE cterm=NONE ctermbg=bg ctermfg=61 gui=NONE guibg=bg guifg=#325CC0
     CSAHi rubyModuleName term=NONE cterm=NONE ctermbg=bg ctermfg=61 gui=NONE guibg=bg guifg=#325CC0
-    CSAHi rubyConstant term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi rubyClassDeclaration term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi rubyModuleDeclaration term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
+    CSAHi rubyConstant term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi rubyClassDeclaration term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi rubyModuleDeclaration term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi Function term=NONE cterm=NONE ctermbg=bg ctermfg=61 gui=NONE guibg=bg guifg=#325CC0
-    CSAHi rubyInstanceVariable term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
+    CSAHi rubyInstanceVariable term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi rubyPseudoVariable term=NONE cterm=NONE ctermbg=bg ctermfg=97 gui=NONE guibg=bg guifg=#7A3E9D
     CSAHi rubySymbol term=NONE cterm=NONE ctermbg=bg ctermfg=64 gui=NONE guibg=bg guifg=#448C27
     CSAHi rubyRegexp term=NONE cterm=NONE ctermbg=bg ctermfg=97 gui=NONE guibg=bg guifg=#7A3E9D
-    CSAHi Label term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi Operator term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi Keyword term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi vimGroupList term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
+    CSAHi Label term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi Operator term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi Keyword term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi CocListFgRed term=NONE cterm=NONE ctermbg=bg ctermfg=160 gui=NONE guibg=bg guifg=#cc241d
     CSAHi CocListBgRed term=NONE cterm=NONE ctermbg=160 ctermfg=fg gui=NONE guibg=#cc241d guifg=fg
-    CSAHi vimSubst2 term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSubstRep4 term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimOperParen term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimCollClass term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimRegion term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSynLine term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi CocListBlackBlack term=NONE cterm=NONE ctermbg=235 ctermfg=235 gui=NONE guibg=#282828 guifg=#282828
     CSAHi CocListBlackBlue term=NONE cterm=NONE ctermbg=66 ctermfg=235 gui=NONE guibg=#458588 guifg=#282828
     CSAHi CocListBlackGreen term=NONE cterm=NONE ctermbg=100 ctermfg=235 gui=NONE guibg=#98971a guifg=#282828
@@ -242,32 +186,24 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi CocListBlackWhite term=NONE cterm=NONE ctermbg=138 ctermfg=235 gui=NONE guibg=#a89984 guifg=#282828
     CSAHi CocListBlackCyan term=NONE cterm=NONE ctermbg=71 ctermfg=235 gui=NONE guibg=#689d6a guifg=#282828
     CSAHi CocListBlackYellow term=NONE cterm=NONE ctermbg=172 ctermfg=235 gui=NONE guibg=#d79921 guifg=#282828
-    CSAHi helpGraphic term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi airline_c2_to_airline_x_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=231 gui=NONE guibg=#ffffff guifg=#ffffff
     CSAHi rubyRegexpQuantifier term=NONE cterm=NONE ctermbg=bg ctermfg=64 gui=NONE guibg=bg guifg=#448C27
     CSAHi rubyRegexpAnchor term=NONE cterm=NONE ctermbg=bg ctermfg=243 gui=NONE guibg=bg guifg=#777777
     CSAHi rubyRegexpDelimiter term=NONE cterm=NONE ctermbg=bg ctermfg=243 gui=NONE guibg=bg guifg=#777777
     CSAHi rubyRegexpCharClass term=NONE cterm=NONE ctermbg=bg ctermfg=243 gui=NONE guibg=bg guifg=#777777
-    CSAHi pythonBuiltinFunc term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi goBuiltins term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
+    CSAHi pythonBuiltinFunc term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi goBuiltins term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi goImportString term=NONE cterm=NONE ctermbg=bg ctermfg=61 gui=NONE guibg=bg guifg=#325CC0
     CSAHi goFormatSpecifier term=NONE cterm=NONE ctermbg=bg ctermfg=97 gui=NONE guibg=bg guifg=#7A3E9D
-    CSAHi jsBuiltins term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi jsFunction term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
+    CSAHi jsBuiltins term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi jsFunction term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi Type term=NONE cterm=NONE ctermbg=bg ctermfg=61 gui=NONE guibg=bg guifg=#325CC0
-    CSAHi Typedef term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi vimIskList term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
+    CSAHi Typedef term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi airline_y_inactive term=NONE cterm=NONE ctermbg=252 ctermfg=245 gui=NONE guibg=#d0d0d0 guifg=#8a8a8a
-    CSAHi vimAuSyntax term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi airline_y_inactive_bold term=bold cterm=bold ctermbg=252 ctermfg=245 gui=bold guibg=#d0d0d0 guifg=#8a8a8a
-    CSAHi vimUsrCmd term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi airline_y_inactive_red term=NONE cterm=NONE ctermbg=252 ctermfg=196 gui=NONE guibg=#d0d0d0 guifg=#ff0000
     CSAHi airline_z_inactive term=NONE cterm=NONE ctermbg=249 ctermfg=241 gui=NONE guibg=#b2b2b2 guifg=#666666
     CSAHi airline_z_inactive_bold term=bold cterm=bold ctermbg=249 ctermfg=241 gui=bold guibg=#b2b2b2 guifg=#666666
-    CSAHi airline_c1_to_airline_x_inactive_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=231 gui=NONE guibg=#ffffff guifg=#ffffff
-    CSAHi airline_c1_to_airline_x_inactive_inactive_bold term=bold cterm=bold ctermbg=231 ctermfg=231 gui=bold guibg=#ffffff guifg=#ffffff
     CSAHi airline_z_inactive_red term=NONE cterm=NONE ctermbg=249 ctermfg=196 gui=NONE guibg=#b2b2b2 guifg=#ff0000
-    CSAHi airline_c2_inactive_bold term=bold cterm=bold ctermbg=231 ctermfg=248 gui=bold guibg=#ffffff guifg=#a8a8a8
     CSAHi airline_term_inactive term=NONE cterm=NONE ctermbg=234 ctermfg=158 gui=NONE guibg=#202020 guifg=#9cffd3
     CSAHi CocListBlackMagenta term=NONE cterm=NONE ctermbg=132 ctermfg=235 gui=NONE guibg=#b16286 guifg=#282828
     CSAHi CocListBlackRed term=NONE cterm=NONE ctermbg=160 ctermfg=235 gui=NONE guibg=#cc241d guifg=#282828
@@ -279,39 +215,22 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi CocListBlueGrey term=NONE cterm=NONE ctermbg=102 ctermfg=66 gui=NONE guibg=#928374 guifg=#458588
     CSAHi CocListBlueWhite term=NONE cterm=NONE ctermbg=138 ctermfg=66 gui=NONE guibg=#a89984 guifg=#458588
     CSAHi CocListBlueCyan term=NONE cterm=NONE ctermbg=71 ctermfg=66 gui=NONE guibg=#689d6a guifg=#458588
-    CSAHi vimAutoCmdSpace term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSynKeyRegion term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSynMatchRegion term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSynMtchCchar term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSynMtchGroup term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi jsGlobalObjects term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi jsAssignmentExps term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi jsObjectProp term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi Tag term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi Special term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
+    CSAHi jsGlobalObjects term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi jsAssignmentExps term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi jsObjectProp term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi Tag term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi Special term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi jsRegexpQuantifier term=NONE cterm=NONE ctermbg=bg ctermfg=64 gui=NONE guibg=bg guifg=#448C27
     CSAHi jsFuncCall term=NONE cterm=NONE ctermbg=bg ctermfg=61 gui=NONE guibg=bg guifg=#325CC0
-    CSAHi htmlLink term=underline cterm=underline ctermbg=bg ctermfg=235 gui=underline guibg=bg guifg=#222222
-    CSAHi htmlStatement term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
+    CSAHi htmlLink term=underline cterm=underline ctermbg=bg ctermfg=16 gui=underline guibg=bg guifg=#000000
+    CSAHi htmlStatement term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi DiagnosticError term=NONE cterm=NONE ctermbg=bg ctermfg=196 gui=NONE guibg=bg guifg=Red
     CSAHi DiagnosticWarn term=NONE cterm=NONE ctermbg=bg ctermfg=214 gui=NONE guibg=bg guifg=Orange
     CSAHi DiagnosticInfo term=NONE cterm=NONE ctermbg=bg ctermfg=152 gui=NONE guibg=bg guifg=LightBlue
     CSAHi DiagnosticHint term=NONE cterm=NONE ctermbg=bg ctermfg=252 gui=NONE guibg=bg guifg=LightGrey
-    CSAHi vimRange term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi VimrDefaultCursor term=reverse cterm=reverse ctermbg=bg ctermfg=fg gui=reverse guibg=bg guifg=fg
-    CSAHi VimrInsertCursor term=NONE cterm=NONE ctermbg=235 ctermfg=fg gui=NONE guibg=fg guifg=fg
+    CSAHi VimrInsertCursor term=NONE cterm=NONE ctermbg=16 ctermfg=fg gui=NONE guibg=fg guifg=fg
     CSAHi airline_x_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=248 gui=NONE guibg=#ffffff guifg=#a8a8a8
-    CSAHi vimAutoCmdSfxList term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi airline_c2_inactive_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#ffffff guifg=#ff0000
-    CSAHi airline_c1_to_airline_x_inactive_inactive_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#ffffff guifg=#ff0000
-    CSAHi airline_b_to_airline_c2_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=252 gui=NONE guibg=#ffffff guifg=#d0d0d0
-    CSAHi airline_c3_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=248 gui=NONE guibg=#ffffff guifg=#a8a8a8
-    CSAHi airline_c1_to_airline_x_bold term=bold cterm=bold ctermbg=231 ctermfg=159 gui=bold guibg=#F7F7F7 guifg=#afffff
-    CSAHi airline_c1_to_airline_x_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#F7F7F7 guifg=#ff0000
-    CSAHi airline_c2_to_airline_x_bold term=bold cterm=bold ctermbg=231 ctermfg=159 gui=bold guibg=#F7F7F7 guifg=#afffff
-    CSAHi airline_c2_to_airline_x_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#F7F7F7 guifg=#ff0000
-    CSAHi airline_b_to_airline_c2_bold term=bold cterm=bold ctermbg=231 ctermfg=45 gui=bold guibg=#F7F7F7 guifg=#00dfff
-    CSAHi airline_b_to_airline_c2_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#F7F7F7 guifg=#ff0000
     CSAHi CocListBlueYellow term=NONE cterm=NONE ctermbg=172 ctermfg=66 gui=NONE guibg=#d79921 guifg=#458588
     CSAHi CocListBlueMagenta term=NONE cterm=NONE ctermbg=132 ctermfg=66 gui=NONE guibg=#b16286 guifg=#458588
     CSAHi CocListBlueRed term=NONE cterm=NONE ctermbg=160 ctermfg=66 gui=NONE guibg=#cc241d guifg=#458588
@@ -322,10 +241,6 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi CocListGreenGreen term=NONE cterm=NONE ctermbg=100 ctermfg=100 gui=NONE guibg=#98971a guifg=#98971a
     CSAHi CocListGreenGrey term=NONE cterm=NONE ctermbg=102 ctermfg=100 gui=NONE guibg=#928374 guifg=#98971a
     CSAHi CocListGreenWhite term=NONE cterm=NONE ctermbg=138 ctermfg=100 gui=NONE guibg=#a89984 guifg=#98971a
-    CSAHi vimSynRegion term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSynPatMod term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSyncLines term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSyncMatch term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi airline_x_inactive_bold term=bold cterm=bold ctermbg=231 ctermfg=248 gui=bold guibg=#ffffff guifg=#a8a8a8
     CSAHi airline_x_inactive_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#ffffff guifg=#ff0000
     CSAHi htmlH1 term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
@@ -334,14 +249,9 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi htmlH4 term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi htmlH5 term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi htmlH6 term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi mkdCode term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
+    CSAHi mkdCode term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi IndentGuidesOdd term=NONE cterm=NONE ctermbg=254 ctermfg=253 gui=NONE guibg=#E8E8E8 guifg=#DADADA
     CSAHi IndentGuidesEven term=NONE cterm=NONE ctermbg=253 ctermfg=254 gui=NONE guibg=#DADADA guifg=#E8E8E8
-    CSAHi vimFuncBody term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimFuncBlank term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimEscapeBrace term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSubstRep term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSubstRange term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi airline_term_inactive_bold term=bold cterm=bold ctermbg=234 ctermfg=158 gui=bold guibg=#202020 guifg=#9cffd3
     CSAHi CocListGreenCyan term=NONE cterm=NONE ctermbg=71 ctermfg=100 gui=NONE guibg=#689d6a guifg=#98971a
     CSAHi CocListGreenYellow term=NONE cterm=NONE ctermbg=172 ctermfg=100 gui=NONE guibg=#d79921 guifg=#98971a
@@ -353,12 +263,6 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi CocListGreyBlue term=NONE cterm=NONE ctermbg=66 ctermfg=102 gui=NONE guibg=#458588 guifg=#928374
     CSAHi CocListGreyGreen term=NONE cterm=NONE ctermbg=100 ctermfg=102 gui=NONE guibg=#98971a guifg=#928374
     CSAHi CocListGreyGrey term=NONE cterm=NONE ctermbg=102 ctermfg=102 gui=NONE guibg=#928374 guifg=#928374
-    CSAHi airline_c2_to_airline_x_inactive_inactive_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#ffffff guifg=#ff0000
-    CSAHi airline_b_to_airline_c2_inactive_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=252 gui=NONE guibg=#ffffff guifg=#d0d0d0
-    CSAHi airline_b_to_airline_c2_inactive_inactive_bold term=bold cterm=bold ctermbg=231 ctermfg=252 gui=bold guibg=#ffffff guifg=#d0d0d0
-    CSAHi airline_b_to_airline_c2_inactive_inactive_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#ffffff guifg=#ff0000
-    CSAHi airline_c3_to_airline_x_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=231 gui=NONE guibg=#ffffff guifg=#ffffff
-    CSAHi vimPatRegion term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi Boolean term=NONE cterm=NONE ctermbg=bg ctermfg=97 gui=NONE guibg=bg guifg=#7A3E9D
     CSAHi Float term=NONE cterm=NONE ctermbg=bg ctermfg=97 gui=NONE guibg=bg guifg=#7A3E9D
     CSAHi CocErrorSign term=NONE cterm=NONE ctermbg=bg ctermfg=196 gui=NONE guibg=bg guifg=#ff0000
@@ -372,10 +276,8 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi CocItalic term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=italic guibg=bg guifg=fg
     CSAHi CocStrikeThrough term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi Identifier term=NONE cterm=NONE ctermbg=bg ctermfg=61 gui=NONE guibg=bg guifg=#325CC0
-    CSAHi vimHiLink term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi Conditional term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi airline_c2_to_airline_x_inactive_inactive_bold term=bold cterm=bold ctermbg=231 ctermfg=231 gui=bold guibg=#ffffff guifg=#ffffff
-    CSAHi Statement term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
+    CSAHi Conditional term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi Statement term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi airline_term_inactive_red term=NONE cterm=NONE ctermbg=234 ctermfg=196 gui=NONE guibg=#202020 guifg=#ff0000
     CSAHi airline_error_inactive term=NONE cterm=NONE ctermbg=88 ctermfg=16 gui=NONE guibg=#990000 guifg=#000000
     CSAHi airline_error_inactive_bold term=bold cterm=bold ctermbg=88 ctermfg=16 gui=bold guibg=#990000 guifg=#000000
@@ -386,7 +288,6 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi airline_b_inactive term=NONE cterm=NONE ctermbg=252 ctermfg=245 gui=NONE guibg=#d0d0d0 guifg=#8a8a8a
     CSAHi airline_b_inactive_bold term=bold cterm=bold ctermbg=252 ctermfg=245 gui=bold guibg=#d0d0d0 guifg=#8a8a8a
     CSAHi airline_b_inactive_red term=NONE cterm=NONE ctermbg=252 ctermfg=196 gui=NONE guibg=#d0d0d0 guifg=#ff0000
-    CSAHi vimNormCmds term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi MoreMsg term=bold cterm=bold ctermbg=bg ctermfg=29 gui=bold guibg=bg guifg=SeaGreen
     CSAHi ModeMsg term=bold cterm=bold ctermbg=bg ctermfg=fg gui=bold guibg=bg guifg=fg
     CSAHi LineNr term=NONE cterm=NONE ctermbg=231 ctermfg=247 gui=NONE guibg=#F7F7F7 guifg=#9DA39A
@@ -395,7 +296,6 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi StatusLine term=NONE cterm=NONE ctermbg=252 ctermfg=233 gui=NONE guibg=#cfcfcf guifg=#141414
     CSAHi StatusLineNC term=reverse cterm=reverse ctermbg=bg ctermfg=fg gui=reverse guibg=bg guifg=fg
     CSAHi VertSplit term=reverse cterm=reverse ctermbg=250 ctermfg=250 gui=reverse guibg=#BCBCBC guifg=#BCBCBC
-    CSAHi airline_c2_to_airline_x_inactive_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=231 gui=NONE guibg=#ffffff guifg=#ffffff
     CSAHi CocListGreyWhite term=NONE cterm=NONE ctermbg=138 ctermfg=102 gui=NONE guibg=#a89984 guifg=#928374
     CSAHi CocListGreyCyan term=NONE cterm=NONE ctermbg=71 ctermfg=102 gui=NONE guibg=#689d6a guifg=#928374
     CSAHi CocListGreyYellow term=NONE cterm=NONE ctermbg=172 ctermfg=102 gui=NONE guibg=#d79921 guifg=#928374
@@ -406,30 +306,15 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi CocListWhiteBlack term=NONE cterm=NONE ctermbg=235 ctermfg=138 gui=NONE guibg=#282828 guifg=#a89984
     CSAHi CocListWhiteBlue term=NONE cterm=NONE ctermbg=66 ctermfg=138 gui=NONE guibg=#458588 guifg=#a89984
     CSAHi CocListWhiteGreen term=NONE cterm=NONE ctermbg=100 ctermfg=138 gui=NONE guibg=#98971a guifg=#a89984
-    CSAHi vimAutoEventList term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi DiagnosticUnderlineError term=underline cterm=underline ctermbg=bg ctermfg=196 gui=underline guibg=bg guifg=fg guisp=Red
     CSAHi DiagnosticUnderlineWarn term=underline cterm=underline ctermbg=bg ctermfg=214 gui=underline guibg=bg guifg=fg guisp=Orange
     CSAHi DiagnosticUnderlineInfo term=underline cterm=underline ctermbg=bg ctermfg=152 gui=underline guibg=bg guifg=fg guisp=LightBlue
     CSAHi DiagnosticUnderlineHint term=underline cterm=underline ctermbg=bg ctermfg=252 gui=underline guibg=bg guifg=fg guisp=LightGrey
-    CSAHi airline_c2_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=248 gui=NONE guibg=#ffffff guifg=#a8a8a8
-    CSAHi airline_c1_inactive_bold term=bold cterm=bold ctermbg=231 ctermfg=248 gui=bold guibg=#ffffff guifg=#a8a8a8
-    CSAHi airline_c1_inactive_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#ffffff guifg=#ff0000
-    CSAHi airline_x_to_airline_y_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=252 gui=NONE guibg=#ffffff guifg=#d0d0d0
-    CSAHi airline_z_to_airline_warning_inactive term=NONE cterm=NONE ctermbg=249 ctermfg=166 gui=NONE guibg=#b2b2b2 guifg=#df5f00
-    CSAHi airline_c1_to_airline_x_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=231 gui=NONE guibg=#ffffff guifg=#ffffff
-    CSAHi airline_c_to_airline_x_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=231 gui=NONE guibg=#ffffff guifg=#ffffff
-    CSAHi airline_a_to_airline_b_inactive term=NONE cterm=NONE ctermbg=252 ctermfg=249 gui=NONE guibg=#d0d0d0 guifg=#b2b2b2
-    CSAHi airline_warning_to_airline_error_inactive term=NONE cterm=NONE ctermbg=166 ctermfg=88 gui=NONE guibg=#df5f00 guifg=#990000
-    CSAHi airline_y_to_airline_z_inactive term=NONE cterm=NONE ctermbg=252 ctermfg=249 gui=NONE guibg=#d0d0d0 guifg=#b2b2b2
     CSAHi CocMarkdownLink term=NONE cterm=NONE ctermbg=bg ctermfg=37 gui=NONE guibg=bg guifg=#15aabf
     CSAHi CocDisabled term=NONE cterm=NONE ctermbg=bg ctermfg=246 gui=NONE guibg=bg guifg=#999999
     CSAHi markdownCode term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi markdownH1 term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimHiBang term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi rubyClassVariable term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi vimHiCtermColor term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimHiFontname term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimHiGuiFontname term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
+    CSAHi rubyClassVariable term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi airline_c_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=248 gui=NONE guibg=#ffffff guifg=#a8a8a8
     CSAHi airline_c_inactive_bold term=bold cterm=bold ctermbg=231 ctermfg=248 gui=bold guibg=#ffffff guifg=#a8a8a8
     CSAHi airline_c_inactive_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#ffffff guifg=#ff0000
@@ -440,24 +325,21 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi airline_x_bold term=bold cterm=bold ctermbg=159 ctermfg=27 gui=bold guibg=#afffff guifg=#005fff
     CSAHi airline_x_red term=NONE cterm=NONE ctermbg=159 ctermfg=196 gui=NONE guibg=#afffff guifg=#ff0000
     CSAHi airline_y term=NONE cterm=NONE ctermbg=45 ctermfg=18 gui=NONE guibg=#00dfff guifg=#000087
-    CSAHi Title term=bold cterm=bold ctermbg=bg ctermfg=235 gui=bold guibg=bg guifg=#222222
+    CSAHi Title term=bold cterm=bold ctermbg=bg ctermfg=16 gui=bold guibg=bg guifg=#000000
     CSAHi Visual term=NONE cterm=NONE ctermbg=153 ctermfg=fg gui=NONE guibg=#BFDBFE guifg=fg
     CSAHi VisualNC term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi WarningMsg term=NONE cterm=NONE ctermbg=208 ctermfg=235 gui=NONE guibg=#ff8800 guifg=#222222
+    CSAHi WarningMsg term=NONE cterm=NONE ctermbg=208 ctermfg=16 gui=NONE guibg=#ff8800 guifg=#000000
     CSAHi WildMenu term=NONE cterm=NONE ctermbg=226 ctermfg=16 gui=NONE guibg=Yellow guifg=Black
     CSAHi Folded term=NONE cterm=NONE ctermbg=231 ctermfg=237 gui=NONE guibg=#F7F7F7 guifg=#3d3d3d
     CSAHi FoldColumn term=NONE cterm=NONE ctermbg=250 ctermfg=18 gui=NONE guibg=Grey guifg=DarkBlue
     CSAHi DiffAdd term=bold cterm=bold ctermbg=64 ctermfg=231 gui=bold guibg=#46830c guifg=#f8f8f8
-    CSAHi DiffChange term=NONE cterm=NONE ctermbg=235 ctermfg=235 gui=NONE guibg=#222222 guifg=#222222
+    CSAHi DiffChange term=NONE cterm=NONE ctermbg=16 ctermfg=16 gui=NONE guibg=#000000 guifg=#000000
     CSAHi DiffDelete term=bold cterm=bold ctermbg=195 ctermfg=196 gui=bold guibg=LightCyan guifg=#ff0000
-    CSAHi htmlSpecialTagName term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi vimCollection term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSubstPat term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSyncLinecont term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
+    CSAHi htmlSpecialTagName term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi CocListWhiteGrey term=NONE cterm=NONE ctermbg=102 ctermfg=138 gui=NONE guibg=#928374 guifg=#a89984
     CSAHi CocListWhiteWhite term=NONE cterm=NONE ctermbg=138 ctermfg=138 gui=NONE guibg=#a89984 guifg=#a89984
 elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^screen") && exists("g:CSApprox_eterm") && g:CSApprox_eterm) || &term =~? "^eterm"
-    CSAHi Normal term=NONE cterm=NONE ctermbg=231 ctermfg=235 gui=NONE guibg=#F7F7F7 guifg=#222222
+    CSAHi Normal term=NONE cterm=NONE ctermbg=231 ctermfg=16 gui=NONE guibg=#F7F7F7 guifg=#000000
     CSAHi CocListWhiteCyan term=NONE cterm=NONE ctermbg=71 ctermfg=138 gui=NONE guibg=#689d6a guifg=#a89984
     CSAHi CocListWhiteYellow term=NONE cterm=NONE ctermbg=172 ctermfg=138 gui=NONE guibg=#d79921 guifg=#a89984
     CSAHi CocListWhiteMagenta term=NONE cterm=NONE ctermbg=132 ctermfg=138 gui=NONE guibg=#b16286 guifg=#a89984
@@ -466,16 +348,11 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi CocListBgWhite term=NONE cterm=NONE ctermbg=138 ctermfg=fg gui=NONE guibg=#a89984 guifg=fg
     CSAHi CocListCyanBlack term=NONE cterm=NONE ctermbg=235 ctermfg=71 gui=NONE guibg=#282828 guifg=#689d6a
     CSAHi CocListCyanBlue term=NONE cterm=NONE ctermbg=66 ctermfg=71 gui=NONE guibg=#458588 guifg=#689d6a
-    CSAHi jsFuncArgs term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi vimMenuPriority term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
+    CSAHi jsFuncArgs term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi MatchParen term=underline cterm=underline ctermbg=51 ctermfg=208 gui=underline guibg=Cyan guifg=#ff8800
     CSAHi Comment term=NONE cterm=NONE ctermbg=bg ctermfg=131 gui=NONE guibg=bg guifg=#AA3731
-    CSAHi Underlined term=underline cterm=underline ctermbg=bg ctermfg=235 gui=underline guibg=bg guifg=#222222
+    CSAHi Underlined term=underline cterm=underline ctermbg=bg ctermfg=16 gui=underline guibg=bg guifg=#000000
     CSAHi Ignore term=NONE cterm=NONE ctermbg=bg ctermfg=231 gui=NONE guibg=bg guifg=bg
-    CSAHi vimOnlyCommand term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimStdPlugin term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimOnlyOption term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimTermOption term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi SpecialKey term=NONE cterm=NONE ctermbg=254 ctermfg=233 gui=NONE guibg=#e3e3e3 guifg=#141414
     CSAHi TermCursor term=reverse cterm=reverse ctermbg=bg ctermfg=fg gui=reverse guibg=bg guifg=fg
     CSAHi TermCursorNC term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
@@ -495,18 +372,16 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi airline_term_red term=NONE cterm=NONE ctermbg=234 ctermfg=196 gui=NONE guibg=#202020 guifg=#ff0000
     CSAHi airline_error term=NONE cterm=NONE ctermbg=88 ctermfg=16 gui=NONE guibg=#990000 guifg=#000000
     CSAHi airline_error_bold term=bold cterm=bold ctermbg=88 ctermfg=16 gui=bold guibg=#990000 guifg=#000000
-    CSAHi vimSyncLinebreak term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi DiffText term=bold cterm=bold ctermbg=235 ctermfg=235 gui=bold guibg=#222222 guifg=#222222
+    CSAHi DiffText term=bold cterm=bold ctermbg=16 ctermfg=16 gui=bold guibg=#000000 guifg=#000000
     CSAHi SignColumn term=NONE cterm=NONE ctermbg=231 ctermfg=18 gui=NONE guibg=#F7F7F7 guifg=DarkBlue
     CSAHi Conceal term=NONE cterm=NONE ctermbg=248 ctermfg=252 gui=NONE guibg=DarkGrey guifg=LightGrey
     CSAHi SpellBad term=undercurl cterm=undercurl ctermbg=bg ctermfg=196 gui=undercurl guibg=bg guifg=fg guisp=Red
     CSAHi SpellCap term=undercurl cterm=undercurl ctermbg=bg ctermfg=21 gui=undercurl guibg=bg guifg=fg guisp=Blue
     CSAHi SpellRare term=undercurl cterm=undercurl ctermbg=bg ctermfg=201 gui=undercurl guibg=bg guifg=fg guisp=Magenta
     CSAHi SpellLocal term=undercurl cterm=undercurl ctermbg=bg ctermfg=30 gui=undercurl guibg=bg guifg=fg guisp=DarkCyan
-    CSAHi Pmenu term=NONE cterm=NONE ctermbg=254 ctermfg=235 gui=NONE guibg=#e3e3e3 guifg=#222222
+    CSAHi Pmenu term=NONE cterm=NONE ctermbg=254 ctermfg=16 gui=NONE guibg=#e3e3e3 guifg=#000000
     CSAHi PmenuSel term=NONE cterm=NONE ctermbg=252 ctermfg=fg gui=NONE guibg=#cfcfcf guifg=fg
     CSAHi PmenuSbar term=NONE cterm=NONE ctermbg=250 ctermfg=fg gui=NONE guibg=Grey guifg=fg
-    CSAHi vimSyncRegion term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi CocListCyanGreen term=NONE cterm=NONE ctermbg=100 ctermfg=71 gui=NONE guibg=#98971a guifg=#689d6a
     CSAHi CocListCyanGrey term=NONE cterm=NONE ctermbg=102 ctermfg=71 gui=NONE guibg=#928374 guifg=#689d6a
     CSAHi CocListCyanWhite term=NONE cterm=NONE ctermbg=138 ctermfg=71 gui=NONE guibg=#a89984 guifg=#689d6a
@@ -518,17 +393,6 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi CocListBgCyan term=NONE cterm=NONE ctermbg=71 ctermfg=fg gui=NONE guibg=#689d6a guifg=fg
     CSAHi CocListYellowBlack term=NONE cterm=NONE ctermbg=235 ctermfg=172 gui=NONE guibg=#282828 guifg=#d79921
     CSAHi NvimInternalError term=NONE cterm=NONE ctermbg=9 ctermfg=9 gui=NONE guibg=Red guifg=Red
-    CSAHi vimOnlyHLGroup term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimGlobal term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi airline_b_to_airline_c_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=252 gui=NONE guibg=#ffffff guifg=#d0d0d0
-    CSAHi vimHiKeyList term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi airline_b_to_airline_c2 term=NONE cterm=NONE ctermbg=231 ctermfg=45 gui=NONE guibg=#F7F7F7 guifg=#00dfff
-    CSAHi airline_c3_to_airline_x term=NONE cterm=NONE ctermbg=231 ctermfg=159 gui=NONE guibg=#F7F7F7 guifg=#afffff
-    CSAHi airline_c2_to_airline_x term=NONE cterm=NONE ctermbg=231 ctermfg=159 gui=NONE guibg=#F7F7F7 guifg=#afffff
-    CSAHi vimHiTermcap term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimCommentTitleLeader term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimLuaRegion term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi luaInnerComment term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi airline_error_red term=NONE cterm=NONE ctermbg=88 ctermfg=196 gui=NONE guibg=#990000 guifg=#ff0000
     CSAHi airline_a term=NONE cterm=NONE ctermbg=27 ctermfg=231 gui=NONE guibg=#005fff guifg=#ffffff
     CSAHi airline_a_bold term=bold cterm=bold ctermbg=27 ctermfg=231 gui=bold guibg=#005fff guifg=#ffffff
@@ -547,7 +411,6 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi CursorLine term=NONE cterm=NONE ctermbg=254 ctermfg=fg gui=NONE guibg=#e3e3e3 guifg=fg
     CSAHi ColorColumn term=NONE cterm=NONE ctermbg=254 ctermfg=fg gui=NONE guibg=#e3e3e3 guifg=fg
     CSAHi NormalNC term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimMapLhs term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi CocListYellowBlue term=NONE cterm=NONE ctermbg=66 ctermfg=172 gui=NONE guibg=#458588 guifg=#d79921
     CSAHi CocListYellowGreen term=NONE cterm=NONE ctermbg=100 ctermfg=172 gui=NONE guibg=#98971a guifg=#d79921
     CSAHi CocListYellowGrey term=NONE cterm=NONE ctermbg=102 ctermfg=172 gui=NONE guibg=#928374 guifg=#d79921
@@ -558,16 +421,6 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi CocListYellowRed term=NONE cterm=NONE ctermbg=160 ctermfg=172 gui=NONE guibg=#cc241d guifg=#d79921
     CSAHi CocListFgYellow term=NONE cterm=NONE ctermbg=bg ctermfg=172 gui=NONE guibg=bg guifg=#d79921
     CSAHi CocListBgYellow term=NONE cterm=NONE ctermbg=172 ctermfg=fg gui=NONE guibg=#d79921 guifg=fg
-    CSAHi vimEcho term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimIsCommand term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimExtCmd term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimFilter term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSet term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi luaIfThen term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi luaElseifThen term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi luaThenEnd term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi luaBlock term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi luaLoopBlock term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi airline_warning term=NONE cterm=NONE ctermbg=166 ctermfg=16 gui=NONE guibg=#df5f00 guifg=#000000
     CSAHi airline_warning_bold term=bold cterm=bold ctermbg=166 ctermfg=16 gui=bold guibg=#df5f00 guifg=#000000
     CSAHi airline_warning_red term=NONE cterm=NONE ctermbg=166 ctermfg=196 gui=NONE guibg=#df5f00 guifg=#ff0000
@@ -578,16 +431,13 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi airline_y_to_airline_z term=NONE cterm=NONE ctermbg=45 ctermfg=27 gui=NONE guibg=#00dfff guifg=#005fff
     CSAHi airline_z_to_airline_warning term=NONE cterm=NONE ctermbg=27 ctermfg=166 gui=NONE guibg=#005fff guifg=#df5f00
     CSAHi airline_warning_to_airline_error term=NONE cterm=NONE ctermbg=166 ctermfg=88 gui=NONE guibg=#df5f00 guifg=#990000
-    CSAHi vimMapRhsExtend term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimMenuBang term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi MsgArea term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi RedrawDebugNormal term=reverse cterm=reverse ctermbg=bg ctermfg=fg gui=reverse guibg=bg guifg=fg
     CSAHi RedrawDebugClear term=NONE cterm=NONE ctermbg=226 ctermfg=fg gui=NONE guibg=Yellow guifg=fg
     CSAHi RedrawDebugComposed term=NONE cterm=NONE ctermbg=46 ctermfg=fg gui=NONE guibg=Green guifg=fg
     CSAHi RedrawDebugRecompose term=NONE cterm=NONE ctermbg=196 ctermfg=fg gui=NONE guibg=Red guifg=fg
-    CSAHi Cursor term=NONE cterm=NONE ctermbg=235 ctermfg=231 gui=NONE guibg=#222222 guifg=#F7F7F7
-    CSAHi lCursor term=NONE cterm=NONE ctermbg=235 ctermfg=231 gui=NONE guibg=fg guifg=bg
-    CSAHi vimMapRhs term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
+    CSAHi Cursor term=NONE cterm=NONE ctermbg=16 ctermfg=231 gui=NONE guibg=#000000 guifg=#F7F7F7
+    CSAHi lCursor term=NONE cterm=NONE ctermbg=16 ctermfg=231 gui=NONE guibg=fg guifg=bg
     CSAHi CocListMagentaBlack term=NONE cterm=NONE ctermbg=235 ctermfg=132 gui=NONE guibg=#282828 guifg=#b16286
     CSAHi CocListMagentaBlue term=NONE cterm=NONE ctermbg=66 ctermfg=132 gui=NONE guibg=#458588 guifg=#b16286
     CSAHi CocListMagentaGreen term=NONE cterm=NONE ctermbg=100 ctermfg=132 gui=NONE guibg=#98971a guifg=#b16286
@@ -598,21 +448,12 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi CocListMagentaMagenta term=NONE cterm=NONE ctermbg=132 ctermfg=132 gui=NONE guibg=#b16286 guifg=#b16286
     CSAHi CocListMagentaRed term=NONE cterm=NONE ctermbg=160 ctermfg=132 gui=NONE guibg=#cc241d guifg=#b16286
     CSAHi CocListFgMagenta term=NONE cterm=NONE ctermbg=bg ctermfg=132 gui=NONE guibg=bg guifg=#b16286
-    CSAHi vimComFilter term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimUserCmd term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimCmdSep term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimClusterName term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi luaParen term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi luaTableBlock term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi luaFunctionBlock term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi airline_c1_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=248 gui=NONE guibg=#ffffff guifg=#a8a8a8
     CSAHi CocErrorLine term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi CocWarningLine term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi CocInfoLine term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi CocHintLine term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi CocSelectedLine term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi airline_c1_to_airline_x term=NONE cterm=NONE ctermbg=231 ctermfg=159 gui=NONE guibg=#F7F7F7 guifg=#afffff
-    CSAHi vimSetEqual term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi FloatShadow term=NONE cterm=NONE ctermbg=16 ctermfg=fg gui=NONE guibg=Black guifg=fg
     CSAHi FloatShadowThrough term=NONE cterm=NONE ctermbg=16 ctermfg=fg gui=NONE guibg=Black guifg=fg
     CSAHi Error term=NONE cterm=NONE ctermbg=196 ctermfg=231 gui=NONE guibg=Red guifg=White
@@ -621,8 +462,6 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi Constant term=NONE cterm=NONE ctermbg=bg ctermfg=97 gui=NONE guibg=bg guifg=#7A3E9D
     CSAHi Character term=NONE cterm=NONE ctermbg=bg ctermfg=64 gui=NONE guibg=bg guifg=#448C27
     CSAHi Number term=NONE cterm=NONE ctermbg=bg ctermfg=97 gui=NONE guibg=bg guifg=#7A3E9D
-    CSAHi vimMenuMap term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimMenuRhs term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi CocListBgMagenta term=NONE cterm=NONE ctermbg=132 ctermfg=fg gui=NONE guibg=#b16286 guifg=fg
     CSAHi CocListRedBlack term=NONE cterm=NONE ctermbg=235 ctermfg=160 gui=NONE guibg=#282828 guifg=#cc241d
     CSAHi CocListRedBlue term=NONE cterm=NONE ctermbg=66 ctermfg=160 gui=NONE guibg=#458588 guifg=#cc241d
@@ -633,38 +472,25 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi CocListRedYellow term=NONE cterm=NONE ctermbg=172 ctermfg=160 gui=NONE guibg=#d79921 guifg=#cc241d
     CSAHi CocListRedMagenta term=NONE cterm=NONE ctermbg=132 ctermfg=160 gui=NONE guibg=#b16286 guifg=#cc241d
     CSAHi CocListRedRed term=NONE cterm=NONE ctermbg=160 ctermfg=160 gui=NONE guibg=#cc241d guifg=#cc241d
-    CSAHi vimFiletype term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimAugroup term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimExecute term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimFunction term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi PreProc term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
+    CSAHi PreProc term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi CocCursorTransparent term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi Define term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi vimAugroupSyncA term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi StorageClass term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi helpNormal term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
+    CSAHi Define term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi StorageClass term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi rubyClassName term=NONE cterm=NONE ctermbg=bg ctermfg=61 gui=NONE guibg=bg guifg=#325CC0
     CSAHi rubyModuleName term=NONE cterm=NONE ctermbg=bg ctermfg=61 gui=NONE guibg=bg guifg=#325CC0
-    CSAHi rubyConstant term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi rubyClassDeclaration term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi rubyModuleDeclaration term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
+    CSAHi rubyConstant term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi rubyClassDeclaration term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi rubyModuleDeclaration term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi Function term=NONE cterm=NONE ctermbg=bg ctermfg=61 gui=NONE guibg=bg guifg=#325CC0
-    CSAHi rubyInstanceVariable term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
+    CSAHi rubyInstanceVariable term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi rubyPseudoVariable term=NONE cterm=NONE ctermbg=bg ctermfg=97 gui=NONE guibg=bg guifg=#7A3E9D
     CSAHi rubySymbol term=NONE cterm=NONE ctermbg=bg ctermfg=64 gui=NONE guibg=bg guifg=#448C27
     CSAHi rubyRegexp term=NONE cterm=NONE ctermbg=bg ctermfg=97 gui=NONE guibg=bg guifg=#7A3E9D
-    CSAHi Label term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi Operator term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi Keyword term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi vimGroupList term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
+    CSAHi Label term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi Operator term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi Keyword term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi CocListFgRed term=NONE cterm=NONE ctermbg=bg ctermfg=160 gui=NONE guibg=bg guifg=#cc241d
     CSAHi CocListBgRed term=NONE cterm=NONE ctermbg=160 ctermfg=fg gui=NONE guibg=#cc241d guifg=fg
-    CSAHi vimSubst2 term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSubstRep4 term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimOperParen term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimCollClass term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimRegion term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSynLine term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi CocListBlackBlack term=NONE cterm=NONE ctermbg=235 ctermfg=235 gui=NONE guibg=#282828 guifg=#282828
     CSAHi CocListBlackBlue term=NONE cterm=NONE ctermbg=66 ctermfg=235 gui=NONE guibg=#458588 guifg=#282828
     CSAHi CocListBlackGreen term=NONE cterm=NONE ctermbg=100 ctermfg=235 gui=NONE guibg=#98971a guifg=#282828
@@ -672,32 +498,24 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi CocListBlackWhite term=NONE cterm=NONE ctermbg=138 ctermfg=235 gui=NONE guibg=#a89984 guifg=#282828
     CSAHi CocListBlackCyan term=NONE cterm=NONE ctermbg=71 ctermfg=235 gui=NONE guibg=#689d6a guifg=#282828
     CSAHi CocListBlackYellow term=NONE cterm=NONE ctermbg=172 ctermfg=235 gui=NONE guibg=#d79921 guifg=#282828
-    CSAHi helpGraphic term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi airline_c2_to_airline_x_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=231 gui=NONE guibg=#ffffff guifg=#ffffff
     CSAHi rubyRegexpQuantifier term=NONE cterm=NONE ctermbg=bg ctermfg=64 gui=NONE guibg=bg guifg=#448C27
     CSAHi rubyRegexpAnchor term=NONE cterm=NONE ctermbg=bg ctermfg=243 gui=NONE guibg=bg guifg=#777777
     CSAHi rubyRegexpDelimiter term=NONE cterm=NONE ctermbg=bg ctermfg=243 gui=NONE guibg=bg guifg=#777777
     CSAHi rubyRegexpCharClass term=NONE cterm=NONE ctermbg=bg ctermfg=243 gui=NONE guibg=bg guifg=#777777
-    CSAHi pythonBuiltinFunc term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi goBuiltins term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
+    CSAHi pythonBuiltinFunc term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi goBuiltins term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi goImportString term=NONE cterm=NONE ctermbg=bg ctermfg=61 gui=NONE guibg=bg guifg=#325CC0
     CSAHi goFormatSpecifier term=NONE cterm=NONE ctermbg=bg ctermfg=97 gui=NONE guibg=bg guifg=#7A3E9D
-    CSAHi jsBuiltins term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi jsFunction term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
+    CSAHi jsBuiltins term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi jsFunction term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi Type term=NONE cterm=NONE ctermbg=bg ctermfg=61 gui=NONE guibg=bg guifg=#325CC0
-    CSAHi Typedef term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi vimIskList term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
+    CSAHi Typedef term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi airline_y_inactive term=NONE cterm=NONE ctermbg=252 ctermfg=245 gui=NONE guibg=#d0d0d0 guifg=#8a8a8a
-    CSAHi vimAuSyntax term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi airline_y_inactive_bold term=bold cterm=bold ctermbg=252 ctermfg=245 gui=bold guibg=#d0d0d0 guifg=#8a8a8a
-    CSAHi vimUsrCmd term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi airline_y_inactive_red term=NONE cterm=NONE ctermbg=252 ctermfg=196 gui=NONE guibg=#d0d0d0 guifg=#ff0000
     CSAHi airline_z_inactive term=NONE cterm=NONE ctermbg=249 ctermfg=241 gui=NONE guibg=#b2b2b2 guifg=#666666
     CSAHi airline_z_inactive_bold term=bold cterm=bold ctermbg=249 ctermfg=241 gui=bold guibg=#b2b2b2 guifg=#666666
-    CSAHi airline_c1_to_airline_x_inactive_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=231 gui=NONE guibg=#ffffff guifg=#ffffff
-    CSAHi airline_c1_to_airline_x_inactive_inactive_bold term=bold cterm=bold ctermbg=231 ctermfg=231 gui=bold guibg=#ffffff guifg=#ffffff
     CSAHi airline_z_inactive_red term=NONE cterm=NONE ctermbg=249 ctermfg=196 gui=NONE guibg=#b2b2b2 guifg=#ff0000
-    CSAHi airline_c2_inactive_bold term=bold cterm=bold ctermbg=231 ctermfg=248 gui=bold guibg=#ffffff guifg=#a8a8a8
     CSAHi airline_term_inactive term=NONE cterm=NONE ctermbg=234 ctermfg=158 gui=NONE guibg=#202020 guifg=#9cffd3
     CSAHi CocListBlackMagenta term=NONE cterm=NONE ctermbg=132 ctermfg=235 gui=NONE guibg=#b16286 guifg=#282828
     CSAHi CocListBlackRed term=NONE cterm=NONE ctermbg=160 ctermfg=235 gui=NONE guibg=#cc241d guifg=#282828
@@ -709,39 +527,22 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi CocListBlueGrey term=NONE cterm=NONE ctermbg=102 ctermfg=66 gui=NONE guibg=#928374 guifg=#458588
     CSAHi CocListBlueWhite term=NONE cterm=NONE ctermbg=138 ctermfg=66 gui=NONE guibg=#a89984 guifg=#458588
     CSAHi CocListBlueCyan term=NONE cterm=NONE ctermbg=71 ctermfg=66 gui=NONE guibg=#689d6a guifg=#458588
-    CSAHi vimAutoCmdSpace term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSynKeyRegion term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSynMatchRegion term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSynMtchCchar term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSynMtchGroup term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi jsGlobalObjects term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi jsAssignmentExps term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi jsObjectProp term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi Tag term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi Special term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
+    CSAHi jsGlobalObjects term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi jsAssignmentExps term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi jsObjectProp term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi Tag term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi Special term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi jsRegexpQuantifier term=NONE cterm=NONE ctermbg=bg ctermfg=64 gui=NONE guibg=bg guifg=#448C27
     CSAHi jsFuncCall term=NONE cterm=NONE ctermbg=bg ctermfg=61 gui=NONE guibg=bg guifg=#325CC0
-    CSAHi htmlLink term=underline cterm=underline ctermbg=bg ctermfg=235 gui=underline guibg=bg guifg=#222222
-    CSAHi htmlStatement term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
+    CSAHi htmlLink term=underline cterm=underline ctermbg=bg ctermfg=16 gui=underline guibg=bg guifg=#000000
+    CSAHi htmlStatement term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi DiagnosticError term=NONE cterm=NONE ctermbg=bg ctermfg=196 gui=NONE guibg=bg guifg=Red
     CSAHi DiagnosticWarn term=NONE cterm=NONE ctermbg=bg ctermfg=214 gui=NONE guibg=bg guifg=Orange
     CSAHi DiagnosticInfo term=NONE cterm=NONE ctermbg=bg ctermfg=152 gui=NONE guibg=bg guifg=LightBlue
     CSAHi DiagnosticHint term=NONE cterm=NONE ctermbg=bg ctermfg=252 gui=NONE guibg=bg guifg=LightGrey
-    CSAHi vimRange term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi VimrDefaultCursor term=reverse cterm=reverse ctermbg=bg ctermfg=fg gui=reverse guibg=bg guifg=fg
-    CSAHi VimrInsertCursor term=NONE cterm=NONE ctermbg=235 ctermfg=fg gui=NONE guibg=fg guifg=fg
+    CSAHi VimrInsertCursor term=NONE cterm=NONE ctermbg=16 ctermfg=fg gui=NONE guibg=fg guifg=fg
     CSAHi airline_x_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=248 gui=NONE guibg=#ffffff guifg=#a8a8a8
-    CSAHi vimAutoCmdSfxList term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi airline_c2_inactive_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#ffffff guifg=#ff0000
-    CSAHi airline_c1_to_airline_x_inactive_inactive_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#ffffff guifg=#ff0000
-    CSAHi airline_b_to_airline_c2_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=252 gui=NONE guibg=#ffffff guifg=#d0d0d0
-    CSAHi airline_c3_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=248 gui=NONE guibg=#ffffff guifg=#a8a8a8
-    CSAHi airline_c1_to_airline_x_bold term=bold cterm=bold ctermbg=231 ctermfg=159 gui=bold guibg=#F7F7F7 guifg=#afffff
-    CSAHi airline_c1_to_airline_x_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#F7F7F7 guifg=#ff0000
-    CSAHi airline_c2_to_airline_x_bold term=bold cterm=bold ctermbg=231 ctermfg=159 gui=bold guibg=#F7F7F7 guifg=#afffff
-    CSAHi airline_c2_to_airline_x_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#F7F7F7 guifg=#ff0000
-    CSAHi airline_b_to_airline_c2_bold term=bold cterm=bold ctermbg=231 ctermfg=45 gui=bold guibg=#F7F7F7 guifg=#00dfff
-    CSAHi airline_b_to_airline_c2_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#F7F7F7 guifg=#ff0000
     CSAHi CocListBlueYellow term=NONE cterm=NONE ctermbg=172 ctermfg=66 gui=NONE guibg=#d79921 guifg=#458588
     CSAHi CocListBlueMagenta term=NONE cterm=NONE ctermbg=132 ctermfg=66 gui=NONE guibg=#b16286 guifg=#458588
     CSAHi CocListBlueRed term=NONE cterm=NONE ctermbg=160 ctermfg=66 gui=NONE guibg=#cc241d guifg=#458588
@@ -752,10 +553,6 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi CocListGreenGreen term=NONE cterm=NONE ctermbg=100 ctermfg=100 gui=NONE guibg=#98971a guifg=#98971a
     CSAHi CocListGreenGrey term=NONE cterm=NONE ctermbg=102 ctermfg=100 gui=NONE guibg=#928374 guifg=#98971a
     CSAHi CocListGreenWhite term=NONE cterm=NONE ctermbg=138 ctermfg=100 gui=NONE guibg=#a89984 guifg=#98971a
-    CSAHi vimSynRegion term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSynPatMod term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSyncLines term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSyncMatch term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi airline_x_inactive_bold term=bold cterm=bold ctermbg=231 ctermfg=248 gui=bold guibg=#ffffff guifg=#a8a8a8
     CSAHi airline_x_inactive_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#ffffff guifg=#ff0000
     CSAHi htmlH1 term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
@@ -764,14 +561,9 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi htmlH4 term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi htmlH5 term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi htmlH6 term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi mkdCode term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
+    CSAHi mkdCode term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi IndentGuidesOdd term=NONE cterm=NONE ctermbg=254 ctermfg=253 gui=NONE guibg=#E8E8E8 guifg=#DADADA
     CSAHi IndentGuidesEven term=NONE cterm=NONE ctermbg=253 ctermfg=254 gui=NONE guibg=#DADADA guifg=#E8E8E8
-    CSAHi vimFuncBody term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimFuncBlank term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimEscapeBrace term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSubstRep term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSubstRange term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi airline_term_inactive_bold term=bold cterm=bold ctermbg=234 ctermfg=158 gui=bold guibg=#202020 guifg=#9cffd3
     CSAHi CocListGreenCyan term=NONE cterm=NONE ctermbg=71 ctermfg=100 gui=NONE guibg=#689d6a guifg=#98971a
     CSAHi CocListGreenYellow term=NONE cterm=NONE ctermbg=172 ctermfg=100 gui=NONE guibg=#d79921 guifg=#98971a
@@ -783,12 +575,6 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi CocListGreyBlue term=NONE cterm=NONE ctermbg=66 ctermfg=102 gui=NONE guibg=#458588 guifg=#928374
     CSAHi CocListGreyGreen term=NONE cterm=NONE ctermbg=100 ctermfg=102 gui=NONE guibg=#98971a guifg=#928374
     CSAHi CocListGreyGrey term=NONE cterm=NONE ctermbg=102 ctermfg=102 gui=NONE guibg=#928374 guifg=#928374
-    CSAHi airline_c2_to_airline_x_inactive_inactive_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#ffffff guifg=#ff0000
-    CSAHi airline_b_to_airline_c2_inactive_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=252 gui=NONE guibg=#ffffff guifg=#d0d0d0
-    CSAHi airline_b_to_airline_c2_inactive_inactive_bold term=bold cterm=bold ctermbg=231 ctermfg=252 gui=bold guibg=#ffffff guifg=#d0d0d0
-    CSAHi airline_b_to_airline_c2_inactive_inactive_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#ffffff guifg=#ff0000
-    CSAHi airline_c3_to_airline_x_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=231 gui=NONE guibg=#ffffff guifg=#ffffff
-    CSAHi vimPatRegion term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi Boolean term=NONE cterm=NONE ctermbg=bg ctermfg=97 gui=NONE guibg=bg guifg=#7A3E9D
     CSAHi Float term=NONE cterm=NONE ctermbg=bg ctermfg=97 gui=NONE guibg=bg guifg=#7A3E9D
     CSAHi CocErrorSign term=NONE cterm=NONE ctermbg=bg ctermfg=196 gui=NONE guibg=bg guifg=#ff0000
@@ -802,10 +588,8 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi CocItalic term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=italic guibg=bg guifg=fg
     CSAHi CocStrikeThrough term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi Identifier term=NONE cterm=NONE ctermbg=bg ctermfg=61 gui=NONE guibg=bg guifg=#325CC0
-    CSAHi vimHiLink term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi Conditional term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi airline_c2_to_airline_x_inactive_inactive_bold term=bold cterm=bold ctermbg=231 ctermfg=231 gui=bold guibg=#ffffff guifg=#ffffff
-    CSAHi Statement term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
+    CSAHi Conditional term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi Statement term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi airline_term_inactive_red term=NONE cterm=NONE ctermbg=234 ctermfg=196 gui=NONE guibg=#202020 guifg=#ff0000
     CSAHi airline_error_inactive term=NONE cterm=NONE ctermbg=88 ctermfg=16 gui=NONE guibg=#990000 guifg=#000000
     CSAHi airline_error_inactive_bold term=bold cterm=bold ctermbg=88 ctermfg=16 gui=bold guibg=#990000 guifg=#000000
@@ -816,7 +600,6 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi airline_b_inactive term=NONE cterm=NONE ctermbg=252 ctermfg=245 gui=NONE guibg=#d0d0d0 guifg=#8a8a8a
     CSAHi airline_b_inactive_bold term=bold cterm=bold ctermbg=252 ctermfg=245 gui=bold guibg=#d0d0d0 guifg=#8a8a8a
     CSAHi airline_b_inactive_red term=NONE cterm=NONE ctermbg=252 ctermfg=196 gui=NONE guibg=#d0d0d0 guifg=#ff0000
-    CSAHi vimNormCmds term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi MoreMsg term=bold cterm=bold ctermbg=bg ctermfg=29 gui=bold guibg=bg guifg=SeaGreen
     CSAHi ModeMsg term=bold cterm=bold ctermbg=bg ctermfg=fg gui=bold guibg=bg guifg=fg
     CSAHi LineNr term=NONE cterm=NONE ctermbg=231 ctermfg=247 gui=NONE guibg=#F7F7F7 guifg=#9DA39A
@@ -825,7 +608,6 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi StatusLine term=NONE cterm=NONE ctermbg=252 ctermfg=233 gui=NONE guibg=#cfcfcf guifg=#141414
     CSAHi StatusLineNC term=reverse cterm=reverse ctermbg=bg ctermfg=fg gui=reverse guibg=bg guifg=fg
     CSAHi VertSplit term=reverse cterm=reverse ctermbg=250 ctermfg=250 gui=reverse guibg=#BCBCBC guifg=#BCBCBC
-    CSAHi airline_c2_to_airline_x_inactive_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=231 gui=NONE guibg=#ffffff guifg=#ffffff
     CSAHi CocListGreyWhite term=NONE cterm=NONE ctermbg=138 ctermfg=102 gui=NONE guibg=#a89984 guifg=#928374
     CSAHi CocListGreyCyan term=NONE cterm=NONE ctermbg=71 ctermfg=102 gui=NONE guibg=#689d6a guifg=#928374
     CSAHi CocListGreyYellow term=NONE cterm=NONE ctermbg=172 ctermfg=102 gui=NONE guibg=#d79921 guifg=#928374
@@ -836,30 +618,15 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi CocListWhiteBlack term=NONE cterm=NONE ctermbg=235 ctermfg=138 gui=NONE guibg=#282828 guifg=#a89984
     CSAHi CocListWhiteBlue term=NONE cterm=NONE ctermbg=66 ctermfg=138 gui=NONE guibg=#458588 guifg=#a89984
     CSAHi CocListWhiteGreen term=NONE cterm=NONE ctermbg=100 ctermfg=138 gui=NONE guibg=#98971a guifg=#a89984
-    CSAHi vimAutoEventList term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi DiagnosticUnderlineError term=underline cterm=underline ctermbg=bg ctermfg=196 gui=underline guibg=bg guifg=fg guisp=Red
     CSAHi DiagnosticUnderlineWarn term=underline cterm=underline ctermbg=bg ctermfg=214 gui=underline guibg=bg guifg=fg guisp=Orange
     CSAHi DiagnosticUnderlineInfo term=underline cterm=underline ctermbg=bg ctermfg=152 gui=underline guibg=bg guifg=fg guisp=LightBlue
     CSAHi DiagnosticUnderlineHint term=underline cterm=underline ctermbg=bg ctermfg=252 gui=underline guibg=bg guifg=fg guisp=LightGrey
-    CSAHi airline_c2_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=248 gui=NONE guibg=#ffffff guifg=#a8a8a8
-    CSAHi airline_c1_inactive_bold term=bold cterm=bold ctermbg=231 ctermfg=248 gui=bold guibg=#ffffff guifg=#a8a8a8
-    CSAHi airline_c1_inactive_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#ffffff guifg=#ff0000
-    CSAHi airline_x_to_airline_y_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=252 gui=NONE guibg=#ffffff guifg=#d0d0d0
-    CSAHi airline_z_to_airline_warning_inactive term=NONE cterm=NONE ctermbg=249 ctermfg=166 gui=NONE guibg=#b2b2b2 guifg=#df5f00
-    CSAHi airline_c1_to_airline_x_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=231 gui=NONE guibg=#ffffff guifg=#ffffff
-    CSAHi airline_c_to_airline_x_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=231 gui=NONE guibg=#ffffff guifg=#ffffff
-    CSAHi airline_a_to_airline_b_inactive term=NONE cterm=NONE ctermbg=252 ctermfg=249 gui=NONE guibg=#d0d0d0 guifg=#b2b2b2
-    CSAHi airline_warning_to_airline_error_inactive term=NONE cterm=NONE ctermbg=166 ctermfg=88 gui=NONE guibg=#df5f00 guifg=#990000
-    CSAHi airline_y_to_airline_z_inactive term=NONE cterm=NONE ctermbg=252 ctermfg=249 gui=NONE guibg=#d0d0d0 guifg=#b2b2b2
     CSAHi CocMarkdownLink term=NONE cterm=NONE ctermbg=bg ctermfg=37 gui=NONE guibg=bg guifg=#15aabf
     CSAHi CocDisabled term=NONE cterm=NONE ctermbg=bg ctermfg=246 gui=NONE guibg=bg guifg=#999999
     CSAHi markdownCode term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi markdownH1 term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimHiBang term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi rubyClassVariable term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi vimHiCtermColor term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimHiFontname term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimHiGuiFontname term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
+    CSAHi rubyClassVariable term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi airline_c_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=248 gui=NONE guibg=#ffffff guifg=#a8a8a8
     CSAHi airline_c_inactive_bold term=bold cterm=bold ctermbg=231 ctermfg=248 gui=bold guibg=#ffffff guifg=#a8a8a8
     CSAHi airline_c_inactive_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#ffffff guifg=#ff0000
@@ -870,24 +637,21 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi airline_x_bold term=bold cterm=bold ctermbg=159 ctermfg=27 gui=bold guibg=#afffff guifg=#005fff
     CSAHi airline_x_red term=NONE cterm=NONE ctermbg=159 ctermfg=196 gui=NONE guibg=#afffff guifg=#ff0000
     CSAHi airline_y term=NONE cterm=NONE ctermbg=45 ctermfg=18 gui=NONE guibg=#00dfff guifg=#000087
-    CSAHi Title term=bold cterm=bold ctermbg=bg ctermfg=235 gui=bold guibg=bg guifg=#222222
+    CSAHi Title term=bold cterm=bold ctermbg=bg ctermfg=16 gui=bold guibg=bg guifg=#000000
     CSAHi Visual term=NONE cterm=NONE ctermbg=153 ctermfg=fg gui=NONE guibg=#BFDBFE guifg=fg
     CSAHi VisualNC term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi WarningMsg term=NONE cterm=NONE ctermbg=208 ctermfg=235 gui=NONE guibg=#ff8800 guifg=#222222
+    CSAHi WarningMsg term=NONE cterm=NONE ctermbg=208 ctermfg=16 gui=NONE guibg=#ff8800 guifg=#000000
     CSAHi WildMenu term=NONE cterm=NONE ctermbg=226 ctermfg=16 gui=NONE guibg=Yellow guifg=Black
     CSAHi Folded term=NONE cterm=NONE ctermbg=231 ctermfg=237 gui=NONE guibg=#F7F7F7 guifg=#3d3d3d
     CSAHi FoldColumn term=NONE cterm=NONE ctermbg=250 ctermfg=18 gui=NONE guibg=Grey guifg=DarkBlue
     CSAHi DiffAdd term=bold cterm=bold ctermbg=64 ctermfg=231 gui=bold guibg=#46830c guifg=#f8f8f8
-    CSAHi DiffChange term=NONE cterm=NONE ctermbg=235 ctermfg=235 gui=NONE guibg=#222222 guifg=#222222
+    CSAHi DiffChange term=NONE cterm=NONE ctermbg=16 ctermfg=16 gui=NONE guibg=#000000 guifg=#000000
     CSAHi DiffDelete term=bold cterm=bold ctermbg=195 ctermfg=196 gui=bold guibg=LightCyan guifg=#ff0000
-    CSAHi htmlSpecialTagName term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi vimCollection term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSubstPat term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSyncLinecont term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
+    CSAHi htmlSpecialTagName term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi CocListWhiteGrey term=NONE cterm=NONE ctermbg=102 ctermfg=138 gui=NONE guibg=#928374 guifg=#a89984
     CSAHi CocListWhiteWhite term=NONE cterm=NONE ctermbg=138 ctermfg=138 gui=NONE guibg=#a89984 guifg=#a89984
 elseif has("gui_running") || &t_Co == 256
-    CSAHi Normal term=NONE cterm=NONE ctermbg=231 ctermfg=235 gui=NONE guibg=#F7F7F7 guifg=#222222
+    CSAHi Normal term=NONE cterm=NONE ctermbg=231 ctermfg=16 gui=NONE guibg=#F7F7F7 guifg=#000000
     CSAHi CocListWhiteCyan term=NONE cterm=NONE ctermbg=71 ctermfg=138 gui=NONE guibg=#689d6a guifg=#a89984
     CSAHi CocListWhiteYellow term=NONE cterm=NONE ctermbg=172 ctermfg=138 gui=NONE guibg=#d79921 guifg=#a89984
     CSAHi CocListWhiteMagenta term=NONE cterm=NONE ctermbg=132 ctermfg=138 gui=NONE guibg=#b16286 guifg=#a89984
@@ -896,16 +660,11 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi CocListBgWhite term=NONE cterm=NONE ctermbg=138 ctermfg=fg gui=NONE guibg=#a89984 guifg=fg
     CSAHi CocListCyanBlack term=NONE cterm=NONE ctermbg=235 ctermfg=71 gui=NONE guibg=#282828 guifg=#689d6a
     CSAHi CocListCyanBlue term=NONE cterm=NONE ctermbg=66 ctermfg=71 gui=NONE guibg=#458588 guifg=#689d6a
-    CSAHi jsFuncArgs term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi vimMenuPriority term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
+    CSAHi jsFuncArgs term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi MatchParen term=underline cterm=underline ctermbg=51 ctermfg=208 gui=underline guibg=Cyan guifg=#ff8800
     CSAHi Comment term=NONE cterm=NONE ctermbg=bg ctermfg=131 gui=NONE guibg=bg guifg=#AA3731
-    CSAHi Underlined term=underline cterm=underline ctermbg=bg ctermfg=235 gui=underline guibg=bg guifg=#222222
+    CSAHi Underlined term=underline cterm=underline ctermbg=bg ctermfg=16 gui=underline guibg=bg guifg=#000000
     CSAHi Ignore term=NONE cterm=NONE ctermbg=bg ctermfg=231 gui=NONE guibg=bg guifg=bg
-    CSAHi vimOnlyCommand term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimStdPlugin term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimOnlyOption term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimTermOption term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi SpecialKey term=NONE cterm=NONE ctermbg=254 ctermfg=233 gui=NONE guibg=#e3e3e3 guifg=#141414
     CSAHi TermCursor term=reverse cterm=reverse ctermbg=bg ctermfg=fg gui=reverse guibg=bg guifg=fg
     CSAHi TermCursorNC term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
@@ -925,18 +684,16 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi airline_term_red term=NONE cterm=NONE ctermbg=234 ctermfg=196 gui=NONE guibg=#202020 guifg=#ff0000
     CSAHi airline_error term=NONE cterm=NONE ctermbg=88 ctermfg=16 gui=NONE guibg=#990000 guifg=#000000
     CSAHi airline_error_bold term=bold cterm=bold ctermbg=88 ctermfg=16 gui=bold guibg=#990000 guifg=#000000
-    CSAHi vimSyncLinebreak term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi DiffText term=bold cterm=bold ctermbg=235 ctermfg=235 gui=bold guibg=#222222 guifg=#222222
+    CSAHi DiffText term=bold cterm=bold ctermbg=16 ctermfg=16 gui=bold guibg=#000000 guifg=#000000
     CSAHi SignColumn term=NONE cterm=NONE ctermbg=231 ctermfg=18 gui=NONE guibg=#F7F7F7 guifg=DarkBlue
     CSAHi Conceal term=NONE cterm=NONE ctermbg=248 ctermfg=252 gui=NONE guibg=DarkGrey guifg=LightGrey
     CSAHi SpellBad term=undercurl cterm=undercurl ctermbg=bg ctermfg=196 gui=undercurl guibg=bg guifg=fg guisp=Red
     CSAHi SpellCap term=undercurl cterm=undercurl ctermbg=bg ctermfg=21 gui=undercurl guibg=bg guifg=fg guisp=Blue
     CSAHi SpellRare term=undercurl cterm=undercurl ctermbg=bg ctermfg=201 gui=undercurl guibg=bg guifg=fg guisp=Magenta
     CSAHi SpellLocal term=undercurl cterm=undercurl ctermbg=bg ctermfg=30 gui=undercurl guibg=bg guifg=fg guisp=DarkCyan
-    CSAHi Pmenu term=NONE cterm=NONE ctermbg=254 ctermfg=235 gui=NONE guibg=#e3e3e3 guifg=#222222
+    CSAHi Pmenu term=NONE cterm=NONE ctermbg=254 ctermfg=16 gui=NONE guibg=#e3e3e3 guifg=#000000
     CSAHi PmenuSel term=NONE cterm=NONE ctermbg=252 ctermfg=fg gui=NONE guibg=#cfcfcf guifg=fg
     CSAHi PmenuSbar term=NONE cterm=NONE ctermbg=250 ctermfg=fg gui=NONE guibg=Grey guifg=fg
-    CSAHi vimSyncRegion term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi CocListCyanGreen term=NONE cterm=NONE ctermbg=100 ctermfg=71 gui=NONE guibg=#98971a guifg=#689d6a
     CSAHi CocListCyanGrey term=NONE cterm=NONE ctermbg=102 ctermfg=71 gui=NONE guibg=#928374 guifg=#689d6a
     CSAHi CocListCyanWhite term=NONE cterm=NONE ctermbg=138 ctermfg=71 gui=NONE guibg=#a89984 guifg=#689d6a
@@ -948,17 +705,6 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi CocListBgCyan term=NONE cterm=NONE ctermbg=71 ctermfg=fg gui=NONE guibg=#689d6a guifg=fg
     CSAHi CocListYellowBlack term=NONE cterm=NONE ctermbg=235 ctermfg=172 gui=NONE guibg=#282828 guifg=#d79921
     CSAHi NvimInternalError term=NONE cterm=NONE ctermbg=9 ctermfg=9 gui=NONE guibg=Red guifg=Red
-    CSAHi vimOnlyHLGroup term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimGlobal term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi airline_b_to_airline_c_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=252 gui=NONE guibg=#ffffff guifg=#d0d0d0
-    CSAHi vimHiKeyList term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi airline_b_to_airline_c2 term=NONE cterm=NONE ctermbg=231 ctermfg=45 gui=NONE guibg=#F7F7F7 guifg=#00dfff
-    CSAHi airline_c3_to_airline_x term=NONE cterm=NONE ctermbg=231 ctermfg=159 gui=NONE guibg=#F7F7F7 guifg=#afffff
-    CSAHi airline_c2_to_airline_x term=NONE cterm=NONE ctermbg=231 ctermfg=159 gui=NONE guibg=#F7F7F7 guifg=#afffff
-    CSAHi vimHiTermcap term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimCommentTitleLeader term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimLuaRegion term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi luaInnerComment term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi airline_error_red term=NONE cterm=NONE ctermbg=88 ctermfg=196 gui=NONE guibg=#990000 guifg=#ff0000
     CSAHi airline_a term=NONE cterm=NONE ctermbg=27 ctermfg=231 gui=NONE guibg=#005fff guifg=#ffffff
     CSAHi airline_a_bold term=bold cterm=bold ctermbg=27 ctermfg=231 gui=bold guibg=#005fff guifg=#ffffff
@@ -977,7 +723,6 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi CursorLine term=NONE cterm=NONE ctermbg=254 ctermfg=fg gui=NONE guibg=#e3e3e3 guifg=fg
     CSAHi ColorColumn term=NONE cterm=NONE ctermbg=254 ctermfg=fg gui=NONE guibg=#e3e3e3 guifg=fg
     CSAHi NormalNC term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimMapLhs term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi CocListYellowBlue term=NONE cterm=NONE ctermbg=66 ctermfg=172 gui=NONE guibg=#458588 guifg=#d79921
     CSAHi CocListYellowGreen term=NONE cterm=NONE ctermbg=100 ctermfg=172 gui=NONE guibg=#98971a guifg=#d79921
     CSAHi CocListYellowGrey term=NONE cterm=NONE ctermbg=102 ctermfg=172 gui=NONE guibg=#928374 guifg=#d79921
@@ -988,16 +733,6 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi CocListYellowRed term=NONE cterm=NONE ctermbg=160 ctermfg=172 gui=NONE guibg=#cc241d guifg=#d79921
     CSAHi CocListFgYellow term=NONE cterm=NONE ctermbg=bg ctermfg=172 gui=NONE guibg=bg guifg=#d79921
     CSAHi CocListBgYellow term=NONE cterm=NONE ctermbg=172 ctermfg=fg gui=NONE guibg=#d79921 guifg=fg
-    CSAHi vimEcho term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimIsCommand term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimExtCmd term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimFilter term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSet term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi luaIfThen term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi luaElseifThen term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi luaThenEnd term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi luaBlock term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi luaLoopBlock term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi airline_warning term=NONE cterm=NONE ctermbg=166 ctermfg=16 gui=NONE guibg=#df5f00 guifg=#000000
     CSAHi airline_warning_bold term=bold cterm=bold ctermbg=166 ctermfg=16 gui=bold guibg=#df5f00 guifg=#000000
     CSAHi airline_warning_red term=NONE cterm=NONE ctermbg=166 ctermfg=196 gui=NONE guibg=#df5f00 guifg=#ff0000
@@ -1008,16 +743,13 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi airline_y_to_airline_z term=NONE cterm=NONE ctermbg=45 ctermfg=27 gui=NONE guibg=#00dfff guifg=#005fff
     CSAHi airline_z_to_airline_warning term=NONE cterm=NONE ctermbg=27 ctermfg=166 gui=NONE guibg=#005fff guifg=#df5f00
     CSAHi airline_warning_to_airline_error term=NONE cterm=NONE ctermbg=166 ctermfg=88 gui=NONE guibg=#df5f00 guifg=#990000
-    CSAHi vimMapRhsExtend term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimMenuBang term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi MsgArea term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi RedrawDebugNormal term=reverse cterm=reverse ctermbg=bg ctermfg=fg gui=reverse guibg=bg guifg=fg
     CSAHi RedrawDebugClear term=NONE cterm=NONE ctermbg=226 ctermfg=fg gui=NONE guibg=Yellow guifg=fg
     CSAHi RedrawDebugComposed term=NONE cterm=NONE ctermbg=46 ctermfg=fg gui=NONE guibg=Green guifg=fg
     CSAHi RedrawDebugRecompose term=NONE cterm=NONE ctermbg=196 ctermfg=fg gui=NONE guibg=Red guifg=fg
-    CSAHi Cursor term=NONE cterm=NONE ctermbg=235 ctermfg=231 gui=NONE guibg=#222222 guifg=#F7F7F7
-    CSAHi lCursor term=NONE cterm=NONE ctermbg=235 ctermfg=231 gui=NONE guibg=fg guifg=bg
-    CSAHi vimMapRhs term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
+    CSAHi Cursor term=NONE cterm=NONE ctermbg=16 ctermfg=231 gui=NONE guibg=#000000 guifg=#F7F7F7
+    CSAHi lCursor term=NONE cterm=NONE ctermbg=16 ctermfg=231 gui=NONE guibg=fg guifg=bg
     CSAHi CocListMagentaBlack term=NONE cterm=NONE ctermbg=235 ctermfg=132 gui=NONE guibg=#282828 guifg=#b16286
     CSAHi CocListMagentaBlue term=NONE cterm=NONE ctermbg=66 ctermfg=132 gui=NONE guibg=#458588 guifg=#b16286
     CSAHi CocListMagentaGreen term=NONE cterm=NONE ctermbg=100 ctermfg=132 gui=NONE guibg=#98971a guifg=#b16286
@@ -1028,21 +760,12 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi CocListMagentaMagenta term=NONE cterm=NONE ctermbg=132 ctermfg=132 gui=NONE guibg=#b16286 guifg=#b16286
     CSAHi CocListMagentaRed term=NONE cterm=NONE ctermbg=160 ctermfg=132 gui=NONE guibg=#cc241d guifg=#b16286
     CSAHi CocListFgMagenta term=NONE cterm=NONE ctermbg=bg ctermfg=132 gui=NONE guibg=bg guifg=#b16286
-    CSAHi vimComFilter term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimUserCmd term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimCmdSep term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimClusterName term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi luaParen term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi luaTableBlock term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi luaFunctionBlock term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi airline_c1_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=248 gui=NONE guibg=#ffffff guifg=#a8a8a8
     CSAHi CocErrorLine term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi CocWarningLine term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi CocInfoLine term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi CocHintLine term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi CocSelectedLine term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi airline_c1_to_airline_x term=NONE cterm=NONE ctermbg=231 ctermfg=159 gui=NONE guibg=#F7F7F7 guifg=#afffff
-    CSAHi vimSetEqual term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi FloatShadow term=NONE cterm=NONE ctermbg=16 ctermfg=fg gui=NONE guibg=Black guifg=fg
     CSAHi FloatShadowThrough term=NONE cterm=NONE ctermbg=16 ctermfg=fg gui=NONE guibg=Black guifg=fg
     CSAHi Error term=NONE cterm=NONE ctermbg=196 ctermfg=231 gui=NONE guibg=Red guifg=White
@@ -1051,8 +774,6 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi Constant term=NONE cterm=NONE ctermbg=bg ctermfg=97 gui=NONE guibg=bg guifg=#7A3E9D
     CSAHi Character term=NONE cterm=NONE ctermbg=bg ctermfg=64 gui=NONE guibg=bg guifg=#448C27
     CSAHi Number term=NONE cterm=NONE ctermbg=bg ctermfg=97 gui=NONE guibg=bg guifg=#7A3E9D
-    CSAHi vimMenuMap term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimMenuRhs term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi CocListBgMagenta term=NONE cterm=NONE ctermbg=132 ctermfg=fg gui=NONE guibg=#b16286 guifg=fg
     CSAHi CocListRedBlack term=NONE cterm=NONE ctermbg=235 ctermfg=160 gui=NONE guibg=#282828 guifg=#cc241d
     CSAHi CocListRedBlue term=NONE cterm=NONE ctermbg=66 ctermfg=160 gui=NONE guibg=#458588 guifg=#cc241d
@@ -1063,38 +784,25 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi CocListRedYellow term=NONE cterm=NONE ctermbg=172 ctermfg=160 gui=NONE guibg=#d79921 guifg=#cc241d
     CSAHi CocListRedMagenta term=NONE cterm=NONE ctermbg=132 ctermfg=160 gui=NONE guibg=#b16286 guifg=#cc241d
     CSAHi CocListRedRed term=NONE cterm=NONE ctermbg=160 ctermfg=160 gui=NONE guibg=#cc241d guifg=#cc241d
-    CSAHi vimFiletype term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimAugroup term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimExecute term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimFunction term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi PreProc term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
+    CSAHi PreProc term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi CocCursorTransparent term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi Define term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi vimAugroupSyncA term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi StorageClass term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi helpNormal term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
+    CSAHi Define term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi StorageClass term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi rubyClassName term=NONE cterm=NONE ctermbg=bg ctermfg=61 gui=NONE guibg=bg guifg=#325CC0
     CSAHi rubyModuleName term=NONE cterm=NONE ctermbg=bg ctermfg=61 gui=NONE guibg=bg guifg=#325CC0
-    CSAHi rubyConstant term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi rubyClassDeclaration term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi rubyModuleDeclaration term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
+    CSAHi rubyConstant term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi rubyClassDeclaration term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi rubyModuleDeclaration term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi Function term=NONE cterm=NONE ctermbg=bg ctermfg=61 gui=NONE guibg=bg guifg=#325CC0
-    CSAHi rubyInstanceVariable term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
+    CSAHi rubyInstanceVariable term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi rubyPseudoVariable term=NONE cterm=NONE ctermbg=bg ctermfg=97 gui=NONE guibg=bg guifg=#7A3E9D
     CSAHi rubySymbol term=NONE cterm=NONE ctermbg=bg ctermfg=64 gui=NONE guibg=bg guifg=#448C27
     CSAHi rubyRegexp term=NONE cterm=NONE ctermbg=bg ctermfg=97 gui=NONE guibg=bg guifg=#7A3E9D
-    CSAHi Label term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi Operator term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi Keyword term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi vimGroupList term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
+    CSAHi Label term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi Operator term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi Keyword term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi CocListFgRed term=NONE cterm=NONE ctermbg=bg ctermfg=160 gui=NONE guibg=bg guifg=#cc241d
     CSAHi CocListBgRed term=NONE cterm=NONE ctermbg=160 ctermfg=fg gui=NONE guibg=#cc241d guifg=fg
-    CSAHi vimSubst2 term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSubstRep4 term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimOperParen term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimCollClass term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimRegion term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSynLine term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi CocListBlackBlack term=NONE cterm=NONE ctermbg=235 ctermfg=235 gui=NONE guibg=#282828 guifg=#282828
     CSAHi CocListBlackBlue term=NONE cterm=NONE ctermbg=66 ctermfg=235 gui=NONE guibg=#458588 guifg=#282828
     CSAHi CocListBlackGreen term=NONE cterm=NONE ctermbg=100 ctermfg=235 gui=NONE guibg=#98971a guifg=#282828
@@ -1102,32 +810,24 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi CocListBlackWhite term=NONE cterm=NONE ctermbg=138 ctermfg=235 gui=NONE guibg=#a89984 guifg=#282828
     CSAHi CocListBlackCyan term=NONE cterm=NONE ctermbg=71 ctermfg=235 gui=NONE guibg=#689d6a guifg=#282828
     CSAHi CocListBlackYellow term=NONE cterm=NONE ctermbg=172 ctermfg=235 gui=NONE guibg=#d79921 guifg=#282828
-    CSAHi helpGraphic term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi airline_c2_to_airline_x_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=231 gui=NONE guibg=#ffffff guifg=#ffffff
     CSAHi rubyRegexpQuantifier term=NONE cterm=NONE ctermbg=bg ctermfg=64 gui=NONE guibg=bg guifg=#448C27
     CSAHi rubyRegexpAnchor term=NONE cterm=NONE ctermbg=bg ctermfg=243 gui=NONE guibg=bg guifg=#777777
     CSAHi rubyRegexpDelimiter term=NONE cterm=NONE ctermbg=bg ctermfg=243 gui=NONE guibg=bg guifg=#777777
     CSAHi rubyRegexpCharClass term=NONE cterm=NONE ctermbg=bg ctermfg=243 gui=NONE guibg=bg guifg=#777777
-    CSAHi pythonBuiltinFunc term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi goBuiltins term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
+    CSAHi pythonBuiltinFunc term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi goBuiltins term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi goImportString term=NONE cterm=NONE ctermbg=bg ctermfg=61 gui=NONE guibg=bg guifg=#325CC0
     CSAHi goFormatSpecifier term=NONE cterm=NONE ctermbg=bg ctermfg=97 gui=NONE guibg=bg guifg=#7A3E9D
-    CSAHi jsBuiltins term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi jsFunction term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
+    CSAHi jsBuiltins term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi jsFunction term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi Type term=NONE cterm=NONE ctermbg=bg ctermfg=61 gui=NONE guibg=bg guifg=#325CC0
-    CSAHi Typedef term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi vimIskList term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
+    CSAHi Typedef term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi airline_y_inactive term=NONE cterm=NONE ctermbg=252 ctermfg=245 gui=NONE guibg=#d0d0d0 guifg=#8a8a8a
-    CSAHi vimAuSyntax term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi airline_y_inactive_bold term=bold cterm=bold ctermbg=252 ctermfg=245 gui=bold guibg=#d0d0d0 guifg=#8a8a8a
-    CSAHi vimUsrCmd term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi airline_y_inactive_red term=NONE cterm=NONE ctermbg=252 ctermfg=196 gui=NONE guibg=#d0d0d0 guifg=#ff0000
     CSAHi airline_z_inactive term=NONE cterm=NONE ctermbg=249 ctermfg=241 gui=NONE guibg=#b2b2b2 guifg=#666666
     CSAHi airline_z_inactive_bold term=bold cterm=bold ctermbg=249 ctermfg=241 gui=bold guibg=#b2b2b2 guifg=#666666
-    CSAHi airline_c1_to_airline_x_inactive_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=231 gui=NONE guibg=#ffffff guifg=#ffffff
-    CSAHi airline_c1_to_airline_x_inactive_inactive_bold term=bold cterm=bold ctermbg=231 ctermfg=231 gui=bold guibg=#ffffff guifg=#ffffff
     CSAHi airline_z_inactive_red term=NONE cterm=NONE ctermbg=249 ctermfg=196 gui=NONE guibg=#b2b2b2 guifg=#ff0000
-    CSAHi airline_c2_inactive_bold term=bold cterm=bold ctermbg=231 ctermfg=248 gui=bold guibg=#ffffff guifg=#a8a8a8
     CSAHi airline_term_inactive term=NONE cterm=NONE ctermbg=234 ctermfg=158 gui=NONE guibg=#202020 guifg=#9cffd3
     CSAHi CocListBlackMagenta term=NONE cterm=NONE ctermbg=132 ctermfg=235 gui=NONE guibg=#b16286 guifg=#282828
     CSAHi CocListBlackRed term=NONE cterm=NONE ctermbg=160 ctermfg=235 gui=NONE guibg=#cc241d guifg=#282828
@@ -1139,39 +839,22 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi CocListBlueGrey term=NONE cterm=NONE ctermbg=102 ctermfg=66 gui=NONE guibg=#928374 guifg=#458588
     CSAHi CocListBlueWhite term=NONE cterm=NONE ctermbg=138 ctermfg=66 gui=NONE guibg=#a89984 guifg=#458588
     CSAHi CocListBlueCyan term=NONE cterm=NONE ctermbg=71 ctermfg=66 gui=NONE guibg=#689d6a guifg=#458588
-    CSAHi vimAutoCmdSpace term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSynKeyRegion term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSynMatchRegion term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSynMtchCchar term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSynMtchGroup term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi jsGlobalObjects term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi jsAssignmentExps term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi jsObjectProp term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi Tag term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi Special term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
+    CSAHi jsGlobalObjects term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi jsAssignmentExps term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi jsObjectProp term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi Tag term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi Special term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi jsRegexpQuantifier term=NONE cterm=NONE ctermbg=bg ctermfg=64 gui=NONE guibg=bg guifg=#448C27
     CSAHi jsFuncCall term=NONE cterm=NONE ctermbg=bg ctermfg=61 gui=NONE guibg=bg guifg=#325CC0
-    CSAHi htmlLink term=underline cterm=underline ctermbg=bg ctermfg=235 gui=underline guibg=bg guifg=#222222
-    CSAHi htmlStatement term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
+    CSAHi htmlLink term=underline cterm=underline ctermbg=bg ctermfg=16 gui=underline guibg=bg guifg=#000000
+    CSAHi htmlStatement term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi DiagnosticError term=NONE cterm=NONE ctermbg=bg ctermfg=196 gui=NONE guibg=bg guifg=Red
     CSAHi DiagnosticWarn term=NONE cterm=NONE ctermbg=bg ctermfg=214 gui=NONE guibg=bg guifg=Orange
     CSAHi DiagnosticInfo term=NONE cterm=NONE ctermbg=bg ctermfg=152 gui=NONE guibg=bg guifg=LightBlue
     CSAHi DiagnosticHint term=NONE cterm=NONE ctermbg=bg ctermfg=252 gui=NONE guibg=bg guifg=LightGrey
-    CSAHi vimRange term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi VimrDefaultCursor term=reverse cterm=reverse ctermbg=bg ctermfg=fg gui=reverse guibg=bg guifg=fg
-    CSAHi VimrInsertCursor term=NONE cterm=NONE ctermbg=235 ctermfg=fg gui=NONE guibg=fg guifg=fg
+    CSAHi VimrInsertCursor term=NONE cterm=NONE ctermbg=16 ctermfg=fg gui=NONE guibg=fg guifg=fg
     CSAHi airline_x_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=248 gui=NONE guibg=#ffffff guifg=#a8a8a8
-    CSAHi vimAutoCmdSfxList term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi airline_c2_inactive_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#ffffff guifg=#ff0000
-    CSAHi airline_c1_to_airline_x_inactive_inactive_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#ffffff guifg=#ff0000
-    CSAHi airline_b_to_airline_c2_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=252 gui=NONE guibg=#ffffff guifg=#d0d0d0
-    CSAHi airline_c3_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=248 gui=NONE guibg=#ffffff guifg=#a8a8a8
-    CSAHi airline_c1_to_airline_x_bold term=bold cterm=bold ctermbg=231 ctermfg=159 gui=bold guibg=#F7F7F7 guifg=#afffff
-    CSAHi airline_c1_to_airline_x_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#F7F7F7 guifg=#ff0000
-    CSAHi airline_c2_to_airline_x_bold term=bold cterm=bold ctermbg=231 ctermfg=159 gui=bold guibg=#F7F7F7 guifg=#afffff
-    CSAHi airline_c2_to_airline_x_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#F7F7F7 guifg=#ff0000
-    CSAHi airline_b_to_airline_c2_bold term=bold cterm=bold ctermbg=231 ctermfg=45 gui=bold guibg=#F7F7F7 guifg=#00dfff
-    CSAHi airline_b_to_airline_c2_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#F7F7F7 guifg=#ff0000
     CSAHi CocListBlueYellow term=NONE cterm=NONE ctermbg=172 ctermfg=66 gui=NONE guibg=#d79921 guifg=#458588
     CSAHi CocListBlueMagenta term=NONE cterm=NONE ctermbg=132 ctermfg=66 gui=NONE guibg=#b16286 guifg=#458588
     CSAHi CocListBlueRed term=NONE cterm=NONE ctermbg=160 ctermfg=66 gui=NONE guibg=#cc241d guifg=#458588
@@ -1182,10 +865,6 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi CocListGreenGreen term=NONE cterm=NONE ctermbg=100 ctermfg=100 gui=NONE guibg=#98971a guifg=#98971a
     CSAHi CocListGreenGrey term=NONE cterm=NONE ctermbg=102 ctermfg=100 gui=NONE guibg=#928374 guifg=#98971a
     CSAHi CocListGreenWhite term=NONE cterm=NONE ctermbg=138 ctermfg=100 gui=NONE guibg=#a89984 guifg=#98971a
-    CSAHi vimSynRegion term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSynPatMod term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSyncLines term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSyncMatch term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi airline_x_inactive_bold term=bold cterm=bold ctermbg=231 ctermfg=248 gui=bold guibg=#ffffff guifg=#a8a8a8
     CSAHi airline_x_inactive_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#ffffff guifg=#ff0000
     CSAHi htmlH1 term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
@@ -1194,14 +873,9 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi htmlH4 term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi htmlH5 term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi htmlH6 term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi mkdCode term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
+    CSAHi mkdCode term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi IndentGuidesOdd term=NONE cterm=NONE ctermbg=254 ctermfg=253 gui=NONE guibg=#E8E8E8 guifg=#DADADA
     CSAHi IndentGuidesEven term=NONE cterm=NONE ctermbg=253 ctermfg=254 gui=NONE guibg=#DADADA guifg=#E8E8E8
-    CSAHi vimFuncBody term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimFuncBlank term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimEscapeBrace term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSubstRep term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSubstRange term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi airline_term_inactive_bold term=bold cterm=bold ctermbg=234 ctermfg=158 gui=bold guibg=#202020 guifg=#9cffd3
     CSAHi CocListGreenCyan term=NONE cterm=NONE ctermbg=71 ctermfg=100 gui=NONE guibg=#689d6a guifg=#98971a
     CSAHi CocListGreenYellow term=NONE cterm=NONE ctermbg=172 ctermfg=100 gui=NONE guibg=#d79921 guifg=#98971a
@@ -1213,12 +887,6 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi CocListGreyBlue term=NONE cterm=NONE ctermbg=66 ctermfg=102 gui=NONE guibg=#458588 guifg=#928374
     CSAHi CocListGreyGreen term=NONE cterm=NONE ctermbg=100 ctermfg=102 gui=NONE guibg=#98971a guifg=#928374
     CSAHi CocListGreyGrey term=NONE cterm=NONE ctermbg=102 ctermfg=102 gui=NONE guibg=#928374 guifg=#928374
-    CSAHi airline_c2_to_airline_x_inactive_inactive_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#ffffff guifg=#ff0000
-    CSAHi airline_b_to_airline_c2_inactive_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=252 gui=NONE guibg=#ffffff guifg=#d0d0d0
-    CSAHi airline_b_to_airline_c2_inactive_inactive_bold term=bold cterm=bold ctermbg=231 ctermfg=252 gui=bold guibg=#ffffff guifg=#d0d0d0
-    CSAHi airline_b_to_airline_c2_inactive_inactive_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#ffffff guifg=#ff0000
-    CSAHi airline_c3_to_airline_x_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=231 gui=NONE guibg=#ffffff guifg=#ffffff
-    CSAHi vimPatRegion term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi Boolean term=NONE cterm=NONE ctermbg=bg ctermfg=97 gui=NONE guibg=bg guifg=#7A3E9D
     CSAHi Float term=NONE cterm=NONE ctermbg=bg ctermfg=97 gui=NONE guibg=bg guifg=#7A3E9D
     CSAHi CocErrorSign term=NONE cterm=NONE ctermbg=bg ctermfg=196 gui=NONE guibg=bg guifg=#ff0000
@@ -1232,10 +900,8 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi CocItalic term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=italic guibg=bg guifg=fg
     CSAHi CocStrikeThrough term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi Identifier term=NONE cterm=NONE ctermbg=bg ctermfg=61 gui=NONE guibg=bg guifg=#325CC0
-    CSAHi vimHiLink term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi Conditional term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi airline_c2_to_airline_x_inactive_inactive_bold term=bold cterm=bold ctermbg=231 ctermfg=231 gui=bold guibg=#ffffff guifg=#ffffff
-    CSAHi Statement term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
+    CSAHi Conditional term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi Statement term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi airline_term_inactive_red term=NONE cterm=NONE ctermbg=234 ctermfg=196 gui=NONE guibg=#202020 guifg=#ff0000
     CSAHi airline_error_inactive term=NONE cterm=NONE ctermbg=88 ctermfg=16 gui=NONE guibg=#990000 guifg=#000000
     CSAHi airline_error_inactive_bold term=bold cterm=bold ctermbg=88 ctermfg=16 gui=bold guibg=#990000 guifg=#000000
@@ -1246,7 +912,6 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi airline_b_inactive term=NONE cterm=NONE ctermbg=252 ctermfg=245 gui=NONE guibg=#d0d0d0 guifg=#8a8a8a
     CSAHi airline_b_inactive_bold term=bold cterm=bold ctermbg=252 ctermfg=245 gui=bold guibg=#d0d0d0 guifg=#8a8a8a
     CSAHi airline_b_inactive_red term=NONE cterm=NONE ctermbg=252 ctermfg=196 gui=NONE guibg=#d0d0d0 guifg=#ff0000
-    CSAHi vimNormCmds term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi MoreMsg term=bold cterm=bold ctermbg=bg ctermfg=29 gui=bold guibg=bg guifg=SeaGreen
     CSAHi ModeMsg term=bold cterm=bold ctermbg=bg ctermfg=fg gui=bold guibg=bg guifg=fg
     CSAHi LineNr term=NONE cterm=NONE ctermbg=231 ctermfg=247 gui=NONE guibg=#F7F7F7 guifg=#9DA39A
@@ -1255,7 +920,6 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi StatusLine term=NONE cterm=NONE ctermbg=252 ctermfg=233 gui=NONE guibg=#cfcfcf guifg=#141414
     CSAHi StatusLineNC term=reverse cterm=reverse ctermbg=bg ctermfg=fg gui=reverse guibg=bg guifg=fg
     CSAHi VertSplit term=reverse cterm=reverse ctermbg=250 ctermfg=250 gui=reverse guibg=#BCBCBC guifg=#BCBCBC
-    CSAHi airline_c2_to_airline_x_inactive_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=231 gui=NONE guibg=#ffffff guifg=#ffffff
     CSAHi CocListGreyWhite term=NONE cterm=NONE ctermbg=138 ctermfg=102 gui=NONE guibg=#a89984 guifg=#928374
     CSAHi CocListGreyCyan term=NONE cterm=NONE ctermbg=71 ctermfg=102 gui=NONE guibg=#689d6a guifg=#928374
     CSAHi CocListGreyYellow term=NONE cterm=NONE ctermbg=172 ctermfg=102 gui=NONE guibg=#d79921 guifg=#928374
@@ -1266,30 +930,15 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi CocListWhiteBlack term=NONE cterm=NONE ctermbg=235 ctermfg=138 gui=NONE guibg=#282828 guifg=#a89984
     CSAHi CocListWhiteBlue term=NONE cterm=NONE ctermbg=66 ctermfg=138 gui=NONE guibg=#458588 guifg=#a89984
     CSAHi CocListWhiteGreen term=NONE cterm=NONE ctermbg=100 ctermfg=138 gui=NONE guibg=#98971a guifg=#a89984
-    CSAHi vimAutoEventList term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi DiagnosticUnderlineError term=underline cterm=underline ctermbg=bg ctermfg=196 gui=underline guibg=bg guifg=fg guisp=Red
     CSAHi DiagnosticUnderlineWarn term=underline cterm=underline ctermbg=bg ctermfg=214 gui=underline guibg=bg guifg=fg guisp=Orange
     CSAHi DiagnosticUnderlineInfo term=underline cterm=underline ctermbg=bg ctermfg=152 gui=underline guibg=bg guifg=fg guisp=LightBlue
     CSAHi DiagnosticUnderlineHint term=underline cterm=underline ctermbg=bg ctermfg=252 gui=underline guibg=bg guifg=fg guisp=LightGrey
-    CSAHi airline_c2_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=248 gui=NONE guibg=#ffffff guifg=#a8a8a8
-    CSAHi airline_c1_inactive_bold term=bold cterm=bold ctermbg=231 ctermfg=248 gui=bold guibg=#ffffff guifg=#a8a8a8
-    CSAHi airline_c1_inactive_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#ffffff guifg=#ff0000
-    CSAHi airline_x_to_airline_y_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=252 gui=NONE guibg=#ffffff guifg=#d0d0d0
-    CSAHi airline_z_to_airline_warning_inactive term=NONE cterm=NONE ctermbg=249 ctermfg=166 gui=NONE guibg=#b2b2b2 guifg=#df5f00
-    CSAHi airline_c1_to_airline_x_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=231 gui=NONE guibg=#ffffff guifg=#ffffff
-    CSAHi airline_c_to_airline_x_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=231 gui=NONE guibg=#ffffff guifg=#ffffff
-    CSAHi airline_a_to_airline_b_inactive term=NONE cterm=NONE ctermbg=252 ctermfg=249 gui=NONE guibg=#d0d0d0 guifg=#b2b2b2
-    CSAHi airline_warning_to_airline_error_inactive term=NONE cterm=NONE ctermbg=166 ctermfg=88 gui=NONE guibg=#df5f00 guifg=#990000
-    CSAHi airline_y_to_airline_z_inactive term=NONE cterm=NONE ctermbg=252 ctermfg=249 gui=NONE guibg=#d0d0d0 guifg=#b2b2b2
     CSAHi CocMarkdownLink term=NONE cterm=NONE ctermbg=bg ctermfg=37 gui=NONE guibg=bg guifg=#15aabf
     CSAHi CocDisabled term=NONE cterm=NONE ctermbg=bg ctermfg=246 gui=NONE guibg=bg guifg=#999999
     CSAHi markdownCode term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi markdownH1 term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimHiBang term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi rubyClassVariable term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi vimHiCtermColor term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimHiFontname term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimHiGuiFontname term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
+    CSAHi rubyClassVariable term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi airline_c_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=248 gui=NONE guibg=#ffffff guifg=#a8a8a8
     CSAHi airline_c_inactive_bold term=bold cterm=bold ctermbg=231 ctermfg=248 gui=bold guibg=#ffffff guifg=#a8a8a8
     CSAHi airline_c_inactive_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#ffffff guifg=#ff0000
@@ -1300,24 +949,21 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi airline_x_bold term=bold cterm=bold ctermbg=159 ctermfg=27 gui=bold guibg=#afffff guifg=#005fff
     CSAHi airline_x_red term=NONE cterm=NONE ctermbg=159 ctermfg=196 gui=NONE guibg=#afffff guifg=#ff0000
     CSAHi airline_y term=NONE cterm=NONE ctermbg=45 ctermfg=18 gui=NONE guibg=#00dfff guifg=#000087
-    CSAHi Title term=bold cterm=bold ctermbg=bg ctermfg=235 gui=bold guibg=bg guifg=#222222
+    CSAHi Title term=bold cterm=bold ctermbg=bg ctermfg=16 gui=bold guibg=bg guifg=#000000
     CSAHi Visual term=NONE cterm=NONE ctermbg=153 ctermfg=fg gui=NONE guibg=#BFDBFE guifg=fg
     CSAHi VisualNC term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi WarningMsg term=NONE cterm=NONE ctermbg=208 ctermfg=235 gui=NONE guibg=#ff8800 guifg=#222222
+    CSAHi WarningMsg term=NONE cterm=NONE ctermbg=208 ctermfg=16 gui=NONE guibg=#ff8800 guifg=#000000
     CSAHi WildMenu term=NONE cterm=NONE ctermbg=226 ctermfg=16 gui=NONE guibg=Yellow guifg=Black
     CSAHi Folded term=NONE cterm=NONE ctermbg=231 ctermfg=237 gui=NONE guibg=#F7F7F7 guifg=#3d3d3d
     CSAHi FoldColumn term=NONE cterm=NONE ctermbg=250 ctermfg=18 gui=NONE guibg=Grey guifg=DarkBlue
     CSAHi DiffAdd term=bold cterm=bold ctermbg=64 ctermfg=231 gui=bold guibg=#46830c guifg=#f8f8f8
-    CSAHi DiffChange term=NONE cterm=NONE ctermbg=235 ctermfg=235 gui=NONE guibg=#222222 guifg=#222222
+    CSAHi DiffChange term=NONE cterm=NONE ctermbg=16 ctermfg=16 gui=NONE guibg=#000000 guifg=#000000
     CSAHi DiffDelete term=bold cterm=bold ctermbg=195 ctermfg=196 gui=bold guibg=LightCyan guifg=#ff0000
-    CSAHi htmlSpecialTagName term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi vimCollection term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSubstPat term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSyncLinecont term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
+    CSAHi htmlSpecialTagName term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi CocListWhiteGrey term=NONE cterm=NONE ctermbg=102 ctermfg=138 gui=NONE guibg=#928374 guifg=#a89984
     CSAHi CocListWhiteWhite term=NONE cterm=NONE ctermbg=138 ctermfg=138 gui=NONE guibg=#a89984 guifg=#a89984
 elseif has("gui_running") || &t_Co == 256
-    CSAHi Normal term=NONE cterm=NONE ctermbg=231 ctermfg=235 gui=NONE guibg=#F7F7F7 guifg=#222222
+    CSAHi Normal term=NONE cterm=NONE ctermbg=231 ctermfg=16 gui=NONE guibg=#F7F7F7 guifg=#000000
     CSAHi CocListWhiteCyan term=NONE cterm=NONE ctermbg=71 ctermfg=138 gui=NONE guibg=#689d6a guifg=#a89984
     CSAHi CocListWhiteYellow term=NONE cterm=NONE ctermbg=172 ctermfg=138 gui=NONE guibg=#d79921 guifg=#a89984
     CSAHi CocListWhiteMagenta term=NONE cterm=NONE ctermbg=132 ctermfg=138 gui=NONE guibg=#b16286 guifg=#a89984
@@ -1326,16 +972,11 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi CocListBgWhite term=NONE cterm=NONE ctermbg=138 ctermfg=fg gui=NONE guibg=#a89984 guifg=fg
     CSAHi CocListCyanBlack term=NONE cterm=NONE ctermbg=235 ctermfg=71 gui=NONE guibg=#282828 guifg=#689d6a
     CSAHi CocListCyanBlue term=NONE cterm=NONE ctermbg=66 ctermfg=71 gui=NONE guibg=#458588 guifg=#689d6a
-    CSAHi jsFuncArgs term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi vimMenuPriority term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
+    CSAHi jsFuncArgs term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi MatchParen term=underline cterm=underline ctermbg=51 ctermfg=208 gui=underline guibg=Cyan guifg=#ff8800
     CSAHi Comment term=NONE cterm=NONE ctermbg=bg ctermfg=131 gui=NONE guibg=bg guifg=#AA3731
-    CSAHi Underlined term=underline cterm=underline ctermbg=bg ctermfg=235 gui=underline guibg=bg guifg=#222222
+    CSAHi Underlined term=underline cterm=underline ctermbg=bg ctermfg=16 gui=underline guibg=bg guifg=#000000
     CSAHi Ignore term=NONE cterm=NONE ctermbg=bg ctermfg=231 gui=NONE guibg=bg guifg=bg
-    CSAHi vimOnlyCommand term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimStdPlugin term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimOnlyOption term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimTermOption term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi SpecialKey term=NONE cterm=NONE ctermbg=254 ctermfg=233 gui=NONE guibg=#e3e3e3 guifg=#141414
     CSAHi TermCursor term=reverse cterm=reverse ctermbg=bg ctermfg=fg gui=reverse guibg=bg guifg=fg
     CSAHi TermCursorNC term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
@@ -1355,18 +996,16 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi airline_term_red term=NONE cterm=NONE ctermbg=234 ctermfg=196 gui=NONE guibg=#202020 guifg=#ff0000
     CSAHi airline_error term=NONE cterm=NONE ctermbg=88 ctermfg=16 gui=NONE guibg=#990000 guifg=#000000
     CSAHi airline_error_bold term=bold cterm=bold ctermbg=88 ctermfg=16 gui=bold guibg=#990000 guifg=#000000
-    CSAHi vimSyncLinebreak term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi DiffText term=bold cterm=bold ctermbg=235 ctermfg=235 gui=bold guibg=#222222 guifg=#222222
+    CSAHi DiffText term=bold cterm=bold ctermbg=16 ctermfg=16 gui=bold guibg=#000000 guifg=#000000
     CSAHi SignColumn term=NONE cterm=NONE ctermbg=231 ctermfg=18 gui=NONE guibg=#F7F7F7 guifg=DarkBlue
     CSAHi Conceal term=NONE cterm=NONE ctermbg=248 ctermfg=252 gui=NONE guibg=DarkGrey guifg=LightGrey
     CSAHi SpellBad term=undercurl cterm=undercurl ctermbg=bg ctermfg=196 gui=undercurl guibg=bg guifg=fg guisp=Red
     CSAHi SpellCap term=undercurl cterm=undercurl ctermbg=bg ctermfg=21 gui=undercurl guibg=bg guifg=fg guisp=Blue
     CSAHi SpellRare term=undercurl cterm=undercurl ctermbg=bg ctermfg=201 gui=undercurl guibg=bg guifg=fg guisp=Magenta
     CSAHi SpellLocal term=undercurl cterm=undercurl ctermbg=bg ctermfg=30 gui=undercurl guibg=bg guifg=fg guisp=DarkCyan
-    CSAHi Pmenu term=NONE cterm=NONE ctermbg=254 ctermfg=235 gui=NONE guibg=#e3e3e3 guifg=#222222
+    CSAHi Pmenu term=NONE cterm=NONE ctermbg=254 ctermfg=16 gui=NONE guibg=#e3e3e3 guifg=#000000
     CSAHi PmenuSel term=NONE cterm=NONE ctermbg=252 ctermfg=fg gui=NONE guibg=#cfcfcf guifg=fg
     CSAHi PmenuSbar term=NONE cterm=NONE ctermbg=250 ctermfg=fg gui=NONE guibg=Grey guifg=fg
-    CSAHi vimSyncRegion term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi CocListCyanGreen term=NONE cterm=NONE ctermbg=100 ctermfg=71 gui=NONE guibg=#98971a guifg=#689d6a
     CSAHi CocListCyanGrey term=NONE cterm=NONE ctermbg=102 ctermfg=71 gui=NONE guibg=#928374 guifg=#689d6a
     CSAHi CocListCyanWhite term=NONE cterm=NONE ctermbg=138 ctermfg=71 gui=NONE guibg=#a89984 guifg=#689d6a
@@ -1378,17 +1017,6 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi CocListBgCyan term=NONE cterm=NONE ctermbg=71 ctermfg=fg gui=NONE guibg=#689d6a guifg=fg
     CSAHi CocListYellowBlack term=NONE cterm=NONE ctermbg=235 ctermfg=172 gui=NONE guibg=#282828 guifg=#d79921
     CSAHi NvimInternalError term=NONE cterm=NONE ctermbg=9 ctermfg=9 gui=NONE guibg=Red guifg=Red
-    CSAHi vimOnlyHLGroup term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimGlobal term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi airline_b_to_airline_c_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=252 gui=NONE guibg=#ffffff guifg=#d0d0d0
-    CSAHi vimHiKeyList term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi airline_b_to_airline_c2 term=NONE cterm=NONE ctermbg=231 ctermfg=45 gui=NONE guibg=#F7F7F7 guifg=#00dfff
-    CSAHi airline_c3_to_airline_x term=NONE cterm=NONE ctermbg=231 ctermfg=159 gui=NONE guibg=#F7F7F7 guifg=#afffff
-    CSAHi airline_c2_to_airline_x term=NONE cterm=NONE ctermbg=231 ctermfg=159 gui=NONE guibg=#F7F7F7 guifg=#afffff
-    CSAHi vimHiTermcap term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimCommentTitleLeader term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimLuaRegion term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi luaInnerComment term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi airline_error_red term=NONE cterm=NONE ctermbg=88 ctermfg=196 gui=NONE guibg=#990000 guifg=#ff0000
     CSAHi airline_a term=NONE cterm=NONE ctermbg=27 ctermfg=231 gui=NONE guibg=#005fff guifg=#ffffff
     CSAHi airline_a_bold term=bold cterm=bold ctermbg=27 ctermfg=231 gui=bold guibg=#005fff guifg=#ffffff
@@ -1407,7 +1035,6 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi CursorLine term=NONE cterm=NONE ctermbg=254 ctermfg=fg gui=NONE guibg=#e3e3e3 guifg=fg
     CSAHi ColorColumn term=NONE cterm=NONE ctermbg=254 ctermfg=fg gui=NONE guibg=#e3e3e3 guifg=fg
     CSAHi NormalNC term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimMapLhs term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi CocListYellowBlue term=NONE cterm=NONE ctermbg=66 ctermfg=172 gui=NONE guibg=#458588 guifg=#d79921
     CSAHi CocListYellowGreen term=NONE cterm=NONE ctermbg=100 ctermfg=172 gui=NONE guibg=#98971a guifg=#d79921
     CSAHi CocListYellowGrey term=NONE cterm=NONE ctermbg=102 ctermfg=172 gui=NONE guibg=#928374 guifg=#d79921
@@ -1418,16 +1045,6 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi CocListYellowRed term=NONE cterm=NONE ctermbg=160 ctermfg=172 gui=NONE guibg=#cc241d guifg=#d79921
     CSAHi CocListFgYellow term=NONE cterm=NONE ctermbg=bg ctermfg=172 gui=NONE guibg=bg guifg=#d79921
     CSAHi CocListBgYellow term=NONE cterm=NONE ctermbg=172 ctermfg=fg gui=NONE guibg=#d79921 guifg=fg
-    CSAHi vimEcho term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimIsCommand term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimExtCmd term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimFilter term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSet term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi luaIfThen term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi luaElseifThen term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi luaThenEnd term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi luaBlock term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi luaLoopBlock term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi airline_warning term=NONE cterm=NONE ctermbg=166 ctermfg=16 gui=NONE guibg=#df5f00 guifg=#000000
     CSAHi airline_warning_bold term=bold cterm=bold ctermbg=166 ctermfg=16 gui=bold guibg=#df5f00 guifg=#000000
     CSAHi airline_warning_red term=NONE cterm=NONE ctermbg=166 ctermfg=196 gui=NONE guibg=#df5f00 guifg=#ff0000
@@ -1438,16 +1055,13 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi airline_y_to_airline_z term=NONE cterm=NONE ctermbg=45 ctermfg=27 gui=NONE guibg=#00dfff guifg=#005fff
     CSAHi airline_z_to_airline_warning term=NONE cterm=NONE ctermbg=27 ctermfg=166 gui=NONE guibg=#005fff guifg=#df5f00
     CSAHi airline_warning_to_airline_error term=NONE cterm=NONE ctermbg=166 ctermfg=88 gui=NONE guibg=#df5f00 guifg=#990000
-    CSAHi vimMapRhsExtend term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimMenuBang term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi MsgArea term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi RedrawDebugNormal term=reverse cterm=reverse ctermbg=bg ctermfg=fg gui=reverse guibg=bg guifg=fg
     CSAHi RedrawDebugClear term=NONE cterm=NONE ctermbg=226 ctermfg=fg gui=NONE guibg=Yellow guifg=fg
     CSAHi RedrawDebugComposed term=NONE cterm=NONE ctermbg=46 ctermfg=fg gui=NONE guibg=Green guifg=fg
     CSAHi RedrawDebugRecompose term=NONE cterm=NONE ctermbg=196 ctermfg=fg gui=NONE guibg=Red guifg=fg
-    CSAHi Cursor term=NONE cterm=NONE ctermbg=235 ctermfg=231 gui=NONE guibg=#222222 guifg=#F7F7F7
-    CSAHi lCursor term=NONE cterm=NONE ctermbg=235 ctermfg=231 gui=NONE guibg=fg guifg=bg
-    CSAHi vimMapRhs term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
+    CSAHi Cursor term=NONE cterm=NONE ctermbg=16 ctermfg=231 gui=NONE guibg=#000000 guifg=#F7F7F7
+    CSAHi lCursor term=NONE cterm=NONE ctermbg=16 ctermfg=231 gui=NONE guibg=fg guifg=bg
     CSAHi CocListMagentaBlack term=NONE cterm=NONE ctermbg=235 ctermfg=132 gui=NONE guibg=#282828 guifg=#b16286
     CSAHi CocListMagentaBlue term=NONE cterm=NONE ctermbg=66 ctermfg=132 gui=NONE guibg=#458588 guifg=#b16286
     CSAHi CocListMagentaGreen term=NONE cterm=NONE ctermbg=100 ctermfg=132 gui=NONE guibg=#98971a guifg=#b16286
@@ -1458,21 +1072,12 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi CocListMagentaMagenta term=NONE cterm=NONE ctermbg=132 ctermfg=132 gui=NONE guibg=#b16286 guifg=#b16286
     CSAHi CocListMagentaRed term=NONE cterm=NONE ctermbg=160 ctermfg=132 gui=NONE guibg=#cc241d guifg=#b16286
     CSAHi CocListFgMagenta term=NONE cterm=NONE ctermbg=bg ctermfg=132 gui=NONE guibg=bg guifg=#b16286
-    CSAHi vimComFilter term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimUserCmd term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimCmdSep term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimClusterName term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi luaParen term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi luaTableBlock term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi luaFunctionBlock term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi airline_c1_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=248 gui=NONE guibg=#ffffff guifg=#a8a8a8
     CSAHi CocErrorLine term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi CocWarningLine term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi CocInfoLine term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi CocHintLine term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi CocSelectedLine term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi airline_c1_to_airline_x term=NONE cterm=NONE ctermbg=231 ctermfg=159 gui=NONE guibg=#F7F7F7 guifg=#afffff
-    CSAHi vimSetEqual term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi FloatShadow term=NONE cterm=NONE ctermbg=16 ctermfg=fg gui=NONE guibg=Black guifg=fg
     CSAHi FloatShadowThrough term=NONE cterm=NONE ctermbg=16 ctermfg=fg gui=NONE guibg=Black guifg=fg
     CSAHi Error term=NONE cterm=NONE ctermbg=196 ctermfg=231 gui=NONE guibg=Red guifg=White
@@ -1481,8 +1086,6 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi Constant term=NONE cterm=NONE ctermbg=bg ctermfg=97 gui=NONE guibg=bg guifg=#7A3E9D
     CSAHi Character term=NONE cterm=NONE ctermbg=bg ctermfg=64 gui=NONE guibg=bg guifg=#448C27
     CSAHi Number term=NONE cterm=NONE ctermbg=bg ctermfg=97 gui=NONE guibg=bg guifg=#7A3E9D
-    CSAHi vimMenuMap term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimMenuRhs term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi CocListBgMagenta term=NONE cterm=NONE ctermbg=132 ctermfg=fg gui=NONE guibg=#b16286 guifg=fg
     CSAHi CocListRedBlack term=NONE cterm=NONE ctermbg=235 ctermfg=160 gui=NONE guibg=#282828 guifg=#cc241d
     CSAHi CocListRedBlue term=NONE cterm=NONE ctermbg=66 ctermfg=160 gui=NONE guibg=#458588 guifg=#cc241d
@@ -1493,38 +1096,25 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi CocListRedYellow term=NONE cterm=NONE ctermbg=172 ctermfg=160 gui=NONE guibg=#d79921 guifg=#cc241d
     CSAHi CocListRedMagenta term=NONE cterm=NONE ctermbg=132 ctermfg=160 gui=NONE guibg=#b16286 guifg=#cc241d
     CSAHi CocListRedRed term=NONE cterm=NONE ctermbg=160 ctermfg=160 gui=NONE guibg=#cc241d guifg=#cc241d
-    CSAHi vimFiletype term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimAugroup term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimExecute term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimFunction term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi PreProc term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
+    CSAHi PreProc term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi CocCursorTransparent term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi Define term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi vimAugroupSyncA term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi StorageClass term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi helpNormal term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
+    CSAHi Define term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi StorageClass term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi rubyClassName term=NONE cterm=NONE ctermbg=bg ctermfg=61 gui=NONE guibg=bg guifg=#325CC0
     CSAHi rubyModuleName term=NONE cterm=NONE ctermbg=bg ctermfg=61 gui=NONE guibg=bg guifg=#325CC0
-    CSAHi rubyConstant term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi rubyClassDeclaration term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi rubyModuleDeclaration term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
+    CSAHi rubyConstant term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi rubyClassDeclaration term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi rubyModuleDeclaration term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi Function term=NONE cterm=NONE ctermbg=bg ctermfg=61 gui=NONE guibg=bg guifg=#325CC0
-    CSAHi rubyInstanceVariable term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
+    CSAHi rubyInstanceVariable term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi rubyPseudoVariable term=NONE cterm=NONE ctermbg=bg ctermfg=97 gui=NONE guibg=bg guifg=#7A3E9D
     CSAHi rubySymbol term=NONE cterm=NONE ctermbg=bg ctermfg=64 gui=NONE guibg=bg guifg=#448C27
     CSAHi rubyRegexp term=NONE cterm=NONE ctermbg=bg ctermfg=97 gui=NONE guibg=bg guifg=#7A3E9D
-    CSAHi Label term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi Operator term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi Keyword term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi vimGroupList term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
+    CSAHi Label term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi Operator term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi Keyword term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi CocListFgRed term=NONE cterm=NONE ctermbg=bg ctermfg=160 gui=NONE guibg=bg guifg=#cc241d
     CSAHi CocListBgRed term=NONE cterm=NONE ctermbg=160 ctermfg=fg gui=NONE guibg=#cc241d guifg=fg
-    CSAHi vimSubst2 term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSubstRep4 term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimOperParen term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimCollClass term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimRegion term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSynLine term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi CocListBlackBlack term=NONE cterm=NONE ctermbg=235 ctermfg=235 gui=NONE guibg=#282828 guifg=#282828
     CSAHi CocListBlackBlue term=NONE cterm=NONE ctermbg=66 ctermfg=235 gui=NONE guibg=#458588 guifg=#282828
     CSAHi CocListBlackGreen term=NONE cterm=NONE ctermbg=100 ctermfg=235 gui=NONE guibg=#98971a guifg=#282828
@@ -1532,32 +1122,24 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi CocListBlackWhite term=NONE cterm=NONE ctermbg=138 ctermfg=235 gui=NONE guibg=#a89984 guifg=#282828
     CSAHi CocListBlackCyan term=NONE cterm=NONE ctermbg=71 ctermfg=235 gui=NONE guibg=#689d6a guifg=#282828
     CSAHi CocListBlackYellow term=NONE cterm=NONE ctermbg=172 ctermfg=235 gui=NONE guibg=#d79921 guifg=#282828
-    CSAHi helpGraphic term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi airline_c2_to_airline_x_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=231 gui=NONE guibg=#ffffff guifg=#ffffff
     CSAHi rubyRegexpQuantifier term=NONE cterm=NONE ctermbg=bg ctermfg=64 gui=NONE guibg=bg guifg=#448C27
     CSAHi rubyRegexpAnchor term=NONE cterm=NONE ctermbg=bg ctermfg=243 gui=NONE guibg=bg guifg=#777777
     CSAHi rubyRegexpDelimiter term=NONE cterm=NONE ctermbg=bg ctermfg=243 gui=NONE guibg=bg guifg=#777777
     CSAHi rubyRegexpCharClass term=NONE cterm=NONE ctermbg=bg ctermfg=243 gui=NONE guibg=bg guifg=#777777
-    CSAHi pythonBuiltinFunc term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi goBuiltins term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
+    CSAHi pythonBuiltinFunc term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi goBuiltins term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi goImportString term=NONE cterm=NONE ctermbg=bg ctermfg=61 gui=NONE guibg=bg guifg=#325CC0
     CSAHi goFormatSpecifier term=NONE cterm=NONE ctermbg=bg ctermfg=97 gui=NONE guibg=bg guifg=#7A3E9D
-    CSAHi jsBuiltins term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi jsFunction term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
+    CSAHi jsBuiltins term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi jsFunction term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi Type term=NONE cterm=NONE ctermbg=bg ctermfg=61 gui=NONE guibg=bg guifg=#325CC0
-    CSAHi Typedef term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi vimIskList term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
+    CSAHi Typedef term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi airline_y_inactive term=NONE cterm=NONE ctermbg=252 ctermfg=245 gui=NONE guibg=#d0d0d0 guifg=#8a8a8a
-    CSAHi vimAuSyntax term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi airline_y_inactive_bold term=bold cterm=bold ctermbg=252 ctermfg=245 gui=bold guibg=#d0d0d0 guifg=#8a8a8a
-    CSAHi vimUsrCmd term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi airline_y_inactive_red term=NONE cterm=NONE ctermbg=252 ctermfg=196 gui=NONE guibg=#d0d0d0 guifg=#ff0000
     CSAHi airline_z_inactive term=NONE cterm=NONE ctermbg=249 ctermfg=241 gui=NONE guibg=#b2b2b2 guifg=#666666
     CSAHi airline_z_inactive_bold term=bold cterm=bold ctermbg=249 ctermfg=241 gui=bold guibg=#b2b2b2 guifg=#666666
-    CSAHi airline_c1_to_airline_x_inactive_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=231 gui=NONE guibg=#ffffff guifg=#ffffff
-    CSAHi airline_c1_to_airline_x_inactive_inactive_bold term=bold cterm=bold ctermbg=231 ctermfg=231 gui=bold guibg=#ffffff guifg=#ffffff
     CSAHi airline_z_inactive_red term=NONE cterm=NONE ctermbg=249 ctermfg=196 gui=NONE guibg=#b2b2b2 guifg=#ff0000
-    CSAHi airline_c2_inactive_bold term=bold cterm=bold ctermbg=231 ctermfg=248 gui=bold guibg=#ffffff guifg=#a8a8a8
     CSAHi airline_term_inactive term=NONE cterm=NONE ctermbg=234 ctermfg=158 gui=NONE guibg=#202020 guifg=#9cffd3
     CSAHi CocListBlackMagenta term=NONE cterm=NONE ctermbg=132 ctermfg=235 gui=NONE guibg=#b16286 guifg=#282828
     CSAHi CocListBlackRed term=NONE cterm=NONE ctermbg=160 ctermfg=235 gui=NONE guibg=#cc241d guifg=#282828
@@ -1569,39 +1151,22 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi CocListBlueGrey term=NONE cterm=NONE ctermbg=102 ctermfg=66 gui=NONE guibg=#928374 guifg=#458588
     CSAHi CocListBlueWhite term=NONE cterm=NONE ctermbg=138 ctermfg=66 gui=NONE guibg=#a89984 guifg=#458588
     CSAHi CocListBlueCyan term=NONE cterm=NONE ctermbg=71 ctermfg=66 gui=NONE guibg=#689d6a guifg=#458588
-    CSAHi vimAutoCmdSpace term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSynKeyRegion term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSynMatchRegion term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSynMtchCchar term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSynMtchGroup term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi jsGlobalObjects term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi jsAssignmentExps term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi jsObjectProp term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi Tag term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi Special term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
+    CSAHi jsGlobalObjects term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi jsAssignmentExps term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi jsObjectProp term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi Tag term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi Special term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi jsRegexpQuantifier term=NONE cterm=NONE ctermbg=bg ctermfg=64 gui=NONE guibg=bg guifg=#448C27
     CSAHi jsFuncCall term=NONE cterm=NONE ctermbg=bg ctermfg=61 gui=NONE guibg=bg guifg=#325CC0
-    CSAHi htmlLink term=underline cterm=underline ctermbg=bg ctermfg=235 gui=underline guibg=bg guifg=#222222
-    CSAHi htmlStatement term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
+    CSAHi htmlLink term=underline cterm=underline ctermbg=bg ctermfg=16 gui=underline guibg=bg guifg=#000000
+    CSAHi htmlStatement term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi DiagnosticError term=NONE cterm=NONE ctermbg=bg ctermfg=196 gui=NONE guibg=bg guifg=Red
     CSAHi DiagnosticWarn term=NONE cterm=NONE ctermbg=bg ctermfg=214 gui=NONE guibg=bg guifg=Orange
     CSAHi DiagnosticInfo term=NONE cterm=NONE ctermbg=bg ctermfg=152 gui=NONE guibg=bg guifg=LightBlue
     CSAHi DiagnosticHint term=NONE cterm=NONE ctermbg=bg ctermfg=252 gui=NONE guibg=bg guifg=LightGrey
-    CSAHi vimRange term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi VimrDefaultCursor term=reverse cterm=reverse ctermbg=bg ctermfg=fg gui=reverse guibg=bg guifg=fg
-    CSAHi VimrInsertCursor term=NONE cterm=NONE ctermbg=235 ctermfg=fg gui=NONE guibg=fg guifg=fg
+    CSAHi VimrInsertCursor term=NONE cterm=NONE ctermbg=16 ctermfg=fg gui=NONE guibg=fg guifg=fg
     CSAHi airline_x_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=248 gui=NONE guibg=#ffffff guifg=#a8a8a8
-    CSAHi vimAutoCmdSfxList term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi airline_c2_inactive_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#ffffff guifg=#ff0000
-    CSAHi airline_c1_to_airline_x_inactive_inactive_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#ffffff guifg=#ff0000
-    CSAHi airline_b_to_airline_c2_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=252 gui=NONE guibg=#ffffff guifg=#d0d0d0
-    CSAHi airline_c3_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=248 gui=NONE guibg=#ffffff guifg=#a8a8a8
-    CSAHi airline_c1_to_airline_x_bold term=bold cterm=bold ctermbg=231 ctermfg=159 gui=bold guibg=#F7F7F7 guifg=#afffff
-    CSAHi airline_c1_to_airline_x_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#F7F7F7 guifg=#ff0000
-    CSAHi airline_c2_to_airline_x_bold term=bold cterm=bold ctermbg=231 ctermfg=159 gui=bold guibg=#F7F7F7 guifg=#afffff
-    CSAHi airline_c2_to_airline_x_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#F7F7F7 guifg=#ff0000
-    CSAHi airline_b_to_airline_c2_bold term=bold cterm=bold ctermbg=231 ctermfg=45 gui=bold guibg=#F7F7F7 guifg=#00dfff
-    CSAHi airline_b_to_airline_c2_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#F7F7F7 guifg=#ff0000
     CSAHi CocListBlueYellow term=NONE cterm=NONE ctermbg=172 ctermfg=66 gui=NONE guibg=#d79921 guifg=#458588
     CSAHi CocListBlueMagenta term=NONE cterm=NONE ctermbg=132 ctermfg=66 gui=NONE guibg=#b16286 guifg=#458588
     CSAHi CocListBlueRed term=NONE cterm=NONE ctermbg=160 ctermfg=66 gui=NONE guibg=#cc241d guifg=#458588
@@ -1612,10 +1177,6 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi CocListGreenGreen term=NONE cterm=NONE ctermbg=100 ctermfg=100 gui=NONE guibg=#98971a guifg=#98971a
     CSAHi CocListGreenGrey term=NONE cterm=NONE ctermbg=102 ctermfg=100 gui=NONE guibg=#928374 guifg=#98971a
     CSAHi CocListGreenWhite term=NONE cterm=NONE ctermbg=138 ctermfg=100 gui=NONE guibg=#a89984 guifg=#98971a
-    CSAHi vimSynRegion term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSynPatMod term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSyncLines term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSyncMatch term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi airline_x_inactive_bold term=bold cterm=bold ctermbg=231 ctermfg=248 gui=bold guibg=#ffffff guifg=#a8a8a8
     CSAHi airline_x_inactive_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#ffffff guifg=#ff0000
     CSAHi htmlH1 term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
@@ -1624,14 +1185,9 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi htmlH4 term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi htmlH5 term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi htmlH6 term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi mkdCode term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
+    CSAHi mkdCode term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi IndentGuidesOdd term=NONE cterm=NONE ctermbg=254 ctermfg=253 gui=NONE guibg=#E8E8E8 guifg=#DADADA
     CSAHi IndentGuidesEven term=NONE cterm=NONE ctermbg=253 ctermfg=254 gui=NONE guibg=#DADADA guifg=#E8E8E8
-    CSAHi vimFuncBody term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimFuncBlank term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimEscapeBrace term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSubstRep term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSubstRange term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi airline_term_inactive_bold term=bold cterm=bold ctermbg=234 ctermfg=158 gui=bold guibg=#202020 guifg=#9cffd3
     CSAHi CocListGreenCyan term=NONE cterm=NONE ctermbg=71 ctermfg=100 gui=NONE guibg=#689d6a guifg=#98971a
     CSAHi CocListGreenYellow term=NONE cterm=NONE ctermbg=172 ctermfg=100 gui=NONE guibg=#d79921 guifg=#98971a
@@ -1643,12 +1199,6 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi CocListGreyBlue term=NONE cterm=NONE ctermbg=66 ctermfg=102 gui=NONE guibg=#458588 guifg=#928374
     CSAHi CocListGreyGreen term=NONE cterm=NONE ctermbg=100 ctermfg=102 gui=NONE guibg=#98971a guifg=#928374
     CSAHi CocListGreyGrey term=NONE cterm=NONE ctermbg=102 ctermfg=102 gui=NONE guibg=#928374 guifg=#928374
-    CSAHi airline_c2_to_airline_x_inactive_inactive_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#ffffff guifg=#ff0000
-    CSAHi airline_b_to_airline_c2_inactive_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=252 gui=NONE guibg=#ffffff guifg=#d0d0d0
-    CSAHi airline_b_to_airline_c2_inactive_inactive_bold term=bold cterm=bold ctermbg=231 ctermfg=252 gui=bold guibg=#ffffff guifg=#d0d0d0
-    CSAHi airline_b_to_airline_c2_inactive_inactive_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#ffffff guifg=#ff0000
-    CSAHi airline_c3_to_airline_x_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=231 gui=NONE guibg=#ffffff guifg=#ffffff
-    CSAHi vimPatRegion term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi Boolean term=NONE cterm=NONE ctermbg=bg ctermfg=97 gui=NONE guibg=bg guifg=#7A3E9D
     CSAHi Float term=NONE cterm=NONE ctermbg=bg ctermfg=97 gui=NONE guibg=bg guifg=#7A3E9D
     CSAHi CocErrorSign term=NONE cterm=NONE ctermbg=bg ctermfg=196 gui=NONE guibg=bg guifg=#ff0000
@@ -1662,10 +1212,8 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi CocItalic term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=italic guibg=bg guifg=fg
     CSAHi CocStrikeThrough term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi Identifier term=NONE cterm=NONE ctermbg=bg ctermfg=61 gui=NONE guibg=bg guifg=#325CC0
-    CSAHi vimHiLink term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi Conditional term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi airline_c2_to_airline_x_inactive_inactive_bold term=bold cterm=bold ctermbg=231 ctermfg=231 gui=bold guibg=#ffffff guifg=#ffffff
-    CSAHi Statement term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
+    CSAHi Conditional term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
+    CSAHi Statement term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi airline_term_inactive_red term=NONE cterm=NONE ctermbg=234 ctermfg=196 gui=NONE guibg=#202020 guifg=#ff0000
     CSAHi airline_error_inactive term=NONE cterm=NONE ctermbg=88 ctermfg=16 gui=NONE guibg=#990000 guifg=#000000
     CSAHi airline_error_inactive_bold term=bold cterm=bold ctermbg=88 ctermfg=16 gui=bold guibg=#990000 guifg=#000000
@@ -1676,7 +1224,6 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi airline_b_inactive term=NONE cterm=NONE ctermbg=252 ctermfg=245 gui=NONE guibg=#d0d0d0 guifg=#8a8a8a
     CSAHi airline_b_inactive_bold term=bold cterm=bold ctermbg=252 ctermfg=245 gui=bold guibg=#d0d0d0 guifg=#8a8a8a
     CSAHi airline_b_inactive_red term=NONE cterm=NONE ctermbg=252 ctermfg=196 gui=NONE guibg=#d0d0d0 guifg=#ff0000
-    CSAHi vimNormCmds term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi MoreMsg term=bold cterm=bold ctermbg=bg ctermfg=29 gui=bold guibg=bg guifg=SeaGreen
     CSAHi ModeMsg term=bold cterm=bold ctermbg=bg ctermfg=fg gui=bold guibg=bg guifg=fg
     CSAHi LineNr term=NONE cterm=NONE ctermbg=231 ctermfg=247 gui=NONE guibg=#F7F7F7 guifg=#9DA39A
@@ -1685,7 +1232,6 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi StatusLine term=NONE cterm=NONE ctermbg=252 ctermfg=233 gui=NONE guibg=#cfcfcf guifg=#141414
     CSAHi StatusLineNC term=reverse cterm=reverse ctermbg=bg ctermfg=fg gui=reverse guibg=bg guifg=fg
     CSAHi VertSplit term=reverse cterm=reverse ctermbg=250 ctermfg=250 gui=reverse guibg=#BCBCBC guifg=#BCBCBC
-    CSAHi airline_c2_to_airline_x_inactive_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=231 gui=NONE guibg=#ffffff guifg=#ffffff
     CSAHi CocListGreyWhite term=NONE cterm=NONE ctermbg=138 ctermfg=102 gui=NONE guibg=#a89984 guifg=#928374
     CSAHi CocListGreyCyan term=NONE cterm=NONE ctermbg=71 ctermfg=102 gui=NONE guibg=#689d6a guifg=#928374
     CSAHi CocListGreyYellow term=NONE cterm=NONE ctermbg=172 ctermfg=102 gui=NONE guibg=#d79921 guifg=#928374
@@ -1696,30 +1242,15 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi CocListWhiteBlack term=NONE cterm=NONE ctermbg=235 ctermfg=138 gui=NONE guibg=#282828 guifg=#a89984
     CSAHi CocListWhiteBlue term=NONE cterm=NONE ctermbg=66 ctermfg=138 gui=NONE guibg=#458588 guifg=#a89984
     CSAHi CocListWhiteGreen term=NONE cterm=NONE ctermbg=100 ctermfg=138 gui=NONE guibg=#98971a guifg=#a89984
-    CSAHi vimAutoEventList term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi DiagnosticUnderlineError term=underline cterm=underline ctermbg=bg ctermfg=196 gui=underline guibg=bg guifg=fg guisp=Red
     CSAHi DiagnosticUnderlineWarn term=underline cterm=underline ctermbg=bg ctermfg=214 gui=underline guibg=bg guifg=fg guisp=Orange
     CSAHi DiagnosticUnderlineInfo term=underline cterm=underline ctermbg=bg ctermfg=152 gui=underline guibg=bg guifg=fg guisp=LightBlue
     CSAHi DiagnosticUnderlineHint term=underline cterm=underline ctermbg=bg ctermfg=252 gui=underline guibg=bg guifg=fg guisp=LightGrey
-    CSAHi airline_c2_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=248 gui=NONE guibg=#ffffff guifg=#a8a8a8
-    CSAHi airline_c1_inactive_bold term=bold cterm=bold ctermbg=231 ctermfg=248 gui=bold guibg=#ffffff guifg=#a8a8a8
-    CSAHi airline_c1_inactive_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#ffffff guifg=#ff0000
-    CSAHi airline_x_to_airline_y_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=252 gui=NONE guibg=#ffffff guifg=#d0d0d0
-    CSAHi airline_z_to_airline_warning_inactive term=NONE cterm=NONE ctermbg=249 ctermfg=166 gui=NONE guibg=#b2b2b2 guifg=#df5f00
-    CSAHi airline_c1_to_airline_x_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=231 gui=NONE guibg=#ffffff guifg=#ffffff
-    CSAHi airline_c_to_airline_x_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=231 gui=NONE guibg=#ffffff guifg=#ffffff
-    CSAHi airline_a_to_airline_b_inactive term=NONE cterm=NONE ctermbg=252 ctermfg=249 gui=NONE guibg=#d0d0d0 guifg=#b2b2b2
-    CSAHi airline_warning_to_airline_error_inactive term=NONE cterm=NONE ctermbg=166 ctermfg=88 gui=NONE guibg=#df5f00 guifg=#990000
-    CSAHi airline_y_to_airline_z_inactive term=NONE cterm=NONE ctermbg=252 ctermfg=249 gui=NONE guibg=#d0d0d0 guifg=#b2b2b2
     CSAHi CocMarkdownLink term=NONE cterm=NONE ctermbg=bg ctermfg=37 gui=NONE guibg=bg guifg=#15aabf
     CSAHi CocDisabled term=NONE cterm=NONE ctermbg=bg ctermfg=246 gui=NONE guibg=bg guifg=#999999
     CSAHi markdownCode term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
     CSAHi markdownH1 term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimHiBang term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi rubyClassVariable term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi vimHiCtermColor term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimHiFontname term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimHiGuiFontname term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
+    CSAHi rubyClassVariable term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi airline_c_inactive term=NONE cterm=NONE ctermbg=231 ctermfg=248 gui=NONE guibg=#ffffff guifg=#a8a8a8
     CSAHi airline_c_inactive_bold term=bold cterm=bold ctermbg=231 ctermfg=248 gui=bold guibg=#ffffff guifg=#a8a8a8
     CSAHi airline_c_inactive_red term=NONE cterm=NONE ctermbg=231 ctermfg=196 gui=NONE guibg=#ffffff guifg=#ff0000
@@ -1730,20 +1261,17 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi airline_x_bold term=bold cterm=bold ctermbg=159 ctermfg=27 gui=bold guibg=#afffff guifg=#005fff
     CSAHi airline_x_red term=NONE cterm=NONE ctermbg=159 ctermfg=196 gui=NONE guibg=#afffff guifg=#ff0000
     CSAHi airline_y term=NONE cterm=NONE ctermbg=45 ctermfg=18 gui=NONE guibg=#00dfff guifg=#000087
-    CSAHi Title term=bold cterm=bold ctermbg=bg ctermfg=235 gui=bold guibg=bg guifg=#222222
+    CSAHi Title term=bold cterm=bold ctermbg=bg ctermfg=16 gui=bold guibg=bg guifg=#000000
     CSAHi Visual term=NONE cterm=NONE ctermbg=153 ctermfg=fg gui=NONE guibg=#BFDBFE guifg=fg
     CSAHi VisualNC term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi WarningMsg term=NONE cterm=NONE ctermbg=208 ctermfg=235 gui=NONE guibg=#ff8800 guifg=#222222
+    CSAHi WarningMsg term=NONE cterm=NONE ctermbg=208 ctermfg=16 gui=NONE guibg=#ff8800 guifg=#000000
     CSAHi WildMenu term=NONE cterm=NONE ctermbg=226 ctermfg=16 gui=NONE guibg=Yellow guifg=Black
     CSAHi Folded term=NONE cterm=NONE ctermbg=231 ctermfg=237 gui=NONE guibg=#F7F7F7 guifg=#3d3d3d
     CSAHi FoldColumn term=NONE cterm=NONE ctermbg=250 ctermfg=18 gui=NONE guibg=Grey guifg=DarkBlue
     CSAHi DiffAdd term=bold cterm=bold ctermbg=64 ctermfg=231 gui=bold guibg=#46830c guifg=#f8f8f8
-    CSAHi DiffChange term=NONE cterm=NONE ctermbg=235 ctermfg=235 gui=NONE guibg=#222222 guifg=#222222
+    CSAHi DiffChange term=NONE cterm=NONE ctermbg=16 ctermfg=16 gui=NONE guibg=#000000 guifg=#000000
     CSAHi DiffDelete term=bold cterm=bold ctermbg=195 ctermfg=196 gui=bold guibg=LightCyan guifg=#ff0000
-    CSAHi htmlSpecialTagName term=NONE cterm=NONE ctermbg=bg ctermfg=235 gui=NONE guibg=bg guifg=#222222
-    CSAHi vimCollection term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSubstPat term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
-    CSAHi vimSyncLinecont term=NONE cterm=NONE ctermbg=bg ctermfg=fg gui=NONE guibg=bg guifg=fg
+    CSAHi htmlSpecialTagName term=NONE cterm=NONE ctermbg=bg ctermfg=16 gui=NONE guibg=bg guifg=#000000
     CSAHi CocListWhiteGrey term=NONE cterm=NONE ctermbg=102 ctermfg=138 gui=NONE guibg=#928374 guifg=#a89984
     CSAHi CocListWhiteWhite term=NONE cterm=NONE ctermbg=138 ctermfg=138 gui=NONE guibg=#a89984 guifg=#a89984
 endif
