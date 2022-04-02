@@ -195,3 +195,4 @@ let g:go_get_update = 0
 let g:go_gopls_enabled = 0
 let g:go_list_autoclose = 0
 let g:go_template_autocreate = 0
+let g:go_highlight_functions = 1

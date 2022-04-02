@@ -112,6 +112,8 @@ exe 'hi pythonBuiltinFunc guifg='s:builtin
 
 " Go Highlighting
 exe 'hi goBuiltins guifg='s:builtin
+exe 'hi goImportString guifg='s:func
+exe 'hi goFormatSpecifier guifg='s:const
 
 " Javascript Highlighting
 exe 'hi jsBuiltins guifg='s:builtin
