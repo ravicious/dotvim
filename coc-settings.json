@@ -4,10 +4,12 @@
   },
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
+    "go",
     "html",
     "json",
     "javascript",
-    "typescript"
+    "typescript",
+    "typescriptreact"
   ],
   "coc.source.around.firstMatch": false,
   "coc.source.buffer.firstMatch": false
