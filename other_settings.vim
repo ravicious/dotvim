@@ -87,7 +87,7 @@ augroup END
 
 " Colorscheme and GUI
 set bg=light
-if exists('g:GuiLoaded')
+if has("gui_vimr") || exists('g:GuiLoaded')
   colorscheme alabaster
 else
   colorscheme alabaster-256
