@@ -75,6 +75,8 @@ endif
 call neobundle#begin(expand('~/.vim/bundle/'))
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
+" Don't load CSApprox plugin
+let g:CSApprox_loaded = 1
 " All bundles are in bundle/bundles file
 source ~/.vim/plugins.vim
 call neobundle#end()
