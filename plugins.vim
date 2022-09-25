@@ -42,3 +42,4 @@ NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'neoclide/coc.nvim', { 'rev' : 'master', 'build': { 'others': 'yarn install --frozen-lockfile'} }
 NeoBundle 'fatih/vim-go'
 NeoBundle 'godlygeek/csapprox'
+NeoBundle 'jxnblk/vim-mdx-js'
