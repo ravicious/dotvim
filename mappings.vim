@@ -112,6 +112,9 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gsd :call CocAction('jumpDefinition', 'split')<CR>
+nmap <silent> gvd :call CocAction('jumpDefinition', 'vsplit')<CR>
+nmap <silent> gwd :call CocAction('jumpDefinition', 'tabe')<CR>
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gm <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
