@@ -13,5 +13,6 @@
   ],
   "coc.source.around.firstMatch": false,
   "coc.source.buffer.firstMatch": false,
-  "eslint.autoFixOnSave": true
+  "eslint.autoFixOnSave": true,
+  "suggest.noselect": true
 }
