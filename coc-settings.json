@@ -14,5 +14,24 @@
   "coc.source.around.firstMatch": false,
   "coc.source.buffer.firstMatch": false,
   "eslint.autoFixOnSave": true,
-  "suggest.noselect": true
+  "suggest.noselect": true,
+  "languageserver": {
+    "golangci-lint-languageserver": {
+      "command": "golangci-lint-langserver",
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "command": [
+          "golangci-lint",
+          "run",
+          "-c",
+          ".golangci.yml",
+          "--enable",
+          "errcheck",
+          "--out-format",
+          "json",
+          "--issues-exit-code=1"
+        ]
+      }
+    }
+  }
 }
