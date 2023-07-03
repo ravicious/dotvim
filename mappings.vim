@@ -108,6 +108,11 @@ function! CheckBackspace() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
+" Use Ctrl+Space to open suggestions.
+" https://stackoverflow.com/questions/63691893/how-to-trigger-autocomplete-suggestion-box-in-vim-or-neovim-plugin-neoclide-coc
+" https://stackoverflow.com/questions/24983372/what-does-ctrlspace-do-in-vim
+inoremap <silent><expr> <c-@> coc#refresh()
+
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
