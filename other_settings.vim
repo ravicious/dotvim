@@ -199,3 +199,13 @@ let g:go_highlight_functions = 1
 
 " Disable mouse inside nvim
 set mouse=
+
+" Opens a split given by the splitCmd command with the file extension
+" replaced with replacement.
+function! OpenReplacementSplit(splitCmd, replacement)
+    let l:filename = expand("%:r") . a:replacement
+    execute a:splitCmd . " " . l:filename
+endfunction
+
+command! -nargs=+ SplitReplace call OpenReplacementSplit("split", <f-args>)
+command! -nargs=+ VsplitReplace call OpenReplacementSplit("vsplit", <f-args>)
