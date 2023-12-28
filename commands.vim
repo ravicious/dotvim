@@ -7,4 +7,4 @@ command -bar RA RuboCopAutoCorrect
 command -bar EslintFix execute ':!./node_modules/.bin/eslint % --fix' | :call input("Press any key to continue") | :Neomake | :e
 command -bar EF EslintFix
 
-com! FormatJSON %!python -m json.tool
+com! FormatJSON %!python3 -m json.tool
