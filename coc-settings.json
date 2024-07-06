@@ -17,6 +17,8 @@
   "eslint.autoFixOnSave": true,
   "prettier.requireConfig": true,
   "suggest.noselect": true,
+  "tsserver.useLocalTsdk": true,
+  "tsserver.tsdk": "./node_modules/typescript/lib",
   "languageserver": {
     "golangci-lint-languageserver": {
       "command": "golangci-lint-langserver",
