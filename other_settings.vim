@@ -22,17 +22,6 @@ set mouse=a
 " Get rid of unnecessary gui options
 set guioptions=ac
 
-if has('statusline') && !&compatible
-  set laststatus=2  " Always show the status bar
-
-  " Start the status line
-  set statusline=%f\ %m\ %r
-  set statusline+=Line:%l/%L[%p%%]
-  set statusline+=Col:%v
-  set statusline+=Buf:#%n
-  set statusline+=[%b][0x%B]
-endif
-
 " Backups
 set directory=~/.swp//
 set backupdir=~/.vim-backup-dir//
@@ -50,6 +39,7 @@ runtime macros/matchit.vim
 let g:airline_theme='light'
 let g:airline#extensions#neomake#enabled = 1
 let g:airline_section_a = airline#section#create_left(['mode', 'crypt', 'paste', 'iminsert'])
+let g:airline_section_z = '%p%% ㏑%l/%L c%v'
 let g:airline_highlighting_cache = 1
 
 "YouCompleteMe
