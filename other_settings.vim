@@ -100,44 +100,6 @@ set textwidth=100
 " Colorful style for vim-jsx-pretty
 let g:vim_jsx_pretty_colorful_config = 1
 
-" Ale
-let g:ale_echo_msg_format = '%linter%: %s'
-let g:ale_lint_on_text_changed = 'normal'
-let g:ale_lint_on_insert_leave = 1
-let g:ale_open_list = 0
-let g:ale_rust_cargo_use_clippy = 1
-" Turn off default linters.
-let g:ale_linters = {
-      \ 'html': [],
-      \ 'javascript': [],
-      \ 'ruby': ['ruby'],
-      \}
-
-" Neoformat
-" augroup fmt
-"   autocmd!
-"   autocmd BufWritePre * Neoformat
-" augroup END
-let g:neoformat_enabled_json = []
-let g:neoformat_enabled_scss = []
-let g:neoformat_enabled_javascript = []
-let g:neoformat_enabled_ruby = []
-let g:neoformat_only_msg_on_error = 1
-" Example Neoformat formatter options for JavaScript:
-"   let g:neoformat_enabled_javascript = ['prettier']
-"   let g:neoformat_javascript_prettier = {
-"         \ 'exe': nrun#Which('prettier'),
-"         \ 'args': ['--stdin', '--trailing-comma', '--single-quote', '--print-width ' . &textwidth],
-"         \ 'stdin': 1,
-"         \ }
-" Example Neoformat formatter options for SCSS:
-"   let g:neoformat_enabled_scss = ['prettier']
-"   let g:neoformat_scss_prettier = {
-"         \ 'exe': nrun#Which('prettier'),
-"         \ 'args': ['--stdin', '--trailing-comma es5', '--single-quote', '--print-width 100', '--bracket-spacing', '--parser postcss', '--tab-width 2', '--no-semi'],
-"         \ 'stdin': 1,
-"         \ }
-
 " Enables HTML/CSS syntax highlighting in JavaScript files.
 let g:javascript_enable_domhtmlcss = 1
 
@@ -154,15 +116,6 @@ let g:highlightedyank_highlight_duration = 500
 
 " Edit crontab in place
 autocmd filetype crontab setlocal nobackup nowritebackup
-
-" Use the old regex engine for Ruby files. Apparently vim's Ruby syntax is using something that's
-" slower on the newer engine, so this should improve performance.
-" https://stackoverflow.com/a/38616348/742872
-augroup ft_rb
-    au!
-    au FileType ruby setlocal re=1
-    au FileType eruby setlocal re=1
-augroup END
 
 " Show filename in title in GUIs.
 set title
