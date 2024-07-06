@@ -36,7 +36,6 @@ NeoBundle 'Glench/Vim-Jinja2-Syntax'
 NeoBundle 'tpope/vim-speeddating'
 NeoBundle 'machakann/vim-highlightedyank'
 NeoBundle 'AndrewRadev/sideways.vim'
-NeoBundle 'AndrewRadev/tagalong.vim'
 NeoBundle 'cespare/vim-toml', { 'rev' : 'main' }
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'neoclide/coc.nvim', { 'rev' : 'master', 'build': { 'others': 'yarn install --frozen-lockfile'} }
