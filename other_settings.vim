@@ -156,3 +156,6 @@ command! -nargs=+ VsplitReplace call OpenReplacementSplit("vsplit", <f-args>)
 " Prevent tagalong.vim from mangling yanked content when pasting it in visual mode.
 " https://github.com/AndrewRadev/tagalong.vim/issues/10
 let g:tagalong_mappings = ['c', 'C', 'i', 'a']
+
+set splitbelow
+set splitright
