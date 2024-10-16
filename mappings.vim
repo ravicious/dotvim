@@ -142,3 +142,5 @@ endfunction
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
+
+nnoremap <C-W>m <Cmd>WinShift<CR>
