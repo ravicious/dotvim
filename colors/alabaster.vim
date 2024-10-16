@@ -15,7 +15,7 @@ let g:colors_name = 'alabaster'
 
 " Define reusable colorvariables.
 let s:bg='#F7F7F7'
-let s:fg='#000000'
+let s:fg='#333333'
 let s:fg2='#141414'
 let s:fg3='#292929'
 let s:fg4='#3d3d3d'
@@ -34,6 +34,7 @@ let s:warning='#ff0000'
 let s:warning2='#ff8800'
 let s:punc='#777777'
 let s:lightblue='#BFDBFE'
+let s:spongecake='#FEE2BF'
 let s:orange='#FFE9A6'
 let s:orange2='#FFBC5D'
 let s:gray='#9DA39A'
@@ -48,10 +49,10 @@ exe 'hi SignColumn guibg='s:bg
 exe 'hi LineNr guifg='s:gray' guibg='s:bg
 exe 'hi CursorLineNr gui=NONE guifg='s:punc' guibg='s:bg
 exe 'hi VertSplit guifg='s:gray2' guibg='s:gray2
-exe 'hi MatchParen guifg='s:warning2'  gui=underline'
+exe 'hi MatchParen guifg='s:fg' guibg='s:spongecake' gui=underline'
 exe 'hi StatusLine gui=NONE guifg='s:fg2' guibg='s:bg3
 exe 'hi Pmenu guifg='s:fg' guibg='s:bg2
-exe 'hi PmenuSel  guibg='s:bg3
+exe 'hi PmenuSel guifg='s:fg' guibg='s:spongecake
 exe 'hi IncSearch guibg='s:str' guifg='s:orange2
 exe 'hi Search guibg='s:orange
 exe 'hi Directory guifg='s:const
