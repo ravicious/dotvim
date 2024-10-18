@@ -140,3 +140,6 @@ hi htmlH6 gui=NONE
 
 " Markdown Highlighting
 exe 'hi mkdCode guifg='s:builtin
+
+" Treesitter
+exe 'hi @property guifg='s:fg
