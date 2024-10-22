@@ -143,3 +143,4 @@ exe 'hi mkdCode guifg='s:builtin
 
 " Treesitter
 exe 'hi @property guifg='s:fg
+exe 'hi @string.special.url.comment gui=NONE'
