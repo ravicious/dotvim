@@ -37,6 +37,6 @@ NeoBundle 'neoclide/coc.nvim', { 'rev' : 'master', 'build': { 'others': 'yarn in
 NeoBundle 'fatih/vim-go'
 NeoBundle 'godlygeek/csapprox'
 NeoBundle 'jxnblk/vim-mdx-js'
-NeoBundle 'sindrets/winshift.nvim'
+NeoBundle 'sindrets/winshift.nvim', { 'rev' : 'main' }
 NeoBundle 'nvim-treesitter/nvim-treesitter'
 NeoBundle 'nvim-treesitter/nvim-treesitter-textobjects'
