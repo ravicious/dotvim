@@ -19,6 +19,7 @@
   "go.goplsEnv": {
     "GOFLAGS": "-tags=vnetdaemon"
   },
+  "go.goplsPath": "~/go/bin/gopls",
   "prettier.requireConfig": true,
   "suggest.noselect": true,
   "tsserver.useLocalTsdk": true,
