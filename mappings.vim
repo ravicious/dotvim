@@ -32,7 +32,7 @@ nmap <leader>et :tabe <C-R>=expand('%:h').'/'<cr>
 nmap <silent> gw :s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR>`'
 
 " find merge conflict markers
-nmap <silent> <leader>fc <ESC>/\v^[<\|=>]{7}( .*\|$)<CR>
+nmap <silent> <leader>fc <ESC>/\v^[<\|=>%\+]{7}( .*\|$)<CR>
 
 " Adjust viewports to the same size
 map <Leader>= <C-w>=
