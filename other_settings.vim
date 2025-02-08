@@ -295,3 +295,5 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 EOF
+
+command! -nargs=0 CloseTabsToRight :.+1,$tabdo :tabc
