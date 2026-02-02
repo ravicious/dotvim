@@ -297,3 +297,6 @@ require'nvim-treesitter.configs'.setup {
 EOF
 
 command! -nargs=0 CloseTabsToRight :.+1,$tabdo :tabc
+
+" unload buffers when there are no windows displaying them
+set nohidden
