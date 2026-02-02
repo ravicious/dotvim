@@ -12,6 +12,7 @@
     "typescript",
     "typescriptreact"
   ],
+  "coc.preferences.currentFunctionSymbolAutoUpdate": true,
   "coc.source.around.firstMatch": false,
   "coc.source.buffer.firstMatch": false,
   "eslint.autoFixOnSave": true,

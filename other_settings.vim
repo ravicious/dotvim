@@ -39,8 +39,11 @@ runtime macros/matchit.vim
 let g:airline_theme='light'
 let g:airline#extensions#neomake#enabled = 1
 let g:airline_section_a = airline#section#create_left(['mode', 'crypt', 'paste', 'iminsert'])
+let g:airline_section_x = '%{get(b:, "coc_current_function", "")} ' . airline#section#create_right(['tagbar', 'filetype'])
 let g:airline_section_z = '%p%% ㏑%l/%L c%v'
 let g:airline_highlighting_cache = 1
+" Update Airline when coc_current_function changes.
+autocmd User CocStatusChange AirlineRefresh
 
 "YouCompleteMe
 " Enable identifier completion after 3 chars.
