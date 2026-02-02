@@ -19,9 +19,6 @@ set scrolloff=5
 " Enable mouse selection
 set mouse=a
 
-" Get rid of unnecessary gui options
-set guioptions=ac
-
 " Backups
 set directory=~/.swp//
 set backupdir=~/.vim-backup-dir//
