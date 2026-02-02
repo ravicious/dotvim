@@ -40,3 +40,4 @@ NeoBundle 'jxnblk/vim-mdx-js'
 NeoBundle 'sindrets/winshift.nvim', { 'rev' : 'main' }
 NeoBundle 'nvim-treesitter/nvim-treesitter'
 NeoBundle 'nvim-treesitter/nvim-treesitter-textobjects'
+NeoBundle 'avm99963/vim-jjdescription'
