@@ -300,3 +300,9 @@ command! -nargs=0 CloseTabsToRight :.+1,$tabdo :tabc
 
 " unload buffers when there are no windows displaying them
 set nohidden
+
+function! CopyTabBuffers()
+    let @+ = ''
+    windo let @+ .= "=== " . bufname('%') . " ===\n" . join(getline(1,'$'), "\n") . "\n\n"
+endfunction
+command! CopyTabBuffers call CopyTabBuffers()
