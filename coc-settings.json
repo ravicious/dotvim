@@ -21,7 +21,6 @@
     "GOFLAGS": "-tags=vnetdaemon"
   },
   "go.goplsPath": "~/go/bin/gopls",
-  "prettier.requireConfig": true,
   "suggest.noselect": true,
   "tsserver.useLocalTsdk": true,
   "tsserver.tsdk": "./node_modules/typescript/lib",
@@ -45,6 +44,10 @@
       }
     }
   },
+  "oxc.oxfmt.enable": true,
+  "javascript.format.enable": false,
+  "typescript.format.enable": false,
+  "prettier.enable": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   }
