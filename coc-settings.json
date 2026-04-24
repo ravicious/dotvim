@@ -15,8 +15,6 @@
   "coc.preferences.currentFunctionSymbolAutoUpdate": true,
   "coc.source.around.firstMatch": false,
   "coc.source.buffer.firstMatch": false,
-  "eslint.autoFixOnSave": true,
-  "eslint.experimental.useFlatConfig": true,
   "go.goplsEnv": {
     "GOFLAGS": "-tags=vnetdaemon"
   },
@@ -27,7 +25,9 @@
   "languageserver": {
     "golangci-lint-languageserver": {
       "command": "golangci-lint-langserver",
-      "filetypes": ["go"],
+      "filetypes": [
+        "go"
+      ],
       "initializationOptions": {
         "command": [
           "golangci-lint",
@@ -47,8 +47,5 @@
   "oxc.oxfmt.enable": true,
   "javascript.format.enable": false,
   "typescript.format.enable": false,
-  "prettier.enable": false,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  }
+  "prettier.enable": false
 }

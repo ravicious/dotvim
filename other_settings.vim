@@ -119,7 +119,7 @@ set shortmess+=c
 set signcolumn=yes
 
 let g:coc_global_extensions = [
-      \'coc-json', 'coc-tsserver', 'coc-prettier', 'coc-go', 'coc-eslint', 'coc-oxc'
+      \'coc-json', 'coc-tsserver', 'coc-prettier', 'coc-go', 'coc-oxc'
       \]
 
 let g:airline#extensions#coc#enabled = 0
